@@ -9,24 +9,44 @@ import { Tabs, Spin } from 'antd';
 import { CardTask } from "./CardTask";
 import { connect } from 'react-redux'
 import moment from 'moment';
+import { getBootcampAction } from '../../redux/bootcampDuck'
+import Learning from './Learning';
 
 const { TabPane } = Tabs;
 
 function callback(key) {
-    console.log(key);
 }
-const BD = ({ subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: [] }] } }) => {
+const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: [], itemsOrder: [] }] } }) => {
 
     let [activeWeek, setActiveWeek] = useState(0)
+    let [learning, setLearning] = useState({})
+    let [modal, showModal] = useState(false)
 
     useEffect(() => {
+        // get bootcmp with or without learnings
         let { id } = match.params
+        if (id) getBootcampAction(id)
+
+        //let index = localStorage.activeWeek
+        //if (index) setActiveWeek(index)
     }, [])
 
     function changeWeek(index) {
         setActiveWeek(index)
+        localStorage.activeWeek = index
     }
 
+    function showLearning(item) {
+        if (!item || !item.tipo) return
+        setLearning(item)
+        showModal(true)
+    }
+
+    let learnings = {}
+    let order = []
+    if (!bootcamp) return null
+    if (bootcamp.weeks[activeWeek].learnings) bootcamp.weeks[activeWeek].learnings.forEach(l => learnings[l._id] = l)
+    order = bootcamp.weeks[activeWeek].itemsOrder
     return (
         <section className="camp">
             <div className="camp-descript">
@@ -43,7 +63,7 @@ const BD = ({ subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: 
                         <p> <FontAwesome name="user" /> {bootcamp.students.length + 152} Estudiantes</p>
                         <p> <FontAwesome name="calendar" /> 5 semanas </p>
                         <p> <FontAwesome name="file" /> Exámen final  </p>
-                        {subscribed ? <button className="btn-in">Inscrito</button> : <button className="btn-in">Inscríbete</button>}
+                        {subscribed ? <button className="btn-in">Inscrito</button> : <button onClick={() => history.push('/apply')} className="btn-in">Inscríbete</button>}
                     </div>
                 </div>
                 <div className="camp-dates">
@@ -74,12 +94,15 @@ const BD = ({ subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: 
                                 al terminar la semana.
                             </p>
                             <div className="box-lessons">
-                                {bootcamp.weeks[activeWeek].learnings.map(learning => {
+                                {order.map((id, i) => {
+                                    let text = "Semana del " + moment(bootcamp.weeks[activeWeek].startDate).format('ll') +
+                                        " al " + moment(bootcamp.weeks[activeWeek].endDate).format('ll')
                                     return <CardLessons
-                                        week={`Semana ${activeWeek}`}
-                                        date="21 al 27 de Octubre 2019"
-                                        name={learning.title}
-                                        descript="Prework" />
+                                        onClick={() => showLearning(learnings[id])}
+                                        week={`Lección ${i + 1}`}
+                                        date={text}
+                                        name={learnings[id] && learnings[id].title}
+                                        descript={bootcamp.weeks[activeWeek].title} />
 
                                 })}
 
@@ -89,11 +112,14 @@ const BD = ({ subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: 
                     </TabPane>
                     <TabPane tab="Tareas" key="2">
                         <div className="box-lessons" style={{ padding: " 1% 2%" }}>
-                            <CardTask week="Semana 0" date="Tarea 1: Algoritmia" name="Introducción al Desarrollo Web" descript="Prework" />
+                            <CardTask week={bootcamp.weeks[activeWeek].title} date="Tarea 1: Setup del entorno de desarrollo [Por subir]" name="Introducción al Desarrollo Web" descript="Prework" />
                         </div>
                     </TabPane>
-                    <TabPane tab="Exámen" key="3">
-                        Content of Tab Pane 3
+                    <TabPane style={{ paddingLeft: 20 }} tab="Recursos" key="3">
+                        Esta semana no cuenta con recursos extra
+                    </TabPane>
+                    <TabPane style={{ paddingLeft: 20 }} tab="Exámen" key="4">
+                        El examen estará disponible al finalizar el bootcamp
                     </TabPane>
                 </Tabs>,
 
@@ -101,18 +127,21 @@ const BD = ({ subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: 
 
 
             </div>
+            <Learning
+                onOk={() => showModal(false)}
+                learning={learning}
+                visible={modal} />
         </section>
     );
 };
 
-function mapState({ bootcamps: { object }, user: { bootcamps } }, { match: { params: { id } } }) {
+function mapState({ bootcamps: { object } }, { match: { params: { id } } }) {
     let bootcamp = object[id]
-    let subscribed
-    if (bootcamp) subscribed = bootcamps.find(b => b._id === bootcamp._id)
+    let subscribed = bootcamp ? bootcamp.weeks[0].learnings ? true : false : false
     return {
         bootcamp,
-        subscribed: Boolean(subscribed)
+        subscribed
     }
 }
 
-export const BootcampDetail = connect(mapState, {})(BD)
+export const BootcampDetail = connect(mapState, { getBootcampAction })(BD)

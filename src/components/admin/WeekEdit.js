@@ -48,7 +48,7 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
 
     function saveLearning() {
         if (!editing) {
-            saveLearningAction({ week: week._id, title: "blissi" })
+            saveLearningAction({ week: week._id, title: "blissi", description: "bliss" })
         } else {
             saveLearningAction(learning)
         }
@@ -106,7 +106,7 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
 
                             <div>
                                 <ReactMarkdown
-                                    source={item.description.slice(0, 100) + "..."}
+                                    source={item.description && item.description.slice(0, 100) + "..."}
                                     escapeHtml={false}
                                 />
                             </div>

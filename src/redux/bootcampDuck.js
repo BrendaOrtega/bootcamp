@@ -215,6 +215,26 @@ export function getWeekAdminAction(id) {
     }
 }
 
+export function getBootcampAction(id) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: GET_SINGLE_BOOTCAMP })
+        return axios.get(`${baseURL}/${id}`, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({
+                    type: GET_SINGLE_BOOTCAMP_SUCCESS,
+                    payload: { ...res.data }
+                }) // changethis for more than 1 bootcamp at a time
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: GET_SINGLE_BOOTCAMP_ERROR, payload: "Algo falló" })
+                dispatch({ type: GET_SINGLE_BOOTCAMP_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
 export function getBootcampAdminAction(id) {
     return (dispatch, getState) => {
         let { user: { token } } = getState()

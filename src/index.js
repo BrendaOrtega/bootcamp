@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import createStore from './redux/store'
 import 'toastr/build/toastr.css'
+import 'github-markdown-css'
 
 
 const WithRoute = () => (

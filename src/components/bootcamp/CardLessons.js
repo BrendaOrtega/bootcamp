@@ -3,9 +3,9 @@ import "./Bootcamp.css"
 
 
 
-export const CardLessons = ({week, date, name, descript}) => {
+export const CardLessons = ({ onClick, week, date, name, descript }) => {
     return (
-        <section className="card-l">
+        <section onClick={onClick} className="card-l">
             <div>
                 <h2>{week}</h2>
                 <p>{date}</p>
