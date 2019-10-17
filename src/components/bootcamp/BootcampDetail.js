@@ -130,7 +130,8 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
 
                     </TabPane>
                     <TabPane tab={<Badge count={homeworks && homeworks.length} >Tareas -</Badge>} key="2">
-                        <div className="box-lessons" style={{ display: "flex", padding: " 1% 2%" }}>
+                        <div className="box-lessons"
+                            style={{ flexWrap: "wrap", display: "flex", padding: " 1% 2%" }}>
                             {homeworks && homeworks.map(renderHomeworkCard)}
                         </div>
                     </TabPane>
