@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Card, Button, Modal, Input, Progress, Icon, DatePicker, Switch } from 'antd'
+import React, { useEffect, useState, useRef } from 'react'
+import { Card, Button, Modal, Input, Progress, Icon, DatePicker, Switch, Radio } from 'antd'
 import { connect } from 'react-redux'
 import { setEditingBootcampAction } from '../../redux/adminDuck'
 import { getWeekAdminAction, saveHomeworkAction, deleteHomeworkAction, updateCurrentWeekAction } from '../../redux/bootcampDuck'
@@ -23,6 +23,7 @@ function HomeWorkEdit({ updateCurrentWeekAction, error, deleteHomeworkAction, sa
     let [progress, setProgress] = useState(0)
     let [weekMod, setWeekMod] = useState({})
     let [mark, showMark] = useState(false)
+    let input = useRef()
 
     useEffect(() => {
         if (match.params.id) getWeekAdminAction(match.params.id)
@@ -42,8 +43,14 @@ function HomeWorkEdit({ updateCurrentWeekAction, error, deleteHomeworkAction, sa
     function onChange({ target: { name, value } }) {
         setLearning({ ...learning, [name]: value })
     }
-    function saveLearning() {
-        setEditing(false)
+    function addOption(value) {
+        setLearning({ ...learning, options: [...learning.options, value] })
+        input.current.state.value = ''
+    }
+
+    function deleteOptions() {
+        setLearning({ ...learning, options: [] })
+        input.current.state.value = ''
     }
 
     function saveHomework() {
@@ -267,7 +274,31 @@ function HomeWorkEdit({ updateCurrentWeekAction, error, deleteHomeworkAction, sa
                         <br />
                         {learning.link ?
                             <video controls width="300" src={learning.link}></video> : null}
+                        <p>Examen:</p>
 
+                        <Input
+                            name="question"
+                            placeholder="Pregunta"
+                            value={learning.question}
+                            onChange={onChange}
+                        />
+                        {learning.options && <Radio.Group placeholder="Respuestas"
+                            name="answer" onChange={onChange} value={learning.answer}>
+                            {learning.options.map((option, i) => {
+                                return (
+                                    <Radio value={option}>
+                                        {option}
+                                    </Radio>
+                                )
+                            })}
+                            <Button onClick={deleteOptions} icon="delete" />
+                        </Radio.Group>}
+                        <Input
+                            ref={input}
+                            name="option"
+                            placeholder="Escribe una opción"
+                            addonAfter={<Icon onClick={() => addOption(input.current.state.value)} type="check" />}
+                        />
 
                     </Modal>
                     <Modal

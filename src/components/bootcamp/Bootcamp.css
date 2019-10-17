@@ -216,7 +216,6 @@ CARD*/
 
 .card-task{
     width: 250px;
-    height: auto;
     min-height: 120px;
     background-color: white;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);

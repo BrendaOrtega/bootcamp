@@ -62,6 +62,8 @@ function reducer(state = initial, action) {
 }
 
 // constants
+const UPDATE_HOMEWORK = "UPDATE_HOMEWORK"
+
 const UPDATE_PASSWORD = "UPDATE_PASSWORD"
 const UPDATE_PASSWORD_ERROR = "UPDATE_PASSWORD_ERROR"
 const UPDATE_PASSWORD_SUCCESS = "UPDATE_PASSWORD_SUCCESS"
@@ -145,6 +147,25 @@ export function makeBootcampPurchaseAction({ tokenId, bootcampId }) { // {tokenI
                 }
                 dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: err.response.data.message })
                 return err.response.data.message
+            })
+    }
+}
+
+export function updateHomeworkAction(update) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: UPDATE_HOMEWORK })
+        return axios.patch(`${baseURL}/homework`, update, { headers: { Authorization: token } })
+            .then(res => {
+                let { user } = localStorage
+                if (user) user = JSON.parse(user)
+                localStorage.user = JSON.stringify({ ...user, ...res.data })
+                dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: { ...res.data } })
+                return res
+            })
+            .catch(err => {
+                dispatch({ type: UPDATE_PROFILE_ERROR, payload: err.response.data.message })
+                return err
             })
     }
 }

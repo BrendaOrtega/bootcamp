@@ -5,7 +5,7 @@ import Button from "../common/Button";
 import { CardLessons } from "./CardLessons";
 import FontAwesome from "react-fontawesome"
 import js from "../../assets/JavaScript-logo.png"
-import { Tabs, Spin } from 'antd';
+import { Tabs, Badge } from 'antd';
 import { CardTask } from "./CardTask";
 import { connect } from 'react-redux'
 import moment from 'moment';
@@ -17,7 +17,7 @@ const { TabPane } = Tabs;
 
 function callback(key) {
 }
-const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { students: 0, weeks: [{ homeworks: [], learnings: [], itemsOrder: [] }] } }) => {
+const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcamp = { students: 0, weeks: [{ homeworks: [], learnings: [], itemsOrder: [] }] } }) => {
 
     let [activeWeek, setActiveWeek] = useState(0)
     let [learning, setLearning] = useState({})
@@ -54,6 +54,7 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
     function renderHomeworkCard(item, i) {
         return (
             <CardTask
+                uHomework={uHomeworks ? uHomeworks[item._id] : null}
                 onClick={() => showHomework(item)}
                 week={bootcamp.weeks[activeWeek].title} date="Tarea 1: Setup del entorno de desarrollo [Por subir]" name={item.title} descript="Prework" />
         )
@@ -65,7 +66,6 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
     if (bootcamp.weeks[activeWeek].learnings) bootcamp.weeks[activeWeek].learnings.forEach(l => learnings[l._id] = l)
     order = bootcamp.weeks[activeWeek].itemsOrder
     let homeworks = bootcamp.weeks[activeWeek].homeworks
-    console.log(homeworks)
     return (
         <section className="camp">
             <div className="camp-descript">
@@ -129,8 +129,8 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
                         </div>
 
                     </TabPane>
-                    <TabPane tab="Tareas" key="2">
-                        <div className="box-lessons" style={{ padding: " 1% 2%" }}>
+                    <TabPane tab={<Badge count={homeworks && homeworks.length} >Tareas -</Badge>} key="2">
+                        <div className="box-lessons" style={{ display: "flex", padding: " 1% 2%" }}>
                             {homeworks && homeworks.map(renderHomeworkCard)}
                         </div>
                     </TabPane>
@@ -157,12 +157,13 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
     );
 };
 
-function mapState({ bootcamps: { object } }, { match: { params: { id } } }) {
+function mapState({ user: { homeworks }, bootcamps: { object } }, { match: { params: { id } } }) {
     let bootcamp = object[id]
     let subscribed = bootcamp ? bootcamp.weeks[0].learnings ? true : false : false
     return {
         bootcamp,
-        subscribed
+        subscribed,
+        uHomeworks: homeworks
     }
 }
 
