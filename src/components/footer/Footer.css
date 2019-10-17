@@ -14,11 +14,11 @@
 
 .footer h2, .footer h3{
     color: rgba(204,204,204,.5);
-    font-size: 24px;
+    font-size: 18px;
 }
 .footer p{
     color: rgba(204,204,204,.5);
-    font-size: 18px;
+    font-size: 16px;
     transition: all 1s ease;
 }
 .footer p:hover{
