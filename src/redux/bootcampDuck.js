@@ -306,6 +306,8 @@ export function getBootcampAction(id) {
             .catch(err => {
                 if (!err.response) return dispatch({ type: GET_SINGLE_BOOTCAMP_ERROR, payload: "Algo falló" })
                 dispatch({ type: GET_SINGLE_BOOTCAMP_ERROR, payload: err.response.data.message })
+                localStorage.removeItem('user')
+                dispatch({ type: "LOGOUT" })
                 return err
             })
     }
