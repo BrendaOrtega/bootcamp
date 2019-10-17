@@ -11,16 +11,19 @@ import { connect } from 'react-redux'
 import moment from 'moment';
 import { getBootcampAction } from '../../redux/bootcampDuck'
 import Learning from './Learning';
+import HomeWork from './HomeWork'
 
 const { TabPane } = Tabs;
 
 function callback(key) {
 }
-const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { students: 0, weeks: [{ learnings: [], itemsOrder: [] }] } }) => {
+const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { students: 0, weeks: [{ homeworks: [], learnings: [], itemsOrder: [] }] } }) => {
 
     let [activeWeek, setActiveWeek] = useState(0)
     let [learning, setLearning] = useState({})
+    let [homework, setHomework] = useState({})
     let [modal, showModal] = useState(false)
+    let [hModal, showHmodal] = useState(false)
 
     useEffect(() => {
         // get bootcmp with or without learnings
@@ -42,11 +45,27 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
         showModal(true)
     }
 
+    function showHomework(item) {
+        if (!item || !item.tipo) return
+        setHomework(item)
+        showHmodal(true)
+    }
+
+    function renderHomeworkCard(item, i) {
+        return (
+            <CardTask
+                onClick={() => showHomework(item)}
+                week={bootcamp.weeks[activeWeek].title} date="Tarea 1: Setup del entorno de desarrollo [Por subir]" name={item.title} descript="Prework" />
+        )
+    }
+
     let learnings = {}
     let order = []
     if (!bootcamp) return null
     if (bootcamp.weeks[activeWeek].learnings) bootcamp.weeks[activeWeek].learnings.forEach(l => learnings[l._id] = l)
     order = bootcamp.weeks[activeWeek].itemsOrder
+    let homeworks = bootcamp.weeks[activeWeek].homeworks
+    console.log(homeworks)
     return (
         <section className="camp">
             <div className="camp-descript">
@@ -89,7 +108,7 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
                 <Tabs defaultActiveKey="1" onChange={callback} >
                     <TabPane tab="Lecciones" key="1">
                         <div id="tp" className="summary">
-                            <p className="textos">El Bootcamp tiene una duración de 5 semanas. ¡Recuerda! Semanlamente se liberará
+                            <p className="textos">El Bootcamp tiene una duración de 5 semanas. ¡Recuerda! Semanalmente se liberará
                                 el contenido correspondiente, por lo que aunque siempre tendrás acceso a las lecciones en video, no podrás subir tus tareas
                                 al terminar la semana.
                             </p>
@@ -112,7 +131,7 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
                     </TabPane>
                     <TabPane tab="Tareas" key="2">
                         <div className="box-lessons" style={{ padding: " 1% 2%" }}>
-                            <CardTask week={bootcamp.weeks[activeWeek].title} date="Tarea 1: Setup del entorno de desarrollo [Por subir]" name="Introducción al Desarrollo Web" descript="Prework" />
+                            {homeworks && homeworks.map(renderHomeworkCard)}
                         </div>
                     </TabPane>
                     <TabPane style={{ paddingLeft: 20 }} tab="Recursos" key="3">
@@ -131,6 +150,9 @@ const BD = ({ history, getBootcampAction, subscribed, match, bootcamp = { studen
                 onOk={() => showModal(false)}
                 learning={learning}
                 visible={modal} />
+            <HomeWork onOk={() => showHmodal(false)}
+                homework={homework}
+                visible={hModal} />
         </section>
     );
 };

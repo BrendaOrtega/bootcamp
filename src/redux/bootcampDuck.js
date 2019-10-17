@@ -27,6 +27,13 @@ function reducer(state = initial, action) {
         case DELETE_LEARNING:
             return { ...state, fetching: true }
 
+        case SAVE_HOMEWORK_ERROR:
+            return { ...state, fetching: false, error: action.payload }
+        case SAVE_HOMEWORK_SUCCESS:
+            return { ...state, fetching: false }
+        case SAVE_HOMEWORK_SUCCESS:
+            return { ...state, fetching: true }
+
         case SAVE_LEARNING_ERROR:
             return { ...state, fetching: false, error: action.payload }
         case SAVE_LEARNING_SUCCESS:
@@ -88,6 +95,14 @@ const DELETE_LEARNING = "DELETE_LEARNING"
 const DELETE_LEARNING_ERROR = "DELETE_LEARNING_ERROR"
 const DELETE_LEARNING_SUCCESS = "DELETE_LEARNING_SUCCESS"
 
+const DELETE_HOMEWORK = "DELETE_HOMEWORK"
+const DELETE_HOMEWORK_ERROR = "DELETE_HOMEWORK_ERROR"
+const DELETE_HOMEWORK_SUCCESS = "DELETE_HOMEWORK_SUCCESS"
+
+const SAVE_HOMEWORK = "SAVE_HOMEWORK"
+const SAVE_HOMEWORK_ERROR = "SAVE_HOMEWORK_ERROR"
+const SAVE_HOMEWORK_SUCCESS = "SAVE_HOMEWORK_SUCCESS"
+
 const SAVE_LEARNING = "SAVE_LEARNING"
 const SAVE_LEARNING_ERROR = "SAVE_LEARNING_ERROR"
 const SAVE_LEARNING_SUCCESS = "SAVE_LEARNING_SUCCESS"
@@ -112,6 +127,67 @@ const GET_BOOTCAMPS_SUCCESS = "GET_BOOTCAMPS_SUCCESS"
 
 
 //thunks
+export function deleteHomeworkAction(item) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: DELETE_HOMEWORK })
+        return axios.delete(`${baseURL}/homeworks/${item._id}`, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({
+                    type: DELETE_HOMEWORK_SUCCESS,
+                    payload: { ...res.data }
+                }) // changethis for more than 1 bootcamp at a time
+                getWeekAdminAction(item.week)(dispatch, getState)
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: DELETE_HOMEWORK_ERROR, payload: "Algo falló" })
+                dispatch({ type: DELETE_HOMEWORK_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
+export function saveHomeworkAction(item) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: SAVE_HOMEWORK })
+        if (item._id) {
+            return axios.patch(`${baseURL}/homeworks/${item._id}`, item, { headers: { Authorization: token } })
+                .then(res => {
+                    dispatch({
+                        type: SAVE_HOMEWORK_SUCCESS,
+                        payload: { ...res.data }
+                    }) // changethis for more than 1 bootcamp at a time
+                    getWeekAdminAction(item.week)(dispatch, getState)
+                    return res
+                })
+                .catch(err => {
+                    if (!err.response) return dispatch({ type: SAVE_HOMEWORK_ERROR, payload: "Algo falló" })
+                    dispatch({ type: SAVE_HOMEWORK_ERROR, payload: err.response.data.message })
+                    return err
+                })
+        } else {
+            return axios.post(`${baseURL}/homeworks`, item, { headers: { Authorization: token } })
+                .then(res => {
+                    dispatch({
+                        type: SAVE_HOMEWORK_SUCCESS,
+                        payload: { ...res.data }
+                    }) // changethis for more than 1 bootcamp at a time
+                    getWeekAdminAction(item.week)(dispatch, getState)
+                    return res
+                })
+                .catch(err => {
+                    if (!err.response) return dispatch({ type: SAVE_HOMEWORK_ERROR, payload: "Algo falló" })
+                    if (err.response.data.error) return dispatch({ type: SAVE_HOMEWORK_ERROR, payload: err.response.data.error.message })
+                    dispatch({ type: SAVE_HOMEWORK_ERROR, payload: err.response.data.message })
+                    return err
+                })
+        }
+
+    }
+}
+
 export function updateCurrentWeekAction(week) {
     return (dispatch, getState) => {
         let { user: { token } } = getState()

@@ -3,15 +3,17 @@ import "./Bootcamp.css"
 
 
 
-export const CardTask = ({week, date, name, descript}) => {
+export const CardTask = ({ week, date, name, descript, onClick }) => {
     return (
         <section className="card-task">
-            <div style={{padding:"4%"}}>
+            <div style={{ padding: "4%" }}>
                 <h2>{week}</h2>
-                <p>{date}</p>
+                <p>{name}</p>
             </div>
-            <button className="complete">
-                <p>COMPLETAR</p>
+            <button
+                onClick={onClick}
+                className="complete">
+                COMPLETAR
             </button>
 
 

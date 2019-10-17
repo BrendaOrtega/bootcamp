@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Button, Modal, Input } from 'antd'
+import { Card, Button, Modal, Input, Tooltip } from 'antd'
 import { connect } from 'react-redux'
 import { setEditingBootcampAction } from '../../redux/adminDuck'
 import { addWeekAction, getBootcampAdminAction } from '../../redux/bootcampDuck'
@@ -22,9 +22,25 @@ function WeekView({ getBootcampAdminAction, addWeekAction, setEditingBootcampAct
 
     function renderWeek(item, i) {
         return (
-            <Card.Grid onClick={() => {
-                history.push(`/admin/weeks/${item._id}`)
-            }} key={i} style={gridStyle}>{item.title}<br />{item.description}</Card.Grid>
+            <Card.Grid
+                key={i} style={gridStyle}>{item.title}<br />
+                {item.description}
+                <br />
+                <Tooltip title="Learnings">
+                    <Button
+                        onClick={() => {
+                            history.push(`/admin/weeks/${item._id}`)
+                        }}
+                        icon="file-markdown" key="learnings" />
+                </Tooltip>
+                <Tooltip title="Homeworks">
+                    <Button
+                        onClick={() => {
+                            history.push(`/admin/weeks/${item._id}/homework`)
+                        }}
+                        icon="carry-out" key="homework" />
+                </Tooltip>
+            </Card.Grid>
         )
     }
 

@@ -2,7 +2,8 @@ import axios from 'axios'
 import { baseURL } from './baseURL'
 
 let initial = {
-    loggedIn: false
+    loggedIn: false,
+    bootcamps: []
 }
 function reducer(state = initial, action) {
     switch (action.type) {
