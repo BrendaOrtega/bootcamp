@@ -29,9 +29,13 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
         // get bootcmp with or without learnings
         let { id } = match.params
         if (id) getBootcampAction(id)
+            .then(() => {
+                // no habia weeks todavia
+                let index = localStorage.activeWeek
+                if (index) setActiveWeek(Number(index))
+            })
 
-        //let index = localStorage.activeWeek
-        //if (index) setActiveWeek(index)
+
     }, [])
 
     function changeWeek(index) {
@@ -79,7 +83,7 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
                     <div style={{ padding: "0 4%" }}>
                         <h3>Bootcamp Online: {bootcamp.title}</h3>
                         <p>{bootcamp.description} ⚛️</p>
-                        <p> <FontAwesome name="user" /> {bootcamp.students.length + 152} Estudiantes</p>
+                        <p> <FontAwesome name="user" /> {bootcamp.students.length + 195} Estudiantes</p>
                         <p> <FontAwesome name="calendar" /> 5 semanas </p>
                         <p> <FontAwesome name="file" /> Exámen final  </p>
                         {subscribed ? <button className="btn-in">Inscrito</button> : <button onClick={() => history.push('/apply')} className="btn-in">Inscríbete</button>}

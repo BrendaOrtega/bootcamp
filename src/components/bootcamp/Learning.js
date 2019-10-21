@@ -20,15 +20,20 @@ export default function Learning({ onOk, onCancel, learning, visible = true }) {
         onOk(e)
     }
 
+    function videoPlay() {
+        if (video.current && !video.current.paused) video.current.pause()
+        else video.current.play()
+    }
+
     return (
         <Modal
             style={{ minWidth: "80vw" }}
-            onCancel={onCancel}
+            onCancel={ok}
             footer={<Button type="primary" onClick={ok} >Ok</Button>}
             title={title}
             visible={visible}
         >
-            {link && <video ref={video} poster={portada} style={{ width: "100%" }} src={link} controls></video>}
+            {link && <video onClick={videoPlay} ref={video} poster={portada} style={{ width: "100%" }} src={link} controls></video>}
             <div className='markdown-body'>
                 <ReactMarkdown
                     renderers={{

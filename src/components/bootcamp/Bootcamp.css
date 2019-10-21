@@ -377,6 +377,11 @@ CARD*/
     cursor: crosshair;
     color:green;
 }
+.btn-in:hover{
+    background-color: #ca3e47;
+    color:white;
+    cursor: pointer;
+}
 .btn-pre:hover{
     background-color: orange;
     color:white;

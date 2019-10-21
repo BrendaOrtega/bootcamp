@@ -196,6 +196,7 @@ function WeekEdit({ updateCurrentWeekAction, error, deleteLearningAction, saveLe
                         />
                         Disonible a partir de:
                         <DatePicker
+                            showTime
                             value={moment(weekMod.startDate)}
                             format={"DD-MM-YYYY"} locale={locale} placeholder="Selecciona una fecha" onChange={(date) => onChangeWeek({ target: { name: "startDate", value: date.toString() } })} />
                         Disonible hasta:
