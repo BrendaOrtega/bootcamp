@@ -142,8 +142,13 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
                     <TabPane style={{ paddingLeft: 20 }} tab="Recursos" key="3">
                         Esta semana no cuenta con recursos extra
                     </TabPane>
-                    <TabPane style={{ paddingLeft: 20 }} tab="Exámen" key="4">
-                        El examen estará disponible al finalizar el bootcamp
+                    <TabPane style={{ paddingLeft: 20 }} tab="Ayuda" key="4">
+                        Recibe ayuda relacionada a la semana activa del bootcamp directamente de un miembro de nuestro equipo.
+                        <h3 style={{
+                            padding: 30,
+                            textAlign: "center",
+                            border: "2px dashed red"
+                        }} >Este feature aún está en desarrollo, esta semana lo liberaremos. ¡Gracias!</h3>
                     </TabPane>
                 </Tabs>,
 
