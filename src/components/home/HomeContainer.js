@@ -102,7 +102,7 @@ class HomeContainer extends Component {
                     <div className="cover">
                         <div className="slogan">
                             <h2>Aprende las <strong>herramientas</strong> y <strong>frameworks</strong> que usan los profesionales de la industria</h2>
-                            <p>Cursos, tutoriales, botocamps
+                            <p>Cursos, tutoriales, botocamps y más.
                             </p>
                             <br />
                             <Link to="/courses">

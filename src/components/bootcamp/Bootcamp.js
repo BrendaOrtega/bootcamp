@@ -8,6 +8,8 @@ import step1 from "../../assets/iconos_100x100_Mesa de trabajo 1.png"
 import step2 from "../../assets/iconos_100x100-02.png"
 import step3 from "../../assets/iconos_100x100-03.png"
 import step4 from "../../assets/iconos_100x100-04.png"
+import {CardBootcamp} from "../card/CardBootcamp";
+import image from "../../assets/badget1.png"
 
 const { TabPane } = Tabs;
 
@@ -31,15 +33,15 @@ class Bootcamp extends Component {
                 <div className="intro-bootcamp">
                     <div className="bootcamp-descript">
                         <div>
-                            <h2 style={{textAlign:"left"}} className="subtitulos">Online Bootcamp</h2>
+                            <h2 style={{textAlign:"left"}} className="subtitulos">Bootcamp Online</h2>
                             <br/>
                             <p>
-                                Si eres nuevo en programación, agrega este skill a tu carrera y preparate para impulsar tu carrera. <br/>
+                                Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
                                 Aprende los
                                 fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
-                            <p>21 de Octubre | 12:00 pm </p>
+                            <p>100% online | 8 semanas </p>
                             <br/>
                             <Link to="/apply">
                                 <Button ico="{ }" text="Inscribirme"/>
@@ -50,7 +52,21 @@ class Bootcamp extends Component {
 
                     </div>
                 </div>
-                <div className="summary">
+                <section className="destacados">
+                    <h2 className="subtitulos">¿Qué quieres aprender?</h2>
+                    <div className="flexin">
+
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+
+
+                    </div>
+                </section>
+              {/*  <div className="summary">
                     <h2 style={{textAlign:"left"}} className="subtitulos">Programa</h2>
                     <p className="textos">Establece las bases de programación y preparate para una este programa creado especialmente para
                         principiantes que quieren incursionar en el mundo del desarrollo web.
@@ -121,7 +137,7 @@ class Bootcamp extends Component {
                             </TabPane>
                         </Tabs>
                     </div>
-                </div>
+                </div>*/}
                 <div className="how">
                     <h2 className="subtitulos">¿Cómo funciona un Bootcamp Online?</h2>
                     <div className="box-steps">
@@ -133,9 +149,9 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Inscríbete</h3>
-                                <p>Inscríbete al bootcamp antes del día 21 de Octubre.
+                                <p>Inscríbete a cualquier bootcamp
 
-                                    Y completa el Prework aparecerá
+                                    Y completa el Prework que estará disponible
                                     en tu perfil.
                                 </p>
                             </div>
@@ -170,7 +186,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Exámen final</h3>
-                                <p>Para probar que has puesto atención  en cada lección, te haremos un breve exámen para obtener tu diploma y un
+                                <p>Para probar lo que has aprendido en cada lección, realizarás un exámen para obtener tu diploma y un
                                 suculento pack de stickers.
                                 </p>
                             </div>
@@ -180,12 +196,12 @@ class Bootcamp extends Component {
                 <div className="invite">
                     <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilziadas del
+                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas del
                         desarrollo.</p>
                     <p>
                         Encuentra cursos actualizados y concretos de las tecnologías más populares para el desarrollo de aplicaciones
                         web y móviles. Aprende con los profesionales y forma parte
-                        de nuestra comunidad.
+                        de nuestra gran comunidad.
 
                     </p>
                     <br/>

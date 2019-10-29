@@ -10,7 +10,7 @@ class Footer extends Component {
             <div className="footer">
                 <div className="box-one">
                     <img src={geeki} alt="logo-fixter"/>
-                    <h3 style={{color:"white"}}>FixterGeek</h3>
+                    <h3 style={{color:"white", marginLeft:"18px"}}>FixterGeek</h3>
                 </div>
                 <div>
                     <h3>Sobre Nosotros</h3>
