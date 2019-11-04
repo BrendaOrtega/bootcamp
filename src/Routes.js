@@ -13,6 +13,7 @@ import Team from "./components/home/Team";
 import Politicas from "./components/home/Politicas";
 import Login from './components/login/Login';
 import AdminPage from './components/admin/AdminPage';
+import Python from './components/bootcamp/Python';
 
 
 export const Router = () => (
@@ -33,6 +34,9 @@ export const Router = () => (
         <Route path="/apply" component={Apply} />
         <Route path="/profile" component={ProfileContainer} />
         <Route path="/null" component={ProfileContainer} />
+        {/* Secciones nuevas por bootcamp */}
+        <Route path="/python" component={Python} />
+
     </Switch>
 )
 

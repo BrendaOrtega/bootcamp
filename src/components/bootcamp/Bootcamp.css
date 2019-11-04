@@ -30,6 +30,15 @@
     background-position: center;
     background-attachment: fixed;
 }
+.bootcamp-img2{
+    width: 500px;
+    height: 100%;
+    flex-grow: 2;
+    background-image: url('https://www.liberiangeek.net/wp-content/uploads/2019/04/Phyton-1200x743.jpg');
+    background-size: cover;
+    background-position:right;
+    /* background-attachment: fixed; */
+}
 .summary{
     padding: 16px 2% 50px 2%;
     box-sizing: border-box;
