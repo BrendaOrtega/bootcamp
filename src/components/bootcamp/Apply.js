@@ -92,7 +92,7 @@ class Apply extends Component {
                 }
             })
             .catch(() => {
-                toastr.error("No se pudo cobrar")
+                toastr.error("No se pudo cobrar, intenta de nuevo")
             })
     }
     conektaErrorResponseHandler = (response) => {

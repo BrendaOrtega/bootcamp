@@ -17,7 +17,7 @@ function BootcampCard({ history, weeks, bootcamp, title, students = 100, _id, th
     }
     let link = "https://wallpaperplay.com/walls/full/3/c/4/164624.jpg"
     return (
-        <div style={{ maxWidth: 320 }} className="camp-info">
+        <div style={{ maxWidth: 320, marginRight: 10 }} className="camp-info">
             <div className="camp-banner" style={{ backgroundImage: `url(${link})` }}>
 
             </div>
