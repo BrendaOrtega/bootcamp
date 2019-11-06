@@ -141,13 +141,22 @@ export function makeBootcampPurchaseAction({ tokenId, bootcampId }) { // {tokenI
                 return res
             })
             .catch(err => {
-                if (!err.response) {
-                    dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: "Algo falló" })
-                    return "Algo falló, intenta más tarde, no se realizó ningún cobro."
-                }
-                dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: err.response.data.message })
-                return err.response.data.message
+                console.log(err)
+                dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: err.response.data.details[0].debug_message })
+                return err
             })
+        // .catch(err => {
+        //     if (!err.response) {
+        //         dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: "Algo falló" })
+        //         return "Algo falló, intenta más tarde, no se realizó ningún cobro."
+        //     }
+        //     console.log(err)
+        //     console.log(err.response)
+        //     console.log(err.response.data)
+        //     console.log(err.response.data.details[0].debug_message)
+        //     dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: err.response.data.message })
+        //     return err.response.data.message
+        // })
     }
 }
 

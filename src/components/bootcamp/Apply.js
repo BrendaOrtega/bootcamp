@@ -91,6 +91,9 @@ class Apply extends Component {
                     this.props.history.push('/profile')
                 }
             })
+            .catch(() => {
+                toastr.error("No se pudo cobrar")
+            })
     }
     conektaErrorResponseHandler = (response) => {
         this.setState({ error: response.message_to_purchaser })
@@ -100,7 +103,7 @@ class Apply extends Component {
 
 
     render() {
-        console.log(this.props.bootcamps)
+        //console.log(this.props.bootcamps)
         const steps = [
             {
                 title: 'Summary',
