@@ -24,7 +24,7 @@ export const Router = () => (
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />
-        <Redirect path="/bootcamp" to='/python' />
+        <Route exact path="/bootcamp" component={Python} />
         <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />
@@ -35,7 +35,7 @@ export const Router = () => (
         <Route path="/profile" component={ProfileContainer} />
         <Route path="/null" component={ProfileContainer} />
         {/* Secciones nuevas por bootcamp */}
-        <Route path="/python" component={Python} />
+        <Redirect path="/python" to="/bootcamp" />
 
     </Switch>
 )
