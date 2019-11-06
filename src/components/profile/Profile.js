@@ -17,6 +17,9 @@ function callback(key) {
 let photo = "https://media.licdn.com/dms/image/C4E0BAQGdnoI0RtTQnw/company-logo_200_200/0?e=2159024400&v=beta&t=jkaLWEXwLbkEejHmsvuQq9YD_qvbMIbYqbziiRb6NQs"
 
 export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL = photo, country, city, email, changePass, updatePassword }) => {
+
+    console.log(bootcamps)
+
     let input = useRef()
     let [profile, setProfile] = useState({})
     let [newPass, setNewPass] = useState(null)

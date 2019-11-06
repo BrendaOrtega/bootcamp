@@ -34,19 +34,22 @@ class Python extends Component {
                             <h2 style={{textAlign:"left"}} className="subtitulos">Online Bootcamp | Fundamentos de programación con Python 3</h2>
                             <br/>
                             <p>
-                                Si eres nuevo en programación, agrega este skill a tu carrera y preparate para impulsar tu carrera. <br/>
+                                Si eres nuevo en programación, agrega este skill y preparate para impulsar tu carrera. <br/>
                                 Aprende los
                                 fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>25 de Noviembre 2019 | 09:00 am </p>
                             <br/>
-                            {/* <Link to="/apply">
-                                <Button ico="{ }" text="Inscribirme"/>
-                            </Link> */}
+                            <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gridGap:10}}>
                             <a target="_blank" href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FTemario_Python3.pdf?alt=media&token=098d69d7-d41d-4292-ac4f-2818b4cc6463">
                              <Button ico="🎓" text="Descarga el temario"/>
                              </a>
+                             <Link to={"/apply?b=5dc1db06cd0b842984edca7c"}>
+                                <Button ico="{ }" text="Inscribirme"/>
+                            </Link>
+                            </div>
+                           
                         </div>
                     </div>
                     <div className="bootcamp-img2">
@@ -140,9 +143,9 @@ class Python extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Inscríbete</h3>
-                                <p>Inscríbete al bootcamp antes del día 21 de Octubre.
+                                <p>Inscríbete al bootcamp antes del día 25 de Noviembre.
 
-                                    Y completa el Prework aparecerá
+                                    Y completa el Prework que aparecerá
                                     en tu perfil.
                                 </p>
                             </div>
@@ -176,7 +179,7 @@ class Python extends Component {
                                 </div>
                             </div>
                             <div className="step-descript">
-                                <h3>Exámen final</h3>
+                                <h3>Examen final</h3>
                                 <p>Para probar que has puesto atención  en cada lección, te haremos un breve exámen para obtener tu diploma y un
                                 suculento pack de stickers.
                                 </p>

@@ -23,7 +23,7 @@ function AdminBootcamps({ bootcamps, history, setEditingBootcampAction }) {
                 cover={
                     <img
                         alt="example"
-                        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                        src="https://pbs.twimg.com/media/DM19m2yVoAAqynT.jpg"
                     />
                 }
                 actions={[
@@ -33,7 +33,7 @@ function AdminBootcamps({ bootcamps, history, setEditingBootcampAction }) {
                 ]}
             >
                 <Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                    avatar={<Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIYWWwEjIv6aZv2rGTFi1Syq70-NYSxUmkyMQ_48fPYsTXu9GV&s" />}
                     title={title}
                     description={_id}
                 />
@@ -44,7 +44,10 @@ function AdminBootcamps({ bootcamps, history, setEditingBootcampAction }) {
     return (
         <div >
             <h1>Bootcamps</h1>
-            {bootcamps.map(renderCard)}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+                {bootcamps.map(renderCard)}
+
+            </div>
         </div>
     )
 }

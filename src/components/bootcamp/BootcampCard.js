@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom'
 
 
 
-function BootcampCard({ history, weeks, bootcamp, title, students = 100, _id }) {
+function BootcampCard({ history, weeks, bootcamp, title, students = 100, _id, thumbnail }) {
     let available = false
     let week1 = false
     if (weeks && weeks[0] && (moment(weeks[0].startDate) < moment(Date.now()))) {
@@ -15,14 +15,14 @@ function BootcampCard({ history, weeks, bootcamp, title, students = 100, _id }) 
     if (weeks && weeks[1] && (moment(weeks[1].startDate) < moment(Date.now()))) {
         week1 = true
     }
-
+    let link = "https://wallpaperplay.com/walls/full/3/c/4/164624.jpg"
     return (
         <div style={{ maxWidth: 320 }} className="camp-info">
-            <div className="camp-banner" style={{ backgroundImage: `url(${"https://scontent.fmex6-1.fna.fbcdn.net/v/t31.0-8/28698604_1973144766082686_589124668727305128_o.jpg?_nc_cat=106&_nc_oc=AQnwFz_vHgdIYAyTU1FxakCgl3fkxvwbQBibZBanSW6jQ-KjRsV6IQnM-J1yFsWiD9M&_nc_ht=scontent.fmex6-1.fna&oh=1d59fb9f541cbc8f0126e1278b7d13b4&oe=5DA4579E"})` }}>
+            <div className="camp-banner" style={{ backgroundImage: `url(${link})` }}>
 
             </div>
             <div className="camp-avatar">
-                <img src={js} alt="logo-javascript" />
+                <img src={thumbnail || js} alt="logo-javascript" />
             </div>
             <div style={{ padding: "0 4%" }}>
                 <h3>Bootcamp Online: {title}</h3>

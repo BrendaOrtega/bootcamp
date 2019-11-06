@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import HomeContainer from './components/home/HomeContainer'
 import Bootcamp from "./components/bootcamp/Bootcamp";
 import Courses from "./components/courses/Courses";
@@ -24,7 +24,7 @@ export const Router = () => (
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />
-        <Route exact path="/bootcamp" component={Bootcamp} />
+        <Redirect path="/bootcamp" to='/python' />
         <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />
