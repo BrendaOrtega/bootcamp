@@ -10,6 +10,8 @@ import step3 from "../../assets/iconos_100x100-03.png"
 import step4 from "../../assets/iconos_100x100-04.png"
 import {CardBootcamp} from "../card/CardBootcamp";
 import image from "../../assets/badget1.png"
+import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png";
+import web from "../../assets/badge3D_Mesa_de_trabajo_1.png";
 
 const { TabPane } = Tabs;
 
@@ -41,7 +43,7 @@ class Bootcamp extends Component {
                                 fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
-                            <p>100% online | 8 semanas </p>
+                            <p>100% online | 5 y 8 semanas </p>
                             <br/>
                             <Link to="/apply">
                                 <Button ico="{ }" text="Inscribirme"/>
@@ -56,12 +58,29 @@ class Bootcamp extends Component {
                     <h2 className="subtitulos">¿Qué quieres aprender?</h2>
                     <div className="flexin">
 
+                            <CardBootcamp
+                                image={pyth}
+                                name="Fundamentos de Desarrollo con Python"
+                                descript="Aprende a programar con Python, aprende lo necesario sobre el modelo vista controlador"
+                                lecciones="45 lecciones"
+                                tiempo="6hrs"
+                                link="/bootcamp-descript"
+                                link2="/apply?b=5dc1db06cd0b842984edca7c"
+                            />
+                            <CardBootcamp
+                                image={web}
+                                name="Fundamentos de Desarrollo Web con JavaScript"
+                                descript="Aprende a crear y hostear tu propio sitio web con JavaScript"
+                                lecciones="74 lecciones"
+                                tiempo="7hrs"
+                            />
+
+                      {/*  <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
                         <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
                         <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
                         <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
                         <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
-                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
-                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>*/}
 
 
                     </div>
@@ -196,10 +215,9 @@ class Bootcamp extends Component {
                 <div className="invite">
                     <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas del
-                        desarrollo.</p>
+                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas para el desarrollo de software.</p>
                     <p>
-                        Encuentra cursos actualizados y concretos de las tecnologías más populares para el desarrollo de aplicaciones
+                        Encuentra cursos actualizados y concretos sobre las tecnologías más populares para el desarrollo de aplicaciones
                         web y móviles. Aprende con los profesionales y forma parte
                         de nuestra gran comunidad.
 

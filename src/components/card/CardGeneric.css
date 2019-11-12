@@ -34,17 +34,25 @@
 }
 
 .bootcamp-card{
-    width: 320px;
+    width: 360px;
     margin: 20px 10px;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     text-align: center;
-    padding: 2% 1%;
+    padding: 2% ;
     box-sizing: border-box;
+    transition: all 1s ease;
+}
+.bootcamp-card:hover{
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+.bootcamp-card a{
+    color: #45424c !important;
 }
 
 .bootcamp-badge img{
-   height: 80px;
+   height: 96px;
 }
 .bootcamp-card hr{
     background-color: #cccccc;
@@ -93,14 +101,20 @@
     opacity: .2;
 }
 .bootcamp-card button{
-    margin-left: -16px;
+  /*  margin-left: -16px;*/
     width: 120px;
     height: 32px;
     border-radius: 16px;
-    background-color: #a7a7a7;
+/*    background-color: #a7a7a7;*/
     border:none;
-    color:white;
+    border: 1px solid #ca3e47;
+    color:#ca3e47;
     cursor: pointer;
+    transition: all 1s ease;
+}
+.bootcamp-card button:hover{
+    background-color: #ca3e47;
+    color: white;
 }
 .flexin{
     display: flex;
@@ -108,6 +122,9 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
 .container-bootcamp{
     display: flex;
     flex-wrap: wrap;
@@ -115,26 +132,52 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
 }
+.contenedor{
+    width: 100%;
+    padding: 80px 15%;
+   box-sizing: border-box;
+}
+
 .container-summary{
     width: 240px;
     flex-grow: 1;
     padding: 0 2% 0 4%;
-    margin-top: 70px;
+}
+.line-red{
+    width:50%;
+    margin-left: 0px;
+    height: 2px;
+    border: none;
+    background-color: #ca3e47;
+    margin-top: -12px;
+    margin-bottom: 24px;
 }
 .container-content{
     width: 500px;
-    height: 100vh;
+    height: 110vh;
     flex-grow: 2;
-    padding: 0 4%;
-    background-color: #323232;
+    background-image: url("../../assets/17834072_1542858145778019_3295799447117516700_o.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+     padding: 0 4%;
+    padding-top: 70px;
     display: flex;
     align-items: center;
-
-    padding-top: 70px;
 }
 .name-descript{
-    font-size: 36px;
+    font-size: 48px;
+    color:#323232;
 }
 .description{
 
@@ -147,7 +190,7 @@
     background-color: #ca3e47;
     color: white;
     position: relative;
-    right: -200px;
+    right: -240px;
     margin: 24px 0 12px 0;
 }
 .teacher-camp{
@@ -169,4 +212,86 @@
     background-color: white;
     padding: 2%;
     margin: 0 10px;
+}
+.camp-programa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.box-programa{
+    width: 500px;
+    flex-grow: 2;
+    padding: 0 4% 0 0;
+    box-sizing: border-box;
+}
+.box-data{
+    width: 240px;
+    flex-grow: 1;
+    padding: 0 2%;
+    box-sizing: border-box;
+    padding-top: 150px;
+}
+.camp-programa h2, .contenedor h2{
+    color:#323232;
+    font-size: 36px;
+}
+.camp-programa h3{
+    color:#45424c;
+    font-size: 24px;
+}
+.box-data h3{
+    color:#323232;
+}
+.box-data p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.box-data hr{
+    height: 2px;
+    border-radius: 2px;
+    border: none;
+    width: 25%;
+    margin: 0 0 24px 0;
+    margin-left: 0px;
+    background-color: #ca3e47;
+
+}
+.download-t{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.temario{
+    width: 60%;
+}
+.temario p{
+    margin-left: 12px;
+}
+.downl{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+.downl div{
+    background-color: rgba(249,213,187, .3);
+    padding: 8% ;
+    box-sizing: border-box;
+    min-height: 320px;
+
+}
+.btn-down{
+    width: 120px;
+    height:40px ;
+    border:1px solid #ca3e47;
+    color: #ca3e47;
+    background-color: transparent;
+    margin: 48px 0;
+    padding: 4% 8%;
+}
+.downl a:hover{
+    color:  #ca3e47 !important;
 }

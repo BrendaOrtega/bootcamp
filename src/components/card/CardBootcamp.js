@@ -3,21 +3,23 @@ import "./CourseCard.css"
 import badge from "../../assets/badget1.png"
 import {Link} from "react-router-dom";
 
-export const CardBootcamp = ({image, name, lecciones, tiempo}) => {
+export const CardBootcamp = ({image, name, descript, lecciones, tiempo, link, link2}) => {
 
 
     return (
         <div className="bootcamp-card">
-
-            <div className="bootcamp-badge">
+            <Link to={link}>
+                <div className="bootcamp-badge">
                 <img className="badge" src={image} alt="badge-curso"/>
             </div>
+            <br/>
             <h2>{name}</h2>
-            <p>Aprende a programar con Python, aprende lo necesario sobre el modelo vista controlador</p>
+            <p>{descript}</p>
             <p>{lecciones} <span>&bull;</span> {tiempo}</p>
+            </Link>
             <hr/>
             <div className="bootcamp-alumni">
-                <div className="box-alumni">
+       {/*         <div className="box-alumni">
                     <div className="alumni" style={{backgroundImage:`url("https://scontent-qro1-1.xx.fbcdn.net/v/t1.0-9/71338768_2399328773495830_5281049889755627520_o.jpg?_nc_cat=100&_nc_oc=AQmKoPfk1US-8J1eOAW1li5YhtiYQw3MdM9Lddof42yVoSZjdAPK4EX-tXPQrqd7aDc&_nc_ht=scontent-qro1-1.xx&oh=b884bcb60961c77b95401bd713f5c272&oe=5E1ABA99")`}}>
 
                     </div>
@@ -27,13 +29,13 @@ export const CardBootcamp = ({image, name, lecciones, tiempo}) => {
                     <div className="alumni dos" style={{backgroundImage:`url("https://scontent-qro1-1.xx.fbcdn.net/v/t1.0-9/71338768_2399328773495830_5281049889755627520_o.jpg?_nc_cat=100&_nc_oc=AQmKoPfk1US-8J1eOAW1li5YhtiYQw3MdM9Lddof42yVoSZjdAPK4EX-tXPQrqd7aDc&_nc_ht=scontent-qro1-1.xx&oh=b884bcb60961c77b95401bd713f5c272&oe=5E1ABA99")`}}>
 
                     </div>
-                 {/*   <div className="alumni dos circle" >
+                    <div className="alumni dos circle" >
                         <p>+23</p>
-                    </div>*/}
-                </div>
-                <Link to="/bootcamp-descript">
+                    </div>
+                </div>*/}
+                <Link to={link2}>
                     <button>
-                        Inscribirme
+                        Ver más
                     </button>
                 </Link>
 

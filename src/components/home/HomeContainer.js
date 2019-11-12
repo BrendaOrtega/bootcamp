@@ -14,9 +14,12 @@ import jorge from "../../assets/jorge.jpg"
 import siete from "../../assets/badget1.png"
 import cinco from "../../assets/badget2.png"
 import seis from "../../assets/badget-3.png"
+import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png"
+import web from "../../assets/badge3D_Mesa_de_trabajo_1.png"
 // redux
 import { connect } from 'react-redux'
 import { getBootcampsAction } from '../../redux/bootcampDuck'
+import {CardBootcamp} from "../card/CardBootcamp";
 
 
 let react = require("../../assets/react.png")
@@ -181,9 +184,27 @@ class HomeContainer extends Component {
                     </div>
                 </section>
                 <section className="destacados">
-                    <h2 className="subtitulos">Nuevos Cursos</h2>
+                    <h2 className="subtitulos">Nuevos Bootcamps</h2>
                     <div className="box-destacados">
-                        <CourseCard image={siete} name="Empezando con Firebase Realtime Database"
+                        <CardBootcamp
+                            image={pyth}
+                            name="Fundamentos de Desarrollo con Python"
+                            descript="Aprende a programar con Python, aprende lo necesario sobre el modelo vista controlador"
+                            lecciones="45 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-descript"
+                            link2="/apply?b=5dc1db06cd0b842984edca7c"
+                        />
+                        <CardBootcamp
+                            image={web}
+                            name="Fundamentos de Desarrollo Web con JavaScript"
+                            descript="Aprende a crear y hostear tu propio sitio web con JavaScript"
+                            lecciones="74 lecciones"
+                            tiempo="7hrs"
+                        />
+
+
+                      {/*  <CourseCard image={siete} name="Empezando con Firebase Realtime Database"
                         lecciones="12 lecciones" tiempo="35 minutos"
                         />
                         <CourseCard image={cinco} name="Tu primer aplicación con Firebase"
@@ -191,7 +212,7 @@ class HomeContainer extends Component {
                         />
                         <CourseCard image={seis} name="Estructura de Datos Complejos con Realtime DB"
                                     lecciones="10 lecciones" tiempo="40 minutos"
-                        />
+                        />*/}
                     </div>
                 </section>
                 <section className="testimonios">
