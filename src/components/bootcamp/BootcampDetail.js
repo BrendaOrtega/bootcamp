@@ -150,7 +150,18 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
                             border: "2px dashed red"
                         }} >Este feature aún está en desarrollo, esta semana lo liberaremos. ¡Gracias!</h3>
                     </TabPane>
-                </Tabs>,
+
+                    {activeWeek === 4 && <TabPane style={{ paddingLeft: 20, textAlign: "center" }} tab={<Badge count={"new"} >Examen -</Badge>} key="5">
+                        <p>Completa el examen que se promediará con tus tareas para que puedas obtener tu certificado</p>
+                        <h3 style={{
+                            padding: 30,
+                            textAlign: "center",
+                            border: "2px dashed red"
+                        }} >
+                            Estamos subiendo el examen, estará disponible esta semanas. ¡Gracias!</h3>
+                    </TabPane>}
+
+                </Tabs>
 
 
 
