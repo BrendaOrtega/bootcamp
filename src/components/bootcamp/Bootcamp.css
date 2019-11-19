@@ -31,7 +31,7 @@
     background-attachment: fixed;
 }
 .summary{
-    padding: 16px 2% 50px 2%;
+    padding: 16px 2% 0px 2%;
     box-sizing: border-box;
 
 }
@@ -360,7 +360,7 @@ CARD*/
 .camp-task{
     width: 600px;
     flex-grow: 1;
-    padding: 2% 0 2% 0%;
+    padding: 2% 0 0% 0%;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -401,6 +401,16 @@ CARD*/
     cursor: pointer;
     color:orange;
     margin-top: 10px;
+}
+.window-chat{
+    padding: 0 2%;
+    box-sizing: border-box;
+
+}
+
+.tab-pad{
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 890px) {
