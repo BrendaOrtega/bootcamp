@@ -8,7 +8,7 @@ import avatar from "../../assets/avatar.png"
 export const NavBarDisplay = ({ loggedIn, logOut }) => {
     return (
         <div className="nav">
-            <Link to= "/">
+            <Link to="/">
                 <img className="logo" src={logo} alt="" />
             </Link>
             <div className="pestanas web">
@@ -21,21 +21,21 @@ export const NavBarDisplay = ({ loggedIn, logOut }) => {
                     <hr className="red-line" />
                 </Link>
 
-                <Link to="/apply">
+                <Link to="/apply?b=5dc1db06cd0b842984edca7c">
                     <button className="btn-aply">Aplicar</button>
                 </Link>
 
                 <hr className="line" />
                 {loggedIn ?
                     <div className="user-log dropdown">
-                      <Link to="/profile">
-                          <img className="avatar" src={avatar} alt="avatar"/>
-                      </Link>
+                        <Link to="/profile">
+                            <img className="avatar" src={avatar} alt="avatar" />
+                        </Link>
                         <div id="user-drop" className="dropdown-content">
                             <Link to="/profile">
-                            <p>Perfil</p>
+                                <p>Perfil</p>
                             </Link>
-                                <p onClick={logOut} className="linea">Cerrar Sesión</p>
+                            <p onClick={logOut} className="linea">Cerrar Sesión</p>
 
                         </div>
 
@@ -59,7 +59,7 @@ export const NavBarDisplay = ({ loggedIn, logOut }) => {
                             <Link to="/profile">
                                 <p>Perfil</p>
                             </Link>
-                        <p onClick={logOut} className="linea">Cerrar Sesión</p></div> :
+                            <p onClick={logOut} className="linea">Cerrar Sesión</p></div> :
                         <Link to="/login">
                             <p className="linea">Login - {loggedIn}</p>
                         </Link>}

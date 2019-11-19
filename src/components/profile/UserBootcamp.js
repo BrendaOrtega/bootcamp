@@ -18,7 +18,8 @@ export const UserBootcamp = ({ bootcamps = [] }) => {
                     <ButtonUser text="SABER MÁS" />
                 </Link>
             </div> :
-                <div style={{ display: "flex" }}>
+
+                <div style={{ display: "flex", flexWrap: "wrap" }}>
                     {bootcamps.map((bootcamp, i) => (
                         <BootcampCard bootcamp={bootcamp} key={i} {...bootcamp} />
                     ))}

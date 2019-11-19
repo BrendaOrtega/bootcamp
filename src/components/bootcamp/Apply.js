@@ -7,34 +7,25 @@ import StepTres from "./StepTres";
 import { connect } from 'react-redux'
 import toastr from 'toastr'
 import { makeBootcampPurchaseAction } from '../../redux/userDuck'
+import queryString from 'query-string'
+
 
 const { Step } = Steps;
-
-const steps = [
-    {
-        title: 'Summary',
-        content: <StepUno />,
-    },
-    {
-        title: 'Datos',
-        content: <StepDos />,
-    },
-    {
-        title: 'Confirmación',
-        content: <StepTres />,
-    },
-];
 
 class Apply extends Component {
     state = {
         current: 0,
         loading: false,
-        error: null
+        error: null,
+        bootcamp: { empty: true }
     };
+
+
 
     componentDidMount() {
         if (!this.props.loggedIn) {
-            this.props.history.push('/login?next=/apply')
+            let next = this.props.location.pathname + this.props.location.search
+            this.props.history.push(`/login?next=${next}`)
         }
         // conekta
         let script = document.createElement('script')
@@ -91,7 +82,7 @@ class Apply extends Component {
 
     conektaSuccessResponseHandler = token => {
         // action para enviar token
-        this.props.makeBootcampPurchaseAction({ tokenId: token.id, bootcampId: this.props.bootcamp._id })
+        this.props.makeBootcampPurchaseAction({ tokenId: token.id, bootcampId: this.props.selected._id })
             .then(() => {
                 this.setState({ loading: false })
                 if (this.props.error) toastr.error(this.props.error)
@@ -99,6 +90,9 @@ class Apply extends Component {
                     toastr.success("Pago realizado con éxito.")
                     this.props.history.push('/profile')
                 }
+            })
+            .catch(() => {
+                toastr.error("No se pudo cobrar, intenta de nuevo")
             })
     }
     conektaErrorResponseHandler = (response) => {
@@ -109,6 +103,23 @@ class Apply extends Component {
 
 
     render() {
+        //console.log(this.props.bootcamps)
+        const steps = [
+            {
+                title: 'Summary',
+                content: <StepUno
+                    selected={this.props.selected}
+                />,
+            },
+            {
+                title: 'Datos',
+                content: <StepDos />,
+            },
+            {
+                title: 'Confirmación',
+                content: <StepTres />,
+            },
+        ];
         const { current } = this.state;
         let { loggedIn } = this.props
         if (!loggedIn) return null
@@ -152,13 +163,20 @@ class Apply extends Component {
     }
 }
 
-function mapState({ user: { loggedIn, error }, bootcamps: { student, fetching, current } }) {
+function mapState({ user: { loggedIn, error }, bootcamps: { student, fetching, current, object } }, ownProps) {
+    let selected = current
+    let parsed = queryString.parse(ownProps.location.search)
+    if (parsed.b && object[parsed.b]) {
+        selected = object[parsed.b]
+    }
+
     return {
         loggedIn,
         student,
         fetching,
         bootcamp: current,
-        error
+        error,
+        selected
     }
 }
 
