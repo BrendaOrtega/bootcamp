@@ -44,7 +44,7 @@ class Bootcamp extends Component {
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
                             <br/>
-                            <Link to="/apply">
+                            <Link to={"/apply?b=5dc1db06cd0b842984edca7c"}>
                                 <Button ico="{ }" text="Inscribirme"/>
                             </Link>
                             <div>
@@ -67,7 +67,7 @@ class Bootcamp extends Component {
                                 lecciones="45 lecciones"
                                 tiempo="6hrs"
                                 link="/bootcamp-descript"
-                                link2="/apply?b=5dc1db06cd0b842984edca7c"
+                                link2={"/apply?b=5dc1db06cd0b842984edca7c"}
                                 action="Inscribirme"
                             />
                             <CardBootcamp

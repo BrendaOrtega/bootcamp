@@ -109,7 +109,7 @@ class HomeContainer extends Component {
                             <p>Cursos, tutoriales, botocamps y más.
                             </p>
                             <br />
-                            <Link to="/courses">
+                            <Link to="/bootcamp">
                                 <Button ico=">_" text=" Explorar" />
                             </Link>
                         </div>
@@ -194,7 +194,7 @@ class HomeContainer extends Component {
                             lecciones="45 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-descript"
-                            link2="/apply?b=5dc1db06cd0b842984edca7c"
+                            link2={"/apply?b=5dc1db06cd0b842984edca7c"}
                             action="Inscribirme"
                         />
                         <CardBootcamp

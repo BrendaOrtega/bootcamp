@@ -13,12 +13,10 @@ import Team from "./components/home/Team";
 import Politicas from "./components/home/Politicas";
 import Login from './components/login/Login';
 import AdminPage from './components/admin/AdminPage';
-<<<<<<< HEAD
 import BootcampDescript from "./components/bootcamp/BootcampDescript";
 import BootcampDescriptWeb from "./components/bootcamp/BootcampDescriptWeb";
-=======
 import Python from './components/bootcamp/Python';
->>>>>>> e4f3ec6a0ca81fe1ec1a5cad66cf4d2d4351ee74
+
 
 
 export const Router = () => (
