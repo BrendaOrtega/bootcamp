@@ -12,7 +12,7 @@ import moment from 'moment';
 import { getBootcampAction } from '../../redux/bootcampDuck'
 import Learning from './Learning';
 import HomeWork from './HomeWork'
-
+import img from "../../assets/28698604_1973144766082686_589124668727305128_o.jpg"
 const { TabPane } = Tabs;
 
 function callback(key) {
@@ -74,7 +74,7 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
         <section className="camp">
             <div className="camp-descript">
                 <div className="camp-info">
-                    <div className="camp-banner" style={{ backgroundImage: `url(${"https://scontent.fmex6-1.fna.fbcdn.net/v/t31.0-8/28698604_1973144766082686_589124668727305128_o.jpg?_nc_cat=106&_nc_oc=AQnwFz_vHgdIYAyTU1FxakCgl3fkxvwbQBibZBanSW6jQ-KjRsV6IQnM-J1yFsWiD9M&_nc_ht=scontent.fmex6-1.fna&oh=1d59fb9f541cbc8f0126e1278b7d13b4&oe=5DA4579E"})` }}>
+                    <div className="camp-banner" style={{ backgroundImage: `url(${img})` }}>
 
                     </div>
                     <div className="camp-avatar">

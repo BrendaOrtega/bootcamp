@@ -6,6 +6,7 @@ export const UserEvents = () => {
     return (
         <section className="user-courses">
             <div className="box-c none-user">
+                <h2> <strong>¡Ups! </strong></h2>
                 <p> No tenemos eventos programados por el momento.
                 </p>
                 <img style={{opacity:".7"}} src={img} alt=""/>

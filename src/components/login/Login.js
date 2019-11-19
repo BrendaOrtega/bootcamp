@@ -27,6 +27,7 @@ class Login extends Component {
     }
 
     componentDidMount() {
+        window.scroll(0, 0)
         if (this.props.loggedIn) return this._redirect()
         let parsed = queryString.parse(this.props.location.search)
         if (parsed.next) this.setState({ next: parsed.next })

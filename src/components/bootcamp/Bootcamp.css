@@ -196,6 +196,7 @@ CARD*/
     height: auto;
     min-height: 120px;
     background-color: white;
+
     /*
     box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
     */
@@ -212,6 +213,9 @@ CARD*/
     transition: all 1s ease;
     cursor: pointer;
 
+}
+.nn{
+    width: 280px;
 }
 
 .card-task{

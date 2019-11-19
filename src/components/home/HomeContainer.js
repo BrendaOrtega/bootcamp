@@ -3,10 +3,10 @@ import "./Home.css"
 import Button from "../common/Button";
 import { CourseCard } from "../card/CourseCard";
 import { Carousel } from 'antd';
-import uno from "../../assets/iconos_web_Mesa de trabajo 1 (1).png"
-import dos from "../../assets/iconos_web-02 (1).png"
-import tres from "../../assets/iconos_web-03 (1).png"
-import cuatro from "../../assets/iconos_web-04 (1).png"
+import uno from "../../assets/icono3_version2.png"
+import dos from "../../assets/icono4_version2.png"
+import tres from "../../assets/icono2_version2.png"
+import cuatro from "../../assets/icono1_version2.png"
 import { Link } from "react-router-dom";
 import oscar from "../../assets/ossscar.jpg"
 import carlitos from "../../assets/carlitos.jpg"
@@ -63,6 +63,7 @@ class HomeContainer extends Component {
 
 
     componentDidMount() {
+        window.scroll(0, 0)
         let script = document.createElement('script')
         script.src = 'https://cdn.jsdelivr.net/gh/cmiscm/stickerjs/sticker.min.js'
         script.async = true
@@ -188,12 +189,13 @@ class HomeContainer extends Component {
                     <div className="box-destacados">
                         <CardBootcamp
                             image={pyth}
-                            name="Fundamentos de Desarrollo con Python"
-                            descript="Aprende a programar con Python, aprende lo necesario sobre el modelo vista controlador"
+                            name="Fundamentos de Programación con Python"
+                            descript="Aprende todo lo necesario sobre el modelo vista controlador"
                             lecciones="45 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-descript"
                             link2="/apply?b=5dc1db06cd0b842984edca7c"
+                            action="Inscribirme"
                         />
                         <CardBootcamp
                             image={web}
@@ -201,6 +203,8 @@ class HomeContainer extends Component {
                             descript="Aprende a crear y hostear tu propio sitio web con JavaScript"
                             lecciones="74 lecciones"
                             tiempo="7hrs"
+                            link="/bootcamp-descript-web"
+                            action="Próximamente"
                         />
 
 

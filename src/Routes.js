@@ -14,6 +14,7 @@ import Politicas from "./components/home/Politicas";
 import Login from './components/login/Login';
 import AdminPage from './components/admin/AdminPage';
 import BootcampDescript from "./components/bootcamp/BootcampDescript";
+import BootcampDescriptWeb from "./components/bootcamp/BootcampDescriptWeb";
 
 
 export const Router = () => (
@@ -26,6 +27,7 @@ export const Router = () => (
         <Route path="/courses/detail" component={CoursesDetail} />
         <Route exact path="/bootcamp" component={Bootcamp} />
         <Route path="/bootcamp-descript" component={BootcampDescript}/>
+            <Route path="/bootcamp-descript-web" component={BootcampDescriptWeb}/>
         <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />

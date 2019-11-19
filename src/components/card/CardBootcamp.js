@@ -3,7 +3,7 @@ import "./CourseCard.css"
 import badge from "../../assets/badget1.png"
 import {Link} from "react-router-dom";
 
-export const CardBootcamp = ({image, name, descript, lecciones, tiempo, link, link2}) => {
+export const CardBootcamp = ({image, name, descript, lecciones, tiempo, link, link2, action}) => {
 
 
     return (
@@ -35,7 +35,7 @@ export const CardBootcamp = ({image, name, descript, lecciones, tiempo, link, li
                 </div>*/}
                 <Link to={link2}>
                     <button>
-                        Ver más
+                        {action}
                     </button>
                 </Link>
 

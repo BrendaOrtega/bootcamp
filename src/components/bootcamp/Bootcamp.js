@@ -12,7 +12,6 @@ import {CardBootcamp} from "../card/CardBootcamp";
 import image from "../../assets/badget1.png"
 import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png";
 import web from "../../assets/badge3D_Mesa_de_trabajo_1.png";
-
 const { TabPane } = Tabs;
 
 class Bootcamp extends Component {
@@ -48,6 +47,9 @@ class Bootcamp extends Component {
                             <Link to="/apply">
                                 <Button ico="{ }" text="Inscribirme"/>
                             </Link>
+                            <div>
+
+                            </div>
                         </div>
                     </div>
                     <div className="bootcamp-img">
@@ -66,6 +68,7 @@ class Bootcamp extends Component {
                                 tiempo="6hrs"
                                 link="/bootcamp-descript"
                                 link2="/apply?b=5dc1db06cd0b842984edca7c"
+                                action="Inscribirme"
                             />
                             <CardBootcamp
                                 image={web}
@@ -73,6 +76,8 @@ class Bootcamp extends Component {
                                 descript="Aprende a crear y hostear tu propio sitio web con JavaScript"
                                 lecciones="74 lecciones"
                                 tiempo="7hrs"
+                                link="/bootcamp-descript-web"
+                                action="Próximamente"
                             />
 
                       {/*  <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
@@ -168,9 +173,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Inscríbete</h3>
-                                <p>Inscríbete a cualquier bootcamp
-
-                                    Y completa el Prework que estará disponible
+                                <p>Inscríbete a cualquier bootcamp y completa el Prework que aparecerá disponible
                                     en tu perfil.
                                 </p>
                             </div>

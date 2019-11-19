@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import "./Bootcamp.css"
 import { Tabs } from 'antd';
+import {Link} from "react-router-dom";
+import download from "../../assets/iconos100x100DWN-05.png"
+import pactive from "../../assets/barra-de-progreso 2.svg"
+import pinactive from "../../assets/barra-de-progreso_inactive.svg"
+import katia from "../../assets/Screen Shot 2019-11-18 at 9.03.37 PM.png";
 
 class BootcampDescript extends Component {
     componentDidMount () {
@@ -38,13 +43,21 @@ class BootcampDescript extends Component {
                 <title>Bootcamp Python | FixterGeek</title>
                 <section className="container-bootcamp">
                     <div className="container-summary">
-                        <h2 className="name-descript">Fundamentos de Desarrollo con Python</h2>
+                        <h2 className="name-descript">Fundamentos de Programación con Python</h2>
                         <hr className="line-red"/>
-                        <p className="description"> Aprende las bases de la programación y preparate
-                            para este programa, creado especialmente para principiantes que quieren incursionar en el mundo de Python
-                            tanto para analisis de datos como para desarrollo web. </p>
-                        <button className="btn-float">Inscribete</button>
-
+                        <p className="description"> Aprende las bases de la programación, y preparate
+                            para este programa creado especialmente para principiantes que quieren incursionar en el mundo de Python
+                            tanto para análisis de datos como para desarrollo web. </p>
+                        <Link to="/apply?b=5dc1db06cd0b842984edca7c">
+                            <button className="btn-float">Inscribirme</button>
+                        </Link>
+                        <div className="nivel">
+                            <p>Nivel <span style={{fontSize:"10px"}}>(básico)</span></p>
+                            <img src={pactive} alt="nivel"/>
+                            <img style={{opacity:".3"}} src={pinactive} alt="nivel"/>
+                            <img style={{opacity:".3"}} src={pinactive} alt="nivel"/>
+                            <img style={{opacity:".3"}} src={pinactive} alt="nivel"/>
+                        </div>
                     </div>
                     <div className="container-content">
                         <div className="background">
@@ -76,17 +89,23 @@ class BootcampDescript extends Component {
                 <section style={{backgroundColor:"#f5f5f5"}} className="contenedor camp-programa">
                     <div className="box-programa">
                         <h2>
-                            ¡Explora el poder del desarrollo web front-end con Python!</h2>
+                            ¡Explora el poder de la programación con Python!</h2>
                         <br/>
-                        <h3>Web experiences</h3>
-                        <p>Add more depth to your websites with our JavaScript course. You'll start with the basics of functional programming, like objects, arrays, and jQuery. Then you’ll cover APIs and AJAX, and promises, among other topics. You will leave this course with the perfect addition to your front-end skillset.</p>
+                        <h3>Por qué aprender Python...</h3>
+                        <p>
+                            Python es un lenguaje de programación versátil y popular, es uno de los lenguajes de programación más populares y de más rápido crecimiento del mundo, utilizado por ingenieros de software, analistas, científicos de datos e ingenieros de machine learning.
+                        </p>
                         <br/>
-                        <h3>Unmatched Experience</h3>
-                        <p>This JavaScript course is a unique offering in Toronto. Nowhere else can you join a classroom of people focused specifically on learning JavaScript. Since HTML & CSS are a prerequisite, you’ll dive right into JavaScript and spend 48 in-class hours mastering curriculum that is regularly updated to ensure you’re learning the best, most relevant programming topics.</p>
+                        <h3>Experiencia inigulable</h3>
+                        <p>
+                          Este curso es una gran introducción a los conceptos básicos de programación,
+                          en donde al final, entenderás como utilizar este lenguaje y como aplicarlo tanto para el
+                          análisis de datos, como para el desarrollo web.
+                        </p>
                     </div>
                     <div className="box-data">
                         <p>Próxima edición</p>
-                        <h3>25 de Noviembre</h3>
+                        <h3>25 de Noviembre 2018</h3>
 
                         <hr/>
                         <p>Más de 24 hrs de ejercicios en</p>
@@ -94,9 +113,9 @@ class BootcampDescript extends Component {
 
                         <hr/>
                         <p>Aprende con la práctica</p>
-                        <h3>4 proyectos</h3>
+                        <h3>1 examen final</h3>
                         <hr/>
-                        <p>Precio especial Edición cero</p>
+                        <p>Precio especial edición cero</p>
                         <h3>$ 1,000.00</h3>
 
                         <hr/>
@@ -105,8 +124,8 @@ class BootcampDescript extends Component {
                 <section className="contenedor download-t">
                     <div className="temario">
                        <h2>¿Qué vas a aprender?</h2>
-                        <p>Algunas cosas que aprenderás ene ste curso son:</p>
-                        <p><span>&bull;</span> Funcionaes, ciclos y condicionales</p>
+                        <p>Algunas cosas que aprenderás en este curso son:</p>
+                        <p><span>&bull;</span> Funciones, ciclos y condicionales</p>
                         <p><span>&bull;</span> Debug, tracing y logging</p>
                         <p><span>&bull;</span> Expresiones regulares en Python</p>
                         <p><span>&bull;</span> Funciones lambda</p>
@@ -120,15 +139,26 @@ class BootcampDescript extends Component {
                         <div>
                         <h3>TEMARIO</h3>
                         <p>¿Quieres saber más sobre lo que aprenderás en el bootcamp?
-                        Descarga el temario completo en PDF
+                        Descarga el temario completo en PDF.
                         </p>
+
                             <br/>
-                        <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FTemario_Python3.pdf?alt=media&token=098d69d7-d41d-4292-ac4f-2818b4cc6463" target="blank" className="btn-down">
-                          Descargar
+                        <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FTemario_Python3.pdf?alt=media&token=098d69d7-d41d-4292-ac4f-2818b4cc6463" target="blank" >
+                            <img src={download} alt="descargar-temario"/>
                         </a>
                         </div>
                     </div>
                 </section>
+               {/* <section className="team-education">
+                    <div>
+                    <div className="circulo katia">
+
+                    </div>
+                        <br/>
+                    <h2>Katia Lira</h2>
+                        <p>Teacher</p>
+                    </div>
+                </section>*/}
                {/* <img src="https://images.pexels.com/photos/2625766/pexels-photo-2625766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/>
                 <section style={{MaxHeight:"200px", overflow:"hidden"}}>
                     <OwlCarousel ref="car" options={options}  >

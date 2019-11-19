@@ -166,6 +166,18 @@
 
 
 }
+.nivel p{
+    margin-bottom: 0px;
+}
+.nivel img{
+    width: 24px;
+    margin-right: 4px;
+}
+#contain{
+
+    background-image: url("../../assets/25438830_1861335307263633_2930730188315941572_o.jpg");
+
+}
 .background{
     width: 100%;
     height: 100%;
@@ -262,6 +274,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
 }
 .temario{
     width: 60%;
@@ -277,11 +291,14 @@
 
 }
 .downl div{
-    background-color: rgba(249,213,187, .3);
+    background-color: rgba(104,159,99, .06);
     padding: 8% ;
     box-sizing: border-box;
     min-height: 320px;
 
+}
+.downl div img{
+    width: 120px;
 }
 .btn-down{
     width: 120px;
@@ -294,4 +311,75 @@
 }
 .downl a:hover{
     color:  #ca3e47 !important;
+}
+.team-education{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    background-color: rgb(245, 245, 245);
+    padding: 5%;
+    box-sizing: border-box;
+}
+.circulo{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 8px solid white;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.katia{
+    background-image: url("../../assets/Screen Shot 2019-11-18 at 9.03.37 PM.png");
+}
+
+@media (max-width: 1000px) {
+    .container-summary{
+        width: 500px;
+    }
+    .container-content{
+        width: 200px;
+    }
+    .btn-float{
+        right: -400px;
+    }
+    .box-data{
+        padding-top: 40px;
+    }
+    .contenedor{
+        padding: 40px 10%;
+    }
+}
+@media (max-width: 680px) {
+    .container-summary{
+        padding: 100px 5% 40px 5%;
+    }
+    .btn-float{
+        right: 0px;
+    }
+    #contain{
+        height: 40vh;
+    }
+    .nivel{
+        margin-top: 32px;
+    }
+    .temario{
+        width: 100%;
+    }
+
+    .downl{
+        margin-top: 32px;
+        width: 100%;
+
+    }
+    .contenedor{
+        padding: 40px 8%;
+    }
+    .box-data{
+        padding-top: 32px;
+    }
 }
