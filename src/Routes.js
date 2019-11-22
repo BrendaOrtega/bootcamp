@@ -14,6 +14,7 @@ import Politicas from "./components/home/Politicas";
 import Login from './components/login/Login';
 import AdminPage from './components/admin/AdminPage';
 import Python from './components/bootcamp/Python';
+import BuyForGift from './components/bootcamp/BuyForGift';
 
 
 export const Router = () => (
@@ -36,6 +37,7 @@ export const Router = () => (
         <Route path="/null" component={ProfileContainer} />
         {/* Secciones nuevas por bootcamp */}
         <Redirect path="/python" to="/bootcamp" />
+        <Route to="/gift" component={BuyForGift} />
 
     </Switch>
 )
