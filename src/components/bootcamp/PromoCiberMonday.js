@@ -147,7 +147,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                 <h2>Pre ordena cualquiera de nuestros bootcamps que comienzan en 2020</h2>
                 <h4>Con solo <strong>$250.00MXN</strong></h4>
                 <h4>Y paga el resto hasta febrero con 25% de descuento</h4>
-                <h5><em>Costo real del bootcamp en 2020: $3,000 Tu solo pagarás: $1,500 (en total)</em></h5>
+                <h5><em>Costo real del bootcamp en 2020: $3,000 Tu sólo pagarás: $1,500 (en total)</em></h5>
                 <p style={{ color: "green" }}>Esta pre orden es valida para cualquier bootcamp</p>
                 <div>
                     <Input
@@ -172,7 +172,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                     />
                     <p style={{ color: "red" }}>{errors.general}</p>
                     <p>¿A qué bootcamp te gustaría inscribirte para 2020?</p>
-                    <Select style={{ width: "100%" }} defaultValue={"5de52b17734c4163308b63fe"} onChange={handleChange}>
+                    <Select style={{ width: "100%", outline: "thick double #ca3e47" }} defaultValue={"5de52b17734c4163308b63fe"} onChange={handleChange}>
                         {bootcamps.map((b, i) => {
                             return <option key={i} value={b._id} >{b.title}</option>
                         })}
@@ -244,7 +244,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                     {loading ? <Spin /> : "Realizar el pago"}
                 </Button>
             </div>{/*// box */}
-        </div>
+        </div >
     );
 };
 
