@@ -15,7 +15,13 @@ import Login from './components/login/Login';
 import AdminPage from './components/admin/AdminPage';
 import Python from './components/bootcamp/Python';
 import BuyForGift from './components/bootcamp/BuyForGift';
+import PromoCiberMonday from './components/bootcamp/PromoCiberMonday';
 
+let PrivateRoute = ({ component, next, ...rest }) => {
+    let user = localStorage.user
+    if (!user) return <Redirect to={`/login?next=${next}`} />
+    return <Route to="/promo" component={component} {...rest} />
+}
 
 export const Router = () => (
     <Switch>
@@ -37,6 +43,7 @@ export const Router = () => (
         <Route path="/null" component={ProfileContainer} />
         {/* Secciones nuevas por bootcamp */}
         <Redirect path="/python" to="/bootcamp" />
+        <PrivateRoute next="/promo" to="/promo" component={PromoCiberMonday} />
         <Route to="/gift" component={BuyForGift} />
 
     </Switch>
