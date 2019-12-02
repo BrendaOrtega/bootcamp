@@ -138,7 +138,7 @@ export function makeBootcampPurchasePromoAction({ total, tokenId, tel, email, fu
             bootcampId
         }
         dispatch({ type: MAKE_BOOTCAMP_PURCHASE })
-        return axios.post(`${baseURL}/pay/bootcamp/group`, data, { headers: { Authorization: token } })
+        return axios.post(`${baseURL}/pay/bootcamp/promo`, data, { headers: { Authorization: token } })
             .then(res => {
                 dispatch({ type: MAKE_BOOTCAMP_PURCHASE_SUCCESS, payload: { ...res.data } })
                 return res
@@ -161,7 +161,7 @@ export function makeBootcampPurchaseGroupAction({ total, tokenId, tel, email, fu
             total
         }
         dispatch({ type: MAKE_BOOTCAMP_PURCHASE })
-        return axios.post(`${baseURL}/pay/bootcamp/promo`, data)
+        return axios.post(`${baseURL}/pay/bootcamp/group`, data)
             .then(res => {
                 dispatch({ type: MAKE_BOOTCAMP_PURCHASE_SUCCESS, payload: { ...res.data } })
                 return res
