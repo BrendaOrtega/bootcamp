@@ -14,7 +14,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
     let [errors, setError] = useState({})
     let [total, setTotal] = useState(250)
     let [loading, setLoading] = useState(false)
-    let [form, setForm] = useState({})
+    let [form, setForm] = useState({ bootcampId: "5de52b17734c4163308b63fe" })
     let [success, setSuccess] = useState(false)
 
     useEffect(() => {
@@ -174,7 +174,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                     />
                     <p style={{ color: "red" }}>{errors.general}</p>
                     <p>¿A qué bootcamp te gustaría inscribirte para 2020?</p>
-                    <Select style={{ width: "100%", outline: "thick double #ca3e47" }} defaultValue={"5de52b17734c4163308b63fe"} onChange={handleChange}>
+                    <Select style={{ width: "100%", outline: "thick double #ca3e47" }} defaultValue={form.bootcampId} onChange={handleChange}>
                         {bootcamps.map((b, i) => {
                             return <option key={i} value={b._id} >{b.title}</option>
                         })}
