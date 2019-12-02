@@ -124,6 +124,57 @@ export function recoverPassword(email) {
     }
 }
 
+// compras
+
+export function makeBootcampPurchasePromoAction({ total, tokenId, tel, email, fullName, bootcampId }) { // {tokenId, bootcampId}
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        let data = {
+            tel,
+            fullName,
+            email,
+            tokenId,
+            total,
+            bootcampId
+        }
+        dispatch({ type: MAKE_BOOTCAMP_PURCHASE })
+        return axios.post(`${baseURL}/pay/bootcamp/group`, data, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({ type: MAKE_BOOTCAMP_PURCHASE_SUCCESS, payload: { ...res.data } })
+                return res
+            })
+            .catch(err => {
+                console.log(err)
+                dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: err.response.data.details[0].message })
+                return err
+            })
+    }
+}
+
+export function makeBootcampPurchaseGroupAction({ total, tokenId, tel, email, fullName }) { // {tokenId, bootcampId}
+    return dispatch => {
+        let data = {
+            tel,
+            fullName,
+            email,
+            tokenId,
+            total
+        }
+        dispatch({ type: MAKE_BOOTCAMP_PURCHASE })
+        return axios.post(`${baseURL}/pay/bootcamp/promo`, data)
+            .then(res => {
+                dispatch({ type: MAKE_BOOTCAMP_PURCHASE_SUCCESS, payload: { ...res.data } })
+                return res
+            })
+            .catch(err => {
+                console.log(err)
+                dispatch({ type: MAKE_BOOTCAMP_PURCHASE_ERROR, payload: err.response.data.details[0].message })
+                return err
+            })
+    }
+}
+
+
 export function makeBootcampPurchaseAction({ tokenId, bootcampId }) { // {tokenId, bootcampId}
     return (dispatch, getState) => {
         let { user: { token }, bootcamps: { student } } = getState()

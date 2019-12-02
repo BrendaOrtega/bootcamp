@@ -139,9 +139,9 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
                             {homeworks && homeworks.map(renderHomeworkCard)}
                         </div>
                     </TabPane>
-                    <TabPane style={{ paddingLeft: 20 }} tab="Recursos" key="3">
+                    {/* <TabPane style={{ paddingLeft: 20 }} tab="Recursos" key="3">
                         Esta semana no cuenta con recursos extra
-                    </TabPane>
+                    </TabPane> */}
                     <TabPane style={{ paddingLeft: 20 }} tab="Ayuda" key="4">
                         Recibe ayuda relacionada a la semana activa del bootcamp directamente de un miembro de nuestro equipo.
                         <h3 style={{
