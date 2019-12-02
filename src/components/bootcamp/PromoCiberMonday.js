@@ -64,7 +64,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
 
     function conektaSuccessResponseHandler(token) {
         // action para enviar token
-        makeBootcampPurchasePromoAction({ tokenId: token.id, total, tel: form.tel, email: form.email, fullName: form.fullName })
+        makeBootcampPurchasePromoAction({ tokenId: token.id, total, tel: form.tel, email: form.email, fullName: form.fullName, bootcampId: form.bootcampId })
             .then(() => {
                 setLoading(false)
                 if (error) toastr.error(error)
@@ -128,7 +128,9 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
     }
 
     function handleChange(value) {
-        setTotal(Number(value) * 1000)
+        setForm({ "bootcampId": value })
+        console.log(form)
+        // setTotal(Number(value) * 1000)
     }
     if (success) return (
         <div style={{ minHeight: "72vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
