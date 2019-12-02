@@ -65,6 +65,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
     function conektaSuccessResponseHandler(token) {
         // action para enviar token
         makeBootcampPurchasePromoAction({ tokenId: token.id, total, tel: form.tel, email: form.email, fullName: form.fullName, bootcampId: form.bootcampId })
+            // camba esto !!!    
             .then(() => {
                 setLoading(false)
                 if (error) toastr.error(error)
@@ -146,9 +147,9 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
     return (
         <div style={{ minHeight: "72vh", display: "flex", justifyContent: "center", alignItems: "center" }} className="">
             <div className="step apply-box">
-                <h2>Pre ordena cualquiera de nuestros bootcamps que comienzan en 2020</h2>
+                <h2>Pre ordena cualquiera de nuestros bootcamps que comienzan en 2020 y aparta tu lugar</h2>
                 <h4>Con solo <strong>$250.00MXN</strong></h4>
-                <h4>Y paga el resto hasta febrero con 25% de descuento</h4>
+                <h4>Y paga el resto hasta febrero con 50% de descuento</h4>
                 <h5><em>Costo real del bootcamp en 2020: $3,000 Tu sólo pagarás: $1,500 (en total)</em></h5>
                 <p style={{ color: "green" }}>Esta pre orden es valida para cualquier bootcamp</p>
                 <div>
