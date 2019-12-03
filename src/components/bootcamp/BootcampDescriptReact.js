@@ -3,8 +3,8 @@ import "./Bootcamp.css"
 import pactive from "../../assets/barra-de-progreso 2.svg";
 import pinactive from "../../assets/barra-de-progreso_inactive.svg";
 import download from "../../assets/iconos100x100DWN-05.png";
-import {Link} from "react-router-dom";
-class BootcampDescriptWeb extends Component {
+
+class BootcampDescriptReact extends Component {
     componentDidMount () {
         window.scroll(0, 0)
     }
@@ -44,10 +44,7 @@ class BootcampDescriptWeb extends Component {
                         <hr className="line-red"/>
                         <p className="description"> Aprende las bases de la programación y preparate
                             para incursionar en el mundo del desarrollo Web utilizando uno de los lenguajes más utilizados: JavaScript.</p>
-                        <Link to="/preorder">
-                            <button className="btn-float">Pre-inscripción</button>
-                        </Link>
-
+                        <button className="btn-float">Próximamente</button>
                         <div className="nivel">
                             <p>Nivel <span style={{fontSize:"10px"}}>(básico)</span></p>
                             <img src={pactive} alt="nivel"/>
@@ -93,8 +90,8 @@ class BootcampDescriptWeb extends Component {
                         <p>Aprende con la práctica</p>
                         <h3>1 exámen final</h3>
                         <hr/>
-                        <p>Precio especial diciembre</p>
-                        <h3>$ 1,500.00</h3>
+                        <p>Precio especial edición cero</p>
+                        <h3>$ 1,000.00</h3>
 
                         <hr/>
                     </div>
@@ -125,7 +122,7 @@ class BootcampDescriptWeb extends Component {
                         </div>
                     </div>
                 </section>
-             {/*   <section className="team-education">
+                {/*   <section className="team-education">
                     <div className="circulo katia">
                         <img src={katia} alt="katia"/>
                     </div>
@@ -135,4 +132,4 @@ class BootcampDescriptWeb extends Component {
     }
 }
 
-export default BootcampDescriptWeb;
+export default BootcampDescriptReact;

@@ -12,6 +12,7 @@ import {CardBootcamp} from "../card/CardBootcamp";
 import image from "../../assets/badget1.png"
 import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png";
 import web from "../../assets/badge3D_Mesa_de_trabajo_1.png";
+import rea from "../../assets/badget-3.png";
 const { TabPane } = Tabs;
 
 class Bootcamp extends Component {
@@ -68,7 +69,7 @@ class Bootcamp extends Component {
                                 tiempo="6hrs"
                                 link="/bootcamp-descript"
                                 link2={"/apply?b=5dc1db06cd0b842984edca7c"}
-                                action="Inscribirme"
+                                action="Pre-inscripción"
                             />
                             <CardBootcamp
                                 image={web}
@@ -77,8 +78,28 @@ class Bootcamp extends Component {
                                 lecciones="74 lecciones"
                                 tiempo="7hrs"
                                 link="/bootcamp-descript-web"
-                                action="Próximamente"
+                                action="Pre-inscripción"
                             />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
+                            name="Aplicaciones web fullstack con Laravel"
+                            descript="Crea una aplicación web de 0 a 100 con PHP y Laravel "
+                            lecciones="+ 50 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-descript-laravel"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
+                     {/*   <CardBootcamp
+                            image={rea}
+                            name="Desarrollo Frontend con ReactJs + Redux"
+                            descript="Crea una aplicación web "
+                            lecciones="72 lecciones"
+                            tiempo="8hrs"
+                            link="/bootcamp-descript-react"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />*/}
 
                       {/*  <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
                         <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>

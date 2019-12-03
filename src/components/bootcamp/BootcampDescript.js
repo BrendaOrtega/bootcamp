@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import download from "../../assets/iconos100x100DWN-05.png"
 import pactive from "../../assets/barra-de-progreso 2.svg"
 import pinactive from "../../assets/barra-de-progreso_inactive.svg"
-import katia from "../../assets/Screen Shot 2019-11-18 at 9.03.37 PM.png";
 
 class BootcampDescript extends Component {
     componentDidMount () {
@@ -48,8 +47,8 @@ class BootcampDescript extends Component {
                         <p className="description"> Aprende las bases de la programación, y preparate
                             para este programa creado especialmente para principiantes que quieren incursionar en el mundo de Python
                             tanto para análisis de datos como para desarrollo web. </p>
-                        <Link to="/apply?b=5dc1db06cd0b842984edca7c">
-                            <button className="btn-float">Inscribirme</button>
+                        <Link to="/preorder">
+                            <button className="btn-float">Pre-inscripción</button>
                         </Link>
                         <div className="nivel">
                             <p>Nivel <span style={{fontSize:"10px"}}>(básico)</span></p>
@@ -59,7 +58,7 @@ class BootcampDescript extends Component {
                             <img style={{opacity:".3"}} src={pinactive} alt="nivel"/>
                         </div>
                     </div>
-                    <div className="container-content">
+                    <div id="python" className="container-content">
                         <div className="background">
                        {/* <div className="week">
                             <h3>5 semanas</h3>
@@ -105,7 +104,7 @@ class BootcampDescript extends Component {
                     </div>
                     <div className="box-data">
                         <p>Próxima edición</p>
-                        <h3>25 de Noviembre 2018</h3>
+                        <h3>20 de Enero de 2020</h3>
 
                         <hr/>
                         <p>Más de 24 hrs de ejercicios en</p>
@@ -115,8 +114,8 @@ class BootcampDescript extends Component {
                         <p>Aprende con la práctica</p>
                         <h3>1 examen final</h3>
                         <hr/>
-                        <p>Precio especial edición cero</p>
-                        <h3>$ 1,000.00</h3>
+                        <p>Precio especial diciembre</p>
+                        <h3>$ 1,500.00</h3>
 
                         <hr/>
                     </div>

@@ -166,6 +166,10 @@
 
 
 }
+
+#python{
+    background-image: url("../../assets/25438830_1861335307263633_2930730188315941572_o.jpg");
+}
 .nivel p{
     margin-bottom: 0px;
 }
@@ -175,7 +179,9 @@
 }
 #contain{
 
+    /*
     background-image: url("../../assets/25438830_1861335307263633_2930730188315941572_o.jpg");
+    */
 
 }
 .background{
@@ -335,7 +341,6 @@
     cursor: pointer;
 }
 .katia{
-    background-image: url("../../assets/Screen Shot 2019-11-18 at 9.03.37 PM.png");
 }
 
 @media (max-width: 1000px) {

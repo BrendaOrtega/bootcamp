@@ -150,14 +150,14 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
                             Recibe ayuda relacionada a la semana activa del bootcamp directamente de un miembro de nuestro equipo.
                         </p>
                         <br/>
-                        <section className="window-chat">
+                      {/*  <section className="window-chat">
                             <div className="fix">
                                 <Message/>
                             </div>
                             <div >
                                 <SendMessage/>
                             </div>
-                        </section>
+                        </section>*/}
                     </TabPane>
                 </Tabs>,
 
