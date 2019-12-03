@@ -32,3 +32,360 @@
     font-family: Avenir;
     margin: 0;
 }
+
+.bootcamp-card{
+    width: 360px;
+    margin: 20px 10px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 2% ;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+.bootcamp-card:hover{
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+.bootcamp-card a{
+    color: #45424c !important;
+}
+
+.bootcamp-badge img{
+   height: 96px;
+}
+.bootcamp-card hr{
+    background-color: #cccccc;
+    height: 1px;
+    border: none;
+    opacity: .8;
+    width: 30%;
+    border-radius: 1px;
+}
+.bootcamp-alumni{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.box-alumni{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  /*  margin-right: 10px;*/
+}
+.alumni{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    z-index: 999;
+}
+.dos{
+    margin-left: -12px;
+}
+.circle{
+    border: 1px solid rgba(167,167,167,.2);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.circle p{
+    margin: 0;
+    opacity: .2;
+}
+.bootcamp-card button{
+  /*  margin-left: -16px;*/
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+/*    background-color: #a7a7a7;*/
+    border:none;
+    border: 1px solid #ca3e47;
+    color:#ca3e47;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.bootcamp-card button:hover{
+    background-color: #ca3e47;
+    color: white;
+}
+.flexin{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container-bootcamp{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
+}
+.contenedor{
+    width: 100%;
+    padding: 80px 15%;
+   box-sizing: border-box;
+}
+
+.container-summary{
+    width: 240px;
+    flex-grow: 1;
+    padding: 0 2% 0 4%;
+}
+.line-red{
+    width:50%;
+    margin-left: 0px;
+    height: 2px;
+    border: none;
+    background-color: #ca3e47;
+    margin-top: -12px;
+    margin-bottom: 24px;
+}
+.container-content{
+    width: 500px;
+    height: 110vh;
+    flex-grow: 2;
+    background-image: url("../../assets/17834072_1542858145778019_3295799447117516700_o.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+
+#python{
+    background-image: url("../../assets/25438830_1861335307263633_2930730188315941572_o.jpg");
+}
+.nivel p{
+    margin-bottom: 0px;
+}
+.nivel img{
+    width: 24px;
+    margin-right: 4px;
+}
+#contain{
+
+    /*
+    background-image: url("../../assets/25438830_1861335307263633_2930730188315941572_o.jpg");
+    */
+
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+     padding: 0 4%;
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+}
+.name-descript{
+    font-size: 48px;
+    color:#323232;
+}
+.description{
+
+}
+.btn-float {
+    width: 240px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    background-color: #ca3e47;
+    color: white;
+    position: relative;
+    right: -240px;
+    margin: 24px 0 12px 0;
+    cursor: pointer;
+}
+.teacher-camp{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+.teacher-img{
+    width: 40px;
+    height: 40px;
+    background-image: url("https://scontent-qro1-1.xx.fbcdn.net/v/t1.0-9/20228641_1351770944918290_3546740758961337379_n.jpg?_nc_cat=100&_nc_oc=AQmqipNS4y8jRDClcopZhQYwVC2pp1EN78uslioDIOOCTNsgOaFwqqNPbKNmwuyUPtw&_nc_ht=scontent-qro1-1.xx&oh=98360cce24397fe372ff18bc0da8573e&oe=5E51CE09");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-right: 16px;
+}
+.week{
+    width: 200px;
+    background-color: white;
+    padding: 2%;
+    margin: 0 10px;
+}
+.camp-programa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.box-programa{
+    width: 500px;
+    flex-grow: 2;
+    padding: 0 4% 0 0;
+    box-sizing: border-box;
+}
+.box-data{
+    width: 240px;
+    flex-grow: 1;
+    padding: 0 2%;
+    box-sizing: border-box;
+    padding-top: 150px;
+}
+.camp-programa h2, .contenedor h2{
+    color:#323232;
+    font-size: 36px;
+}
+.camp-programa h3{
+    color:#45424c;
+    font-size: 24px;
+}
+.box-data h3{
+    color:#323232;
+}
+.box-data p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.box-data hr{
+    height: 2px;
+    border-radius: 2px;
+    border: none;
+    width: 25%;
+    margin: 0 0 24px 0;
+    margin-left: 0px;
+    background-color: #ca3e47;
+
+}
+.download-t{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.temario{
+    width: 60%;
+}
+.temario p{
+    margin-left: 12px;
+}
+.downl{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+.downl div{
+    background-color: rgba(104,159,99, .06);
+    padding: 8% ;
+    box-sizing: border-box;
+    min-height: 320px;
+
+}
+.downl div img{
+    width: 120px;
+}
+.btn-down{
+    width: 120px;
+    height:40px ;
+    border:1px solid #ca3e47;
+    color: #ca3e47;
+    background-color: transparent;
+    margin: 48px 0;
+    padding: 4% 8%;
+}
+.downl a:hover{
+    color:  #ca3e47 !important;
+}
+.team-education{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 400px;
+    background-color: rgb(245, 245, 245);
+    padding: 5%;
+    box-sizing: border-box;
+}
+.circulo{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 8px solid white;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.katia{
+}
+
+@media (max-width: 1000px) {
+    .container-summary{
+        width: 500px;
+    }
+    .container-content{
+        width: 200px;
+    }
+    .btn-float{
+        right: -400px;
+    }
+    .box-data{
+        padding-top: 40px;
+    }
+    .contenedor{
+        padding: 40px 10%;
+    }
+}
+@media (max-width: 680px) {
+    .container-summary{
+        padding: 100px 5% 40px 5%;
+    }
+    .btn-float{
+        right: 0px;
+    }
+    #contain{
+        height: 40vh;
+    }
+    .nivel{
+        margin-top: 32px;
+    }
+    .temario{
+        width: 100%;
+    }
+
+    .downl{
+        margin-top: 32px;
+        width: 100%;
+
+    }
+    .contenedor{
+        padding: 40px 8%;
+    }
+    .box-data{
+        padding-top: 32px;
+    }
+}

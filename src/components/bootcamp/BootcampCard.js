@@ -3,6 +3,7 @@ import FontAwesome from "react-fontawesome"
 import js from "../../assets/JavaScript-logo.png"
 import moment from 'moment'
 import { withRouter } from 'react-router-dom'
+import img from "../../assets/28698604_1973144766082686_589124668727305128_o.jpg"
 
 
 
@@ -17,6 +18,7 @@ function BootcampCard({ startDate, endDate, history, weeks, bootcamp, title, stu
     }
     let link = "https://wallpaperplay.com/walls/full/3/c/4/164624.jpg"
     return (
+
         <div style={{ maxWidth: 320, marginRight: 10 }} className="camp-info">
             <div className="camp-banner" style={{ backgroundImage: `url(${link})` }}>
 
@@ -27,10 +29,10 @@ function BootcampCard({ startDate, endDate, history, weeks, bootcamp, title, stu
             <div style={{ padding: "0 4%" }}>
                 <h3>Bootcamp Online: {title}</h3>
                 <p>Crea las bases que necesitas para convertirte en desarrollador web y comenzar tu carrera profesional. ⚛️</p>
-                <p> <FontAwesome name="user" /> {students.length + 152} Estudiantes</p>
-                <p> <FontAwesome name="calendar" /> Inicia: <strong> {moment(startDate).format("ll")}</strong></p>
-                <p> <FontAwesome name="calendar" /> Prework Disponible:  {available && <strong style={{ color: "green" }}>{moment(weeks[0].startDate).format('ll')}</strong> || <strong style={{ color: "green" }}> 11 de Noviembre, 2019</strong>}</p>
-                <p> <FontAwesome name="file" /> Exámen final: <b>{endDate ? moment(endDate).format('ll') : "23 Noviembre 2019"} </b> </p>
+                <p> <FontAwesome name="user" /> {students.length + 195} Estudiantes</p>
+                <p> <FontAwesome name="calendar" /> Inicia: <strong> 21 Octubre 2019</strong></p>
+                <p> <FontAwesome name="calendar" /> Prework Disponible:  {available && <strong style={{ color: "green" }}>{moment(weeks[0].startDate).format('ll')}</strong> || <strong> 23 Septiembre 2019</strong>}</p>
+                <p> <FontAwesome name="file" /> Exámen final: <b>11 Noviembre 2019 </b> </p>
                 <button className="btn-in">
                     {week1 ? <span
                         onClick={() => history.push("/bootcamp/detail/" + _id)}

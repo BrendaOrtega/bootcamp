@@ -10,7 +10,7 @@ export const CardLessons = ({ onClick, week, date, name, descript }) => {
                 <h2>{week}</h2>
                 <p>{date}</p>
             </div>
-            <div>
+            <div className="nn">
                 <h2>{name}</h2>
                 <p>{descript}</p>
             </div>

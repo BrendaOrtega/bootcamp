@@ -13,9 +13,13 @@ import Team from "./components/home/Team";
 import Politicas from "./components/home/Politicas";
 import Login from './components/login/Login';
 import AdminPage from './components/admin/AdminPage';
+import BootcampDescript from "./components/bootcamp/BootcampDescript";
+import BootcampDescriptWeb from "./components/bootcamp/BootcampDescriptWeb";
 import Python from './components/bootcamp/Python';
 import BuyForGift from './components/bootcamp/BuyForGift';
 import PromoCiberMonday from './components/bootcamp/PromoCiberMonday';
+import BootcampDescriptLaravel from "./components/bootcamp/BootcampDescriptLaravel";
+
 
 let PrivateRoute = ({ component, next, to, ...rest }) => {
     let user = localStorage.user
@@ -31,7 +35,10 @@ export const Router = () => (
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />
-        <Route exact path="/bootcamp" component={Python} />
+        <Route exact path="/bootcamp" component={Bootcamp} />
+        <Route path="/bootcamp-descript" component={BootcampDescript} />
+        <Route path="/bootcamp-descript-laravel" component={BootcampDescriptLaravel} />
+        <Route path="/bootcamp-descript-web" component={BootcampDescriptWeb} />
         <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />

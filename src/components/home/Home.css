@@ -121,7 +121,7 @@ WHY*/
 }
 
 .card-beneficios{
-    width: 200px;
+    width: 240px;
     height: 150px;
     background-color: white;
     border-radius: 4px;
@@ -168,7 +168,7 @@ WHY*/
 .box-destacados{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
@@ -359,15 +359,15 @@ MEDIAS*/
 
         margin: 30px;
     }
-    .about h2{
+    /*.about h2{
         font-size: 48px;
     }
     .about p{
         font-size: 24px;
-    }
+    }*/
     .card-beneficios{
-        width: 280px;
-        padding: 2%;
+        width: 240px;
+        padding:0  2%;
         height: auto;
     }
     .course-card{
@@ -389,7 +389,7 @@ MEDIAS*/
         justify-content: center;
     }
     .card-beneficios{
-        margin:20px ;
+        margin:20px 10px ;
     }
     .box-destacados{
         justify-content: center;

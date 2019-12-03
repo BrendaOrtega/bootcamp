@@ -3,10 +3,10 @@ import "./Home.css"
 import Button from "../common/Button";
 import { CourseCard } from "../card/CourseCard";
 import { Carousel } from 'antd';
-import uno from "../../assets/iconos_web_Mesa de trabajo 1 (1).png"
-import dos from "../../assets/iconos_web-02 (1).png"
-import tres from "../../assets/iconos_web-03 (1).png"
-import cuatro from "../../assets/iconos_web-04 (1).png"
+import uno from "../../assets/icono3_version2.png"
+import dos from "../../assets/icono4_version2.png"
+import tres from "../../assets/icono2_version2.png"
+import cuatro from "../../assets/icono1_version2.png"
 import { Link } from "react-router-dom";
 import oscar from "../../assets/ossscar.jpg"
 import carlitos from "../../assets/carlitos.jpg"
@@ -14,9 +14,14 @@ import jorge from "../../assets/jorge.jpg"
 import siete from "../../assets/badget1.png"
 import cinco from "../../assets/badget2.png"
 import seis from "../../assets/badget-3.png"
+import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png"
+import web from "../../assets/badge3D_Mesa_de_trabajo_1.png"
+import rea from "../../assets/badget-3.png"
+
 // redux
 import { connect } from 'react-redux'
 import { getBootcampsAction } from '../../redux/bootcampDuck'
+import {CardBootcamp} from "../card/CardBootcamp";
 
 
 let react = require("../../assets/react.png")
@@ -60,6 +65,7 @@ class HomeContainer extends Component {
 
 
     componentDidMount() {
+        window.scroll(0, 0)
         let script = document.createElement('script')
         script.src = 'https://cdn.jsdelivr.net/gh/cmiscm/stickerjs/sticker.min.js'
         script.async = true
@@ -102,10 +108,10 @@ class HomeContainer extends Component {
                     <div className="cover">
                         <div className="slogan">
                             <h2>Aprende las <strong>herramientas</strong> y <strong>frameworks</strong> que usan los profesionales de la industria</h2>
-                            <p>Cursos, tutoriales, botocamps
+                            <p>Cursos, tutoriales, botocamps y más.
                             </p>
                             <br />
-                            <Link to="/courses">
+                            <Link to="/bootcamp">
                                 <Button ico=">_" text=" Explorar" />
                             </Link>
                         </div>
@@ -181,9 +187,41 @@ class HomeContainer extends Component {
                     </div>
                 </section>
                 <section className="destacados">
-                    <h2 className="subtitulos">Nuevos Cursos</h2>
+                    <h2 className="subtitulos">Nuevos Bootcamps</h2>
                     <div className="box-destacados">
-                        <CourseCard image={siete} name="Empezando con Firebase Realtime Database"
+                        <CardBootcamp
+                            image={pyth}
+                            name="Fundamentos de Programación con Python"
+                            descript="Aprende todo lo necesario sobre el modelo vista controlador"
+                            lecciones="45 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-descript"
+                            link2="preorder"
+                            action="Pre-inscripción"
+                        />
+                        <CardBootcamp
+                            image={web}
+                            name="Fundamentos de Desarrollo Web con JavaScript"
+                            descript="Aprende a crear y hostear tu propio sitio web con JavaScript"
+                            lecciones="74 lecciones"
+                            tiempo="7hrs"
+                            link="/bootcamp-descript-web"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
+                            name="Aplicaciones web fullstack con Laravel"
+                            descript="Crea una aplicación web de 0 a 100 con PHP y Laravel "
+                            lecciones="80 lecciones"
+                            tiempo="8hrs"
+                            link="/bootcamp-descript-laravel"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
+
+
+                      {/*  <CourseCard image={siete} name="Empezando con Firebase Realtime Database"
                         lecciones="12 lecciones" tiempo="35 minutos"
                         />
                         <CourseCard image={cinco} name="Tu primer aplicación con Firebase"
@@ -191,7 +229,7 @@ class HomeContainer extends Component {
                         />
                         <CourseCard image={seis} name="Estructura de Datos Complejos con Realtime DB"
                                     lecciones="10 lecciones" tiempo="40 minutos"
-                        />
+                        />*/}
                     </div>
                 </section>
                 <section className="testimonios">

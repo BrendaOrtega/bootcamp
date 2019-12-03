@@ -8,7 +8,11 @@ import step1 from "../../assets/iconos_100x100_Mesa de trabajo 1.png"
 import step2 from "../../assets/iconos_100x100-02.png"
 import step3 from "../../assets/iconos_100x100-03.png"
 import step4 from "../../assets/iconos_100x100-04.png"
-
+import {CardBootcamp} from "../card/CardBootcamp";
+import image from "../../assets/badget1.png"
+import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png";
+import web from "../../assets/badge3D_Mesa_de_trabajo_1.png";
+import rea from "../../assets/badget-3.png";
 const { TabPane } = Tabs;
 
 class Bootcamp extends Component {
@@ -31,26 +35,83 @@ class Bootcamp extends Component {
                 <div className="intro-bootcamp">
                     <div className="bootcamp-descript">
                         <div>
-                            <h2 style={{textAlign:"left"}} className="subtitulos">Online Bootcamp</h2>
+                            <h2 style={{textAlign:"left"}} className="subtitulos">Bootcamp Online</h2>
                             <br/>
                             <p>
-                                Si eres nuevo en programación, agrega este skill a tu carrera y preparate para impulsar tu carrera. <br/>
+                                Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
                                 Aprende los
                                 fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
-                            <p>21 de Octubre | 12:00 pm </p>
+                            <p>100% online | 5 y 8 semanas </p>
                             <br/>
-                            <Link to="/apply">
+                            <Link to={"/apply?b=5dc1db06cd0b842984edca7c"}>
                                 <Button ico="{ }" text="Inscribirme"/>
                             </Link>
+                            <div>
+
+                            </div>
                         </div>
                     </div>
                     <div className="bootcamp-img">
 
                     </div>
                 </div>
-                <div className="summary">
+                <section className="destacados">
+                    <h2 className="subtitulos">¿Qué quieres aprender?</h2>
+                    <div className="flexin">
+
+                            <CardBootcamp
+                                image={pyth}
+                                name="Fundamentos de Desarrollo con Python"
+                                descript="Aprende a programar con Python, aprende lo necesario sobre el modelo vista controlador"
+                                lecciones="45 lecciones"
+                                tiempo="6hrs"
+                                link="/bootcamp-descript"
+                                link2={"/apply?b=5dc1db06cd0b842984edca7c"}
+                                action="Pre-inscripción"
+                            />
+                            <CardBootcamp
+                                image={web}
+                                name="Fundamentos de Desarrollo Web con JavaScript"
+                                descript="Aprende a crear y hostear tu propio sitio web con JavaScript"
+                                lecciones="74 lecciones"
+                                tiempo="7hrs"
+                                link="/bootcamp-descript-web"
+                                action="Pre-inscripción"
+                            />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
+                            name="Aplicaciones web fullstack con Laravel"
+                            descript="Crea una aplicación web de 0 a 100 con PHP y Laravel "
+                            lecciones="+ 50 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-descript-laravel"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
+                     {/*   <CardBootcamp
+                            image={rea}
+                            name="Desarrollo Frontend con ReactJs + Redux"
+                            descript="Crea una aplicación web "
+                            lecciones="72 lecciones"
+                            tiempo="8hrs"
+                            link="/bootcamp-descript-react"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />*/}
+
+                      {/*  <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>
+                        <CardBootcamp image={image} name="Backend con Python" lecciones="5 semanas" tiempo="1 proyecto"/>*/}
+
+
+                    </div>
+                </section>
+              {/*  <div className="summary">
                     <h2 style={{textAlign:"left"}} className="subtitulos">Programa</h2>
                     <p className="textos">Establece las bases de programación y preparate para una este programa creado especialmente para
                         principiantes que quieren incursionar en el mundo del desarrollo web.
@@ -121,7 +182,7 @@ class Bootcamp extends Component {
                             </TabPane>
                         </Tabs>
                     </div>
-                </div>
+                </div>*/}
                 <div className="how">
                     <h2 className="subtitulos">¿Cómo funciona un Bootcamp Online?</h2>
                     <div className="box-steps">
@@ -133,9 +194,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Inscríbete</h3>
-                                <p>Inscríbete al bootcamp antes del día 21 de Octubre.
-
-                                    Y completa el Prework aparecerá
+                                <p>Inscríbete a cualquier bootcamp y completa el Prework que aparecerá disponible
                                     en tu perfil.
                                 </p>
                             </div>
@@ -170,7 +229,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Exámen final</h3>
-                                <p>Para probar que has puesto atención  en cada lección, te haremos un breve exámen para obtener tu diploma y un
+                                <p>Para probar lo que has aprendido en cada lección, realizarás un exámen para obtener tu diploma y un
                                 suculento pack de stickers.
                                 </p>
                             </div>
@@ -180,12 +239,11 @@ class Bootcamp extends Component {
                 <div className="invite">
                     <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilziadas del
-                        desarrollo.</p>
+                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas para el desarrollo de software.</p>
                     <p>
-                        Encuentra cursos actualizados y concretos de las tecnologías más populares para el desarrollo de aplicaciones
+                        Encuentra cursos actualizados y concretos sobre las tecnologías más populares para el desarrollo de aplicaciones
                         web y móviles. Aprende con los profesionales y forma parte
-                        de nuestra comunidad.
+                        de nuestra gran comunidad.
 
                     </p>
                     <br/>

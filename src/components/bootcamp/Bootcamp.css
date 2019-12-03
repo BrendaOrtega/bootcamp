@@ -25,7 +25,7 @@
     width: 500px;
     height: 100%;
     flex-grow: 2;
-    background-image: url('https://scontent.fmex6-1.fna.fbcdn.net/v/t31.0-8/28698604_1973144766082686_589124668727305128_o.jpg?_nc_cat=106&_nc_oc=AQnwFz_vHgdIYAyTU1FxakCgl3fkxvwbQBibZBanSW6jQ-KjRsV6IQnM-J1yFsWiD9M&_nc_ht=scontent.fmex6-1.fna&oh=1d59fb9f541cbc8f0126e1278b7d13b4&oe=5DA4579E');
+    background-image: url('../../assets/25438830_1861335307263633_2930730188315941572_o.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -40,7 +40,7 @@
     /* background-attachment: fixed; */
 }
 .summary{
-    padding: 16px 2% 50px 2%;
+    padding: 16px 2% 0px 2%;
     box-sizing: border-box;
 
 }
@@ -205,6 +205,7 @@ CARD*/
     height: auto;
     min-height: 120px;
     background-color: white;
+
     /*
     box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
     */
@@ -221,6 +222,9 @@ CARD*/
     transition: all 1s ease;
     cursor: pointer;
 
+}
+.nn{
+    width: 280px;
 }
 
 .card-task{
@@ -365,7 +369,7 @@ CARD*/
 .camp-task{
     width: 600px;
     flex-grow: 1;
-    padding: 2% 0 2% 0%;
+    padding: 2% 0 0% 0%;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -406,6 +410,16 @@ CARD*/
     cursor: pointer;
     color:orange;
     margin-top: 10px;
+}
+.window-chat{
+    padding: 0 2%;
+    box-sizing: border-box;
+
+}
+
+.tab-pad{
+    padding: 20px 20px 0 20px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 890px) {

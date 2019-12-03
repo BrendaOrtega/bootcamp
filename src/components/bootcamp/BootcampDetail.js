@@ -12,6 +12,9 @@ import moment from 'moment';
 import { getBootcampAction } from '../../redux/bootcampDuck'
 import Learning from './Learning';
 import HomeWork from './HomeWork'
+import img from "../../assets/28698604_1973144766082686_589124668727305128_o.jpg"
+import { Message } from "./chat/Message";
+import { SendMessage } from "./chat/SendMessage";
 
 const { TabPane } = Tabs;
 
@@ -74,7 +77,7 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
         <section className="camp">
             <div className="camp-descript">
                 <div className="camp-info">
-                    <div className="camp-banner" style={{ backgroundImage: `url(${"https://scontent.fmex6-1.fna.fbcdn.net/v/t31.0-8/28698604_1973144766082686_589124668727305128_o.jpg?_nc_cat=106&_nc_oc=AQnwFz_vHgdIYAyTU1FxakCgl3fkxvwbQBibZBanSW6jQ-KjRsV6IQnM-J1yFsWiD9M&_nc_ht=scontent.fmex6-1.fna&oh=1d59fb9f541cbc8f0126e1278b7d13b4&oe=5DA4579E"})` }}>
+                    <div className="camp-banner" style={{ backgroundImage: `url(${img})` }}>
 
                     </div>
                     <div className="camp-avatar">
@@ -141,15 +144,21 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
                     </TabPane>
                     {/* <TabPane style={{ paddingLeft: 20 }} tab="Recursos" key="3">
                         Esta semana no cuenta con recursos extra
-                    </TabPane> */}
-                    <TabPane style={{ paddingLeft: 20 }} tab="Ayuda" key="4">
-                        Recibe ayuda relacionada a la semana activa del bootcamp directamente de un miembro de nuestro equipo.
-                        <h3 style={{
-                            padding: 30,
-                            textAlign: "center",
-                            border: "2px dashed red"
-                        }} >Este feature aún está en desarrollo, esta semana lo liberaremos. ¡Gracias!</h3>
                     </TabPane>
+                    <TabPane className="tab-pad" tab="Ayuda" key="4">
+                        <p>
+                            Recibe ayuda relacionada a la semana activa del bootcamp directamente de un miembro de nuestro equipo.
+                        </p>
+                        <br/>
+                      {/*  <section className="window-chat">
+                            <div className="fix">
+                                <Message/>
+                            </div>
+                            <div >
+                                <SendMessage/>
+                            </div>
+                        </section>*/}
+                    {/* </TabPane> */}
 
                     {activeWeek === 4 && <TabPane style={{ paddingLeft: 20, textAlign: "center" }} tab={<Badge count={"new"} >Examen -</Badge>} key="5">
                         <p>Completa el examen que se promediará con tus tareas para que puedas obtener tu certificado</p>

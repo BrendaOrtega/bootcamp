@@ -1,0 +1,81 @@
+.message{
+    width: 80%;
+    margin:8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+.message-author{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 16px;
+}
+.message-author img{
+    width: 100%;
+    height: 100%;
+}
+.message-text{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    width: calc (100% - 56px);
+    background-color: rgba(104,159,99, .06);
+    padding: 1% 2% 1% 1%;
+    box-sizing: border-box;
+    border-radius: 0px 8px 8px 8px;
+}
+#asistance{
+    background-color: #cccccc;
+}
+.message-text p{
+    margin: 0;
+}
+.input-message{
+    width: 100%;
+    border: none;
+    border-top:  1px solid rgb(243, 243, 243);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+
+}
+.input-message textarea{
+    width: calc(100% - 80px);
+    border: none;
+    padding-top: 8px;
+    box-sizing: border-box;
+}
+.btn-send-message{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ca3e47;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 4px 0 0;
+    margin: 0 0  0 24px;
+    cursor: pointer;
+}
+.message textarea:focus{
+    border: none;
+}
+textarea::placeholder{
+    color:rgba(0,0,0,.2);
+}
+
+
+textarea:focus{
+    outline: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+.fix{
+    min-height: 540px;
+}

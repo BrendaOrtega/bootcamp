@@ -21,8 +21,9 @@ class Apply extends Component {
     };
 
 
-
     componentDidMount() {
+        window.scroll(0, 0)
+
         if (!this.props.loggedIn) {
             let next = this.props.location.pathname + this.props.location.search
             this.props.history.push(`/login?next=${next}`)
