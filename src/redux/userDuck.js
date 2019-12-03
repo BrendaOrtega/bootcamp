@@ -126,7 +126,7 @@ export function recoverPassword(email) {
 
 // compras
 
-export function makeBootcampPurchasePromoAction({ total, tokenId, tel, email, fullName, bootcampId }) { // {tokenId, bootcampId}
+export function makeBootcampPurchasePromoAction({ total, tokenId, tel, email, fullName, bootcampId, bootcampName }) { // {tokenId, bootcampId}
     return (dispatch, getState) => {
         let { user: { token } } = getState()
         let data = {
@@ -135,7 +135,8 @@ export function makeBootcampPurchasePromoAction({ total, tokenId, tel, email, fu
             email,
             tokenId,
             total,
-            bootcampId
+            bootcampId,
+            bootcampName
         }
         dispatch({ type: MAKE_BOOTCAMP_PURCHASE })
         return axios.post(`${baseURL}/pay/bootcamp/promo`, data, { headers: { Authorization: token } })
