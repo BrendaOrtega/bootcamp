@@ -9,23 +9,7 @@ class BootcampDescriptWeb extends Component {
         window.scroll(0, 0)
     }
     render() {
-        const options = {
-            autoplay: true,
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        };
+
         return (
             <section className="bootcamp">
                 <meta

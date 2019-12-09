@@ -108,7 +108,7 @@ class HomeContainer extends Component {
                     <div className="cover">
                         <div className="slogan">
                             <h2>Aprende las <strong>herramientas</strong> y <strong>frameworks</strong> que usan los profesionales de la industria</h2>
-                            <p>Cursos, tutoriales, botocamps y más.
+                            <p>Cursos, botocamps, eventos y más.
                             </p>
                             <br />
                             <Link to="/bootcamp">
@@ -137,16 +137,22 @@ class HomeContainer extends Component {
                         <div className="sticker" />
                     </div>
                     <div className="descript">
-                        <h2>La plataforma para aprender </h2>
+                        <h2>¿Qué es FixterGeek? </h2>
                         <p>
-                            La tecnología se mueve tan rápido, que en ocasiones, a pesar de la pasión o curiosidad que sientes por ella, es difícil aprender o actualizarse debido a la gran cantidad de información que encontramos en la web o en libros, y a lo dispersa que esta información se encuentra.
-
+                            Es una plataforma única en donde profesionales del desarrollo de software
+                            que ofrecen cursos en video sobre herramientas especificas utilizadas en la industria
+                            de forma concisa y clara.
                         </p>
                         <p>
-                            Por ello que FixterGeek, es una plataforma única en donde encontraras cursos, ejercicios, artículos, libros y eventos sobre tecnología.
+                            Tenemos más de 4 años de experiencia impartiendo cursos presenciales, así que buscamos
+                            ofrecerte una experiencia única; no encontrarás 10 videos de 1hr cada uno, encontrarás cursos pequeños y concretos.
                         </p>
                         <p>
-                            Si eres un apasionado del código, los bugs y el localhost, estas en el lugar correcto.</p>
+                            Además, encontrarás bootcamps online,
+                            eventos, artículos y libros sobre tecnología.
+                        </p>
+                        <p>
+                            Si eres un <strong>apasionado del código, los bugs y el localhost,</strong>  estas en el lugar correcto.</p>
                         <br />
                         <Link to="/courses">
                             <Button ico="</>" text=" Iniciar" />

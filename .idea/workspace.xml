@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e39a7cb-4630-4942-9b82-40d018257a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptLaravel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptReact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/home/Landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Screen Shot 2019-11-18 at 9.03.37 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptWeb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptWeb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/CardGeneric.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardGeneric.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/HomeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/HomeContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +84,8 @@
       <workItem from="1569185835001" duration="3718000" />
       <workItem from="1569215053569" duration="360000" />
       <workItem from="1574652081280" duration="578000" />
-      <workItem from="1575342466795" duration="4220000" />
+      <workItem from="1575342466795" duration="4347000" />
+      <workItem from="1575921136222" duration="3460000" />
     </task>
     <servers />
   </component>

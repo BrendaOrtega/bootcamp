@@ -9,11 +9,9 @@ import step2 from "../../assets/iconos_100x100-02.png"
 import step3 from "../../assets/iconos_100x100-03.png"
 import step4 from "../../assets/iconos_100x100-04.png"
 import {CardBootcamp} from "../card/CardBootcamp";
-import image from "../../assets/badget1.png"
 import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png";
 import web from "../../assets/badge3D_Mesa_de_trabajo_1.png";
-import rea from "../../assets/badget-3.png";
-const { TabPane } = Tabs;
+
 
 class Bootcamp extends Component {
     componentDidMount () {
@@ -39,8 +37,7 @@ class Bootcamp extends Component {
                             <br/>
                             <p>
                                 Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
-                                Aprende los
-                                fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
+                                Sumerguete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
@@ -218,7 +215,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Asesoría</h3>
-                                <p>¿Tienes dudas sobre alguna lección? Podrás recibir asesoría de nuestros mentores.</p>
+                                <p>¿Tienes dudas sobre alguna lección? Podrás recibir asesoría de nuestros instructores.</p>
                             </div>
                         </div>
                         <div className="steps">
@@ -239,7 +236,7 @@ class Bootcamp extends Component {
                 <div className="invite">
                     <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas para el desarrollo de software.</p>
+                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas en el desarrollo de software.</p>
                     <p>
                         Encuentra cursos actualizados y concretos sobre las tecnologías más populares para el desarrollo de aplicaciones
                         web y móviles. Aprende con los profesionales y forma parte
