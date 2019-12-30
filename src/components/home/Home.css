@@ -348,8 +348,21 @@ WHY*/
     box-sizing: border-box;
 }
 
+/*LANDING*/
+
+.landing-back{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/reto.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 /*
+
+
+
+
 
 
 

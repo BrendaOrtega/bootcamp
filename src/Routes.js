@@ -19,6 +19,7 @@ import Python from './components/bootcamp/Python';
 import BuyForGift from './components/bootcamp/BuyForGift';
 import PromoCiberMonday from './components/bootcamp/PromoCiberMonday';
 import BootcampDescriptLaravel from "./components/bootcamp/BootcampDescriptLaravel";
+import Landing from "./components/home/Landing";
 
 
 let PrivateRoute = ({ component, next, to, ...rest }) => {
@@ -31,7 +32,7 @@ export const Router = () => (
     <Switch>
         {/* Admin */}
         <Route path="/admin" component={AdminPage} />
-
+        <Route path="/promo-diciembre" component={Landing}/>
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />

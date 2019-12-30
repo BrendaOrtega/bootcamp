@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e39a7cb-4630-4942-9b82-40d018257a32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/home/Landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptWeb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptWeb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/HomeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/HomeContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Landing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +81,8 @@
       <workItem from="1569215053569" duration="360000" />
       <workItem from="1574652081280" duration="578000" />
       <workItem from="1575342466795" duration="4347000" />
-      <workItem from="1575921136222" duration="3460000" />
+      <workItem from="1575921136222" duration="3564000" />
+      <workItem from="1575942331333" duration="429000" />
     </task>
     <servers />
   </component>

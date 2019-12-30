@@ -5,9 +5,16 @@ import "./Home.css"
 class Landing extends Component {
     render() {
         return (
-            <div className="landing">
-                
-            </div>
+            <section className="landing">
+                <div className="landing-back">
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </section>
         )
     }
 }
