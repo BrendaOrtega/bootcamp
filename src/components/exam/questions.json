@@ -1,0 +1,68 @@
+[
+    {
+        "index": 0,
+        "text": "¿Quien invento Python?",
+        "answers": [
+            {
+                "index": 0,
+                "text": "Guido mylove"
+            },
+            {
+                "index": 1,
+                "text": "Katia Lira"
+            },
+            {
+                "index": 2,
+                "text": "Héctor BlisS"
+            },
+            {
+                "index": 3,
+                "text": "Dan Abramov"
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "text": "¿Quien invento Redux?",
+        "answers": [
+            {
+                "index": 0,
+                "text": "Guido mylove"
+            },
+            {
+                "index": 1,
+                "text": "Katia Lira"
+            },
+            {
+                "index": 2,
+                "text": "Héctor BlisS"
+            },
+            {
+                "index": 3,
+                "text": "Dan Abramov"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "text": "¿Quien invento Esta?",
+        "answers": [
+            {
+                "index": 0,
+                "text": "Guido mylove"
+            },
+            {
+                "index": 1,
+                "text": "Katia Lira"
+            },
+            {
+                "index": 2,
+                "text": "Héctor BlisS"
+            },
+            {
+                "index": 3,
+                "text": "Dan Abramov"
+            }
+        ]
+    }
+]

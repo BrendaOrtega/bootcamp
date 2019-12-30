@@ -19,6 +19,7 @@ import Python from './components/bootcamp/Python';
 import BuyForGift from './components/bootcamp/BuyForGift';
 import PromoCiberMonday from './components/bootcamp/PromoCiberMonday';
 import BootcampDescriptLaravel from "./components/bootcamp/BootcampDescriptLaravel";
+import ExamPage from './components/exam/ExamPage';
 
 
 let PrivateRoute = ({ component, next, to, ...rest }) => {
@@ -50,8 +51,12 @@ export const Router = () => (
         <Route path="/null" component={ProfileContainer} />
         {/* Secciones nuevas por bootcamp */}
         <Redirect path="/python" to="/bootcamp" />
+        {/* Examen */}
+        <Route path="/exam" component={ExamPage} />
+        {/* Redirecting everything */}
         <PrivateRoute next="/preorden" to="/preorden" component={PromoCiberMonday} />
         <Route to="/gift" component={BuyForGift} />
+
 
     </Switch>
 )

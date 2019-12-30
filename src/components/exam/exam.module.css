@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    font-family: Avenir;
+    align-items: center;
+}
+
+.flexRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media(max-width:767px){
+    .flexRow{
+        flex-direction: column;
+        font-size: .8rem;
+    }
+}
+
+.container{
+    padding-top: 75px;
+    font-family: 'Press Start 2P', cursive;
+}
+.nav{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 115px;
+    box-shadow: 0px 2px 5px;
+    padding: 25px;
+}
+
+.nav p{
+    font-weight: bolder;
+    margin-bottom: 0;
+    
+}
+.nav h2{
+    font-size: 44px;
+    font-family: Avenir;
+    margin-top: 0;
+    
+}
+@media(max-width:1023px){
+    .nav h2, .nav p{
+        font-size: .8rem;
+    }
+}
+
+.audio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    
+}
+.startArea{
+    padding: 25px;
+    background-color: #ca3e47;
+    height: 51.3vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color:white;
+    font-family: Avenir;
+}
+
+.startArea p{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.startArea h2{
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+}
+.startArea button{
+    height: 60px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 5px lightgray;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+}
+
+.question{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 70vh;
+}
+.question p{
+    margin-top: 30px;
+    font-family: Avenir;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.question button{
+    background-color: #ca3e47;
+    padding:20px 40px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 30px;
+    color:white;
+    cursor: pointer;
+}
+
+@media(max-width:767px){
+    .question p{
+        font-size: 1rem;
+    }
+}
+.time{
+    margin-top: 10px;
+    padding: 20px 40px;
+    background-color:#ca3e47 ;
+    border-radius: 5px;
+    animation: pulse 3s ease-in-out infinite;
+    color: white;
+}
+.answers{
+   /* margin-top: 30px; */
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   text-align: center;
+   grid-gap: 20px;
+   padding:0px 20px;
+}
+.answer{
+    font-family: Avenir;
+    font-size: 1.2rem;
+    padding:20px;
+    width:100%;
+    background-color: white;
+    columns: #222222;
+    cursor: pointer;
+    border:1px solid #595959;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active{
+    font-family: Avenir;
+    font-size: 1.2rem;
+    padding:20px;
+    width:100%;
+    background-color: #ca3e47;
+    color:white;
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
