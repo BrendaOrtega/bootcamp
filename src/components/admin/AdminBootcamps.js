@@ -1,21 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, Icon, Avatar } from 'antd';
 import { connect } from 'react-redux'
 import { setEditingBootcampAction } from '../../redux/adminDuck'
+import { saveExamAction } from '../../redux/bootcampDuck'
+import EditExamModal from './EditExamModal';
 
 const { Meta } = Card;
 
+let initialExam = {
+    questions: [],
+    active: true
+}
 
-
-function AdminBootcamps({ bootcamps, history, setEditingBootcampAction }) {
-    // login?
+function AdminBootcamps({ saveExamAction, bootcamps, history, setEditingBootcampAction }) {
+    let [open, setOpen] = useState(false)
+    let [exam, setExam] = useState({ ...initialExam })
 
     function editBootcamp(_id) {
         setEditingBootcampAction(_id)
         history.push('/admin/bootcamps/' + _id)
     }
 
-    function renderCard({ title, _id }, i) {
+    function openExam(ex, _id) {
+        console.log(ex)
+        if (!ex) ex = { ...initialExam, bootcamp: _id }
+        setExam(ex)
+        setOpen(true)
+    }
+
+    function saveExam(exam) {
+        saveExamAction(exam)
+        setOpen(false)
+    }
+
+    function renderCard({ title, _id, exam }, i) {
         return (
             <Card
                 key={i}
@@ -27,7 +45,7 @@ function AdminBootcamps({ bootcamps, history, setEditingBootcampAction }) {
                     />
                 }
                 actions={[
-                    <Icon spin type="setting" key="setting" />,
+                    <Icon onClick={() => openExam(exam[0], _id)} spin type="setting" key="setting" />,
                     <Icon onClick={() => editBootcamp(_id)} type="edit" key="edit" />,
                     <Icon type="ellipsis" key="ellipsis" />,
                 ]}
@@ -48,6 +66,8 @@ function AdminBootcamps({ bootcamps, history, setEditingBootcampAction }) {
                 {bootcamps.map(renderCard)}
 
             </div>
+
+            <EditExamModal onFinish={saveExam} ex={exam} visible={open} onCancel={() => setOpen(false)} />
         </div>
     )
 }
@@ -58,4 +78,4 @@ function mapState({ bootcamps: { array } }) {
     }
 }
 
-export default connect(mapState, { setEditingBootcampAction })(AdminBootcamps)
+export default connect(mapState, { saveExamAction, setEditingBootcampAction })(AdminBootcamps)

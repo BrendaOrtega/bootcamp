@@ -175,3 +175,19 @@
         transform: scale(1.1);
     }
 }
+
+.grading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:70vh ;
+}
+
+.grading .yes{
+    color:green;
+}
+
+.grading .no{
+    color:red;
+}

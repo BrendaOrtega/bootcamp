@@ -52,7 +52,7 @@ export const Router = () => (
         {/* Secciones nuevas por bootcamp */}
         <Redirect path="/python" to="/bootcamp" />
         {/* Examen */}
-        <Route path="/exam" component={ExamPage} />
+        <Route path="/exam/:id" component={ExamPage} />
         {/* Redirecting everything */}
         <PrivateRoute next="/preorden" to="/preorden" component={PromoCiberMonday} />
         <Route to="/gift" component={BuyForGift} />

@@ -2,6 +2,7 @@
     {
         "index": 0,
         "text": "¿Quien invento Python?",
+        "correct": 0,
         "answers": [
             {
                 "index": 0,
@@ -27,15 +28,15 @@
         "answers": [
             {
                 "index": 0,
-                "text": "Guido mylove"
+                "text": "Pedro "
             },
             {
                 "index": 1,
-                "text": "Katia Lira"
+                "text": " Lucilda"
             },
             {
                 "index": 2,
-                "text": "Héctor BlisS"
+                "text": "Ramon"
             },
             {
                 "index": 3,
@@ -49,11 +50,11 @@
         "answers": [
             {
                 "index": 0,
-                "text": "Guido mylove"
+                "text": "posyo"
             },
             {
                 "index": 1,
-                "text": "Katia Lira"
+                "text": "ese we"
             },
             {
                 "index": 2,
@@ -61,7 +62,7 @@
             },
             {
                 "index": 3,
-                "text": "Dan Abramov"
+                "text": "ste cabrown"
             }
         ]
     }
