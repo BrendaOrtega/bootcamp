@@ -67,7 +67,7 @@ class BootcampDescriptWeb extends Component {
                     </div>
                     <div className="box-data">
                         <p>Próxima edición</p>
-                        <h3>20 de Enero 2019</h3>
+                        <h3>27 de Enero 2020</h3>
 
                         <hr/>
                         <p>Más de 24 hrs de ejercicios en</p>
@@ -77,7 +77,7 @@ class BootcampDescriptWeb extends Component {
                         <p>Aprende con la práctica</p>
                         <h3>1 exámen final</h3>
                         <hr/>
-                        <p>Precio especial diciembre</p>
+                        <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
                         <h3>$ 1,500.00</h3>
 
                         <hr/>
@@ -103,7 +103,7 @@ class BootcampDescriptWeb extends Component {
                                 Descarga el temario completo en PDF
                             </p>
                             <br/>
-                            <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FSyllabus_FixterBOOTCAMP.pdf?alt=media&token=aa1ebddb-ee67-4a8f-8771-514b0eb13059" target="blank" >
+                            <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FFundamentos_Desarrollo_Web.pdf?alt=media&token=80e68013-45be-429d-b9c8-5b58bc9a3615" target="blank" >
                                 <img src={download} alt=""/>
                             </a>
                         </div>

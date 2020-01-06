@@ -2,10 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e39a7cb-4630-4942-9b82-40d018257a32" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/next.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/selected.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/start.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/admin/EditExamModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/admin/admin.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/bootcamp/Backend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampPhp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/exam/ExamPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/exam/Grading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/exam/Question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/exam/Start.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/exam/exam.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/exam/questions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/AdminBootcamps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/AdminBootcamps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/Bootcamp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptLaravel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptLaravel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptReact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptReact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptWeb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDescriptWeb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/BootcampDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/BootcampDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bootcamp/PromoCiberMonday.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bootcamp/PromoCiberMonday.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardBootcamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardBootcamp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardGeneric.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardGeneric.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CourseCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CourseCard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/adminDuck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/adminDuck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/bootcampDuck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/bootcampDuck.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +112,7 @@
       <workItem from="1575342466795" duration="4347000" />
       <workItem from="1575921136222" duration="3564000" />
       <workItem from="1575942331333" duration="429000" />
+      <workItem from="1578285931294" duration="5764000" />
     </task>
     <servers />
   </component>

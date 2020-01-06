@@ -146,14 +146,21 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
         </div>
     )
     return (
-        <div style={{ minHeight: "72vh", display: "flex", justifyContent: "center", alignItems: "center" }} className="">
+        <section >
+            <div className="black"></div>
+        <div style={{ minHeight: "72vh", display: "flex", justifyContent: "center", alignItems: "center" }} className="preorder-form">
+
             <div className="step apply-box">
-                <h2>Pre ordena cualquiera de nuestros bootcamps que comienzan en 2020 y aparta tu lugar</h2>
-                <h4>Con solo <strong>$250.00MXN</strong></h4>
-                <h4>Y paga el resto hasta febrero con 50% de descuento</h4>
+                <h2 style={{fontSize:"28px"}}>¡Aparta tu lugar en cualquiera de nuestros bootcamps de 2020!</h2>
+                <h4>Con solo <strong style={{color:"#ca3e47"}}>$250.00MXN</strong> y paga el resto hasta que inicie el curso.</h4>
+
                 <h5><em>Costo real del bootcamp en 2020: $3,000 Tú sólo pagarás: $1,500 (en total)</em></h5>
-                <p style={{ color: "green" }}>Esta pre orden es valida para cualquier bootcamp</p>
+                <br/>
+{/*
+                <p style={{ color: "green" }}>Esta promoción es válida para cualqueir curso</p>
+*/}
                 <div>
+                    <label htmlFor="">Nombre</label>
                     <Input
                         name="fullName"
                         value={form.fullName}
@@ -161,37 +168,43 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                         placeholder="Tu nombre completo"
                     />
 
+                    <label className="marg" htmlFor="">Teléfono</label>
                     <Input
                         name="tel"
                         value={form.tel}
                         onChange={onChange}
-                        placeholder="Tu teléfono"
+                        placeholder="55 555 55 55"
                     />
-
+                    <label className="marg" htmlFor="">Email</label>
                     <Input
                         name="email"
                         value={form.email}
                         onChange={onChange}
-                        placeholder="Tu correo electrónico"
+                        placeholder="ejemplo@fixter.camp"
                     />
                     <p style={{ color: "red" }}>{errors.general}</p>
                     <p>¿A qué bootcamp te gustaría inscribirte para 2020?</p>
-                    <Select style={{ width: "100%", outline: "thick double #ca3e47" }} defaultValue={form.bootcampId} onChange={handleChange}>
+                    <Select style={{ width: "100%" }} defaultValue={form.bootcampId} onChange={handleChange}>
                         {bootcamps.map((b, i) => {
                             return <option key={i} value={b._id} >{b.title}</option>
                         })}
                     </Select>
                 </div>
+                <br/>
+                <br/>
+                <h3>Información de pago</h3>
+
                 <Form.Item
                     hasFeedback
                     help={errors.cardName}
                     validateStatus={errors.cardName && "error"}
                 >
+                    <label htmlFor="">Nombre del Titular</label>
                     <Input
                         name="cardName"
                         value={form.cardName}
                         onChange={onChange}
-                        placeholder="Titular de la tarjeta"
+                        placeholder="Nombre completo"
                     />
                 </Form.Item>
                 <Form.Item
@@ -199,12 +212,12 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                     help={errors.number}
                     validateStatus={errors.number && "error"}
                 >
-
+                    <label htmlFor="">Número de la tarjeta</label>
                     <Input
                         name="number"
                         value={form.number}
                         onChange={onChange}
-                        placeholder="Número de tarjeta"
+                        placeholder="4242 4242 4242 4242"
                     />
                 </Form.Item>
                 <div className="pay-fl">
@@ -244,11 +257,11 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
                 <br />
                 <h1>Total: ${total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00MXN</h1>
 
-                <Button type="primary" disabled={loading} onClick={makePurchase}>
-                    {loading ? <Spin /> : "Realizar el pago"}
+                <Button style={{width:"120px"}} type="primary" disabled={loading} onClick={makePurchase}>
+                    {loading ? <Spin /> : "Pagar"}
                 </Button>
             </div>{/*// box */}
-        </div >
+        </div ></section>
     );
 };
 

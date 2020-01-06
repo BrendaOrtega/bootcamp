@@ -9,13 +9,15 @@ export const CardBootcamp = ({image, name, descript, lecciones, tiempo, link, li
     return (
         <div className="bootcamp-card">
             <Link to={link}>
-                <div className="bootcamp-badge">
-                <img className="badge" src={image} alt="badge-curso"/>
-            </div>
-            <br/>
-            <h2>{name}</h2>
-            <p>{descript}</p>
-            <p>{lecciones} <span>&bull;</span> {tiempo}</p>
+                <div className="effect">
+                    <div className="bootcamp-badge">
+                        <img className="badge" src={image} alt="badge-curso"/>
+                    </div>
+                    <br/>
+                    <h2>{name}</h2>
+                    <p>{descript}</p>
+                    <p>{lecciones} <span>&bull;</span> {tiempo}</p>
+                </div>
             </Link>
             <hr/>
             <div className="bootcamp-alumni">

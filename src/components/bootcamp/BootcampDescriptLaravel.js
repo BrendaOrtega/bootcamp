@@ -92,8 +92,8 @@ class BootcampDescriptLaravel extends Component {
                         <p>Aprende con la práctica</p>
                         <h3>1 exámen final</h3>
                         <hr/>
-                        <p>Precio especial diciembre</p>
-                        <h3>$ 1,500.00</h3>
+                        <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
+                        <h3>$ 1,500.00 </h3>
 
                         <hr/>
                     </div>

@@ -9,10 +9,33 @@ let initial = {
     array: [],
     current: {},
     loggedIn: false,
-    student: {}
+    student: {},
+    exam: {},
+    grade: null
 }
 function reducer(state = initial, action) {
     switch (action.type) {
+        case GRADE_EXAM_SUCCESS:
+            return { ...state, fetching: false, grade: { ...action.payload } }
+        case GRADE_EXAM:
+            return { ...state, fetching: true }
+        case GRADE_EXAM_ERROR:
+            return { ...state, fetching: false, error: action.payload }
+
+        case GET_EXAM_SUCCESS:
+            return { ...state, fetching: false, exam: { ...action.payload } }
+        case GET_EXAM:
+            return { ...state, fetching: true }
+        case GET_EXAM_ERROR:
+            return { ...state, fetching: false, error: action.payload }
+
+        case SAVE_EXAM_SUCCESS:
+            return { ...state, fetching: false }
+        case SAVE_EXAM:
+            return { ...state, fetching: true }
+        case SAVE_EXAM_ERROR:
+            return { ...state, fetching: false, error: action.payload }
+
         case UPDATE_CURRENT_WEEK:
             return { ...state, currentWeek: { ...action.payload } }
         case UPDATE_CURRENT_WEEK_ERROR:
@@ -86,10 +109,22 @@ function reducer(state = initial, action) {
 }
 
 // constants
+let GRADE_EXAM = "GRADE_EXAM"
+let GRADE_EXAM_SUCCESS = "GRADE_EXAM_SUCCESS"
+let GRADE_EXAM_ERROR = "GRADE_EXAM_ERROR"
+
+let GET_EXAM = "GET_EXAM"
+let GET_EXAM_ERROR = "GET_EXAM_ERROR"
+let GET_EXAM_SUCCESS = "GET_EXAM_SUCCESS"
+
+const SAVE_EXAM = "SAVE_EXAM"
+const SAVE_EXAM_SUCCESS = "SAVE_EXAM_SUCCESS"
+const SAVE_EXAM_ERROR = "SAVE_EXAM_ERROR"
+
+
 const UPDATE_CURRENT_WEEK = "UPDATE_CURRENT_WEEK"
 const UPDATE_CURRENT_WEEK_ERROR = "UPDATE_CURRENT_WEEK_ERROR"
 const UPDATE_CURRENT_WEEK_SUCCESS = "UPDATE_CURRENT_WEEK_SUCCESS"
-
 
 const DELETE_LEARNING = "DELETE_LEARNING"
 const DELETE_LEARNING_ERROR = "DELETE_LEARNING_ERROR"
@@ -127,6 +162,73 @@ const GET_BOOTCAMPS_SUCCESS = "GET_BOOTCAMPS_SUCCESS"
 
 
 //thunks
+export function gradeExamAction(answers, bootcampId) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({
+            type: GRADE_EXAM
+        })
+        return axios.post(`${baseURL}/exams/${bootcampId}/grade`, { answers }, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({
+                    type: GRADE_EXAM_SUCCESS,
+                    payload: { ...res.data }
+                })
+                // getBootcampAction(exam.bootcamp)(dispatch, getState)
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: GRADE_EXAM_ERROR, payload: "Algo falló" })
+                dispatch({ type: GRADE_EXAM_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
+export function getExamAction(bootcampId) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({ type: GET_EXAM })
+        return axios.get(`${baseURL}/exams/${bootcampId}?bootcampId=true`, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({
+                    type: GET_EXAM_SUCCESS,
+                    payload: { ...res.data }
+                })
+                // getBootcampAction(exam.bootcamp)(dispatch, getState)
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: GET_EXAM_ERROR, payload: "Algo falló" })
+                dispatch({ type: GET_EXAM_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
+export function saveExamAction(exam) {
+    return (dispatch, getState) => {
+        let { user: { token } } = getState()
+        dispatch({
+            type: SAVE_EXAM
+        })
+        return axios.post(`${baseURL}/exams/${exam.bootcamp}`, exam, { headers: { Authorization: token } })
+            .then(res => {
+                dispatch({
+                    type: SAVE_EXAM_SUCCESS,
+                    payload: { ...res.data }
+                })
+                getBootcampAction(exam.bootcamp)(dispatch, getState)
+                return res
+            })
+            .catch(err => {
+                if (!err.response) return dispatch({ type: SAVE_EXAM_ERROR, payload: "Algo falló" })
+                dispatch({ type: SAVE_EXAM_ERROR, payload: err.response.data.message })
+                return err
+            })
+    }
+}
+
 export function deleteHomeworkAction(item) {
     return (dispatch, getState) => {
         let { user: { token } } = getState()

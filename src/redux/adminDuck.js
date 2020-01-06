@@ -32,6 +32,7 @@ function reducer(state = initial, action) {
 }
 
 // constants
+
 const SAVE_USER = "SAVE_USER"
 const SAVE_USER_ERROR = "SAVE_USER_ERROR"
 const SAVE_USER_SUCCESS = "SAVE_USER_SUCCESS"
@@ -45,6 +46,7 @@ const GET_USERS_SUCCESS = "GET_USERS_SUCCESS"
 
 
 //thunks
+
 export function saveUserAction(user) {
     return (dispatch, getState) => {
         let { user: { token } } = getState()

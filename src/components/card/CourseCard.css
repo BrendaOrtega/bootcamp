@@ -81,6 +81,7 @@
     opacity: 1;
 }
 
+
 @media (max-width: 890px) {
     .course-card{
         margin: 10px;

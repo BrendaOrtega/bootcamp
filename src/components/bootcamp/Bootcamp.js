@@ -42,7 +42,7 @@ class Bootcamp extends Component {
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
                             <br/>
-                            <Link to={"/apply?b=5dc1db06cd0b842984edca7c"}>
+                            <Link to="/preorder">
                                 <Button ico="{ }" text="Inscribirme"/>
                             </Link>
                             <div>
@@ -65,7 +65,7 @@ class Bootcamp extends Component {
                                 lecciones="45 lecciones"
                                 tiempo="6hrs"
                                 link="/bootcamp-descript"
-                                link2={"/apply?b=5dc1db06cd0b842984edca7c"}
+                                link2="/preorder"
                                 action="Pre-inscripción"
                             />
                             <CardBootcamp
@@ -75,13 +75,34 @@ class Bootcamp extends Component {
                                 lecciones="74 lecciones"
                                 tiempo="7hrs"
                                 link="/bootcamp-descript-web"
+                                link2="/preorder"
                                 action="Pre-inscripción"
                             />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fnode_BADGE_Mesa_de_trabajo_1.png?alt=media&token=4e3f49d4-f4a2-4572-9e7a-b92d66d2a45a"
+                            name="Backend API con NodeJs y ExpressJs"
+                            descript="Construye un backend API con NodeJs y ExpressJs "
+                            lecciones=" 70 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-backend-nodejs"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fbadges_Mesa_de_trabajo_1_copia_2%20(1).png?alt=media&token=b104bae1-992f-4924-85aa-55aaa98a08ba"
+                            name="Aprende a usar PHP correctamente"
+                            descript="Aprende PHP de forma fácil y eficiente, pero sobre todo con buenas prácticas"
+                            lecciones="53 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-php"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
                         <CardBootcamp
                             image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
                             name="Aplicaciones web fullstack con Laravel"
                             descript="Crea una aplicación web de 0 a 100 con PHP y Laravel "
-                            lecciones="+ 50 lecciones"
+                            lecciones="83 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-descript-laravel"
                             link2="/preorder"

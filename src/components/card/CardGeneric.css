@@ -47,6 +47,12 @@
 
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
+.h2{
+    transition: all .5s ease;
+}
+.bootcamp-card .effect:hover h2{
+    color: #ca3e47;
+}
 .bootcamp-card a{
     color: #45424c !important;
 }

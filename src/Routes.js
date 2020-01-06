@@ -20,6 +20,9 @@ import BuyForGift from './components/bootcamp/BuyForGift';
 import PromoCiberMonday from './components/bootcamp/PromoCiberMonday';
 import BootcampDescriptLaravel from "./components/bootcamp/BootcampDescriptLaravel";
 import Landing from "./components/home/Landing";
+import ExamPage from './components/exam/ExamPage';
+import Backend from "./components/bootcamp/Backend";
+import BootcampPhp from "./components/bootcamp/BootcampPhp";
 
 
 let PrivateRoute = ({ component, next, to, ...rest }) => {
@@ -40,6 +43,8 @@ export const Router = () => (
         <Route path="/bootcamp-descript" component={BootcampDescript} />
         <Route path="/bootcamp-descript-laravel" component={BootcampDescriptLaravel} />
         <Route path="/bootcamp-descript-web" component={BootcampDescriptWeb} />
+        <Route path="/bootcamp-backend-nodejs" component={Backend}/>
+        <Route path="/bootcamp-php" component={BootcampPhp}/>
         <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />
@@ -51,8 +56,12 @@ export const Router = () => (
         <Route path="/null" component={ProfileContainer} />
         {/* Secciones nuevas por bootcamp */}
         <Redirect path="/python" to="/bootcamp" />
+        {/* Examen */}
+        <Route path="/exam/:id" component={ExamPage} />
+        {/* Redirecting everything */}
         <PrivateRoute next="/preorden" to="/preorden" component={PromoCiberMonday} />
         <Route to="/gift" component={BuyForGift} />
+
 
     </Switch>
 )

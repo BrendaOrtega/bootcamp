@@ -27,6 +27,9 @@ body{
   color: #61dafb;
 }
 
+.preorder-form{
+  margin-top: 100px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
