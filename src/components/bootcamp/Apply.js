@@ -82,8 +82,9 @@ class Apply extends Component {
     }
 
     conektaSuccessResponseHandler = token => {
+        let { student: { monthly_installments } } = this.props
         // action para enviar token
-        this.props.makeBootcampPurchaseAction({ tokenId: token.id, bootcampId: this.props.selected._id })
+        this.props.makeBootcampPurchaseAction({ tokenId: token.id, bootcampId: this.props.selected._id, monthly_installments })
             .then(() => {
                 this.setState({ loading: false })
                 if (this.props.error) toastr.error(this.props.error)
@@ -118,7 +119,7 @@ class Apply extends Component {
             },
             {
                 title: 'Confirmación',
-                content: <StepTres />,
+                content: <StepTres selected={this.props.selected} />,
             },
         ];
         const { current } = this.state;
@@ -137,7 +138,9 @@ class Apply extends Component {
                                     <Step key={item.title} title={item.title} />
                                 ))}
                             </Steps>
-                            <div className="steps-content">{steps[current].content}</div>
+                            <div className="steps-content">
+                                {steps[current].content}
+                            </div>
                             <div className="steps-action">
                                 {current > 0 && (
                                     <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>

@@ -35,7 +35,7 @@ export const Router = () => (
     <Switch>
         {/* Admin */}
         <Route path="/admin" component={AdminPage} />
-        <Route path="/promo-diciembre" component={Landing}/>
+        <Route path="/promo-diciembre" component={Landing} />
         <Route exact path="/" component={HomeContainer} />
         <Route exact path="/courses" component={Courses} />
         <Route path="/courses/detail" component={CoursesDetail} />
@@ -43,8 +43,8 @@ export const Router = () => (
         <Route path="/bootcamp-descript" component={BootcampDescript} />
         <Route path="/bootcamp-descript-laravel" component={BootcampDescriptLaravel} />
         <Route path="/bootcamp-descript-web" component={BootcampDescriptWeb} />
-        <Route path="/bootcamp-backend-nodejs" component={Backend}/>
-        <Route path="/bootcamp-php" component={BootcampPhp}/>
+        <Route path="/bootcamp-backend-nodejs" component={Backend} />
+        <Route path="/bootcamp-php" component={BootcampPhp} />
         <Route path="/bootcamp/detail/:id" component={BootcampDetail} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/politicas-de-privacidad-fixter" component={Politicas} />
@@ -59,8 +59,8 @@ export const Router = () => (
         {/* Examen */}
         <Route path="/exam/:id" component={ExamPage} />
         {/* Redirecting everything */}
-        <PrivateRoute next="/preorden" to="/preorden" component={PromoCiberMonday} />
-        <Route to="/gift" component={BuyForGift} />
+        {/* <PrivateRoute next="/preorden" to="/preorden" component={PromoCiberMonday} /> */}
+        {/* <Route to="/gift" component={BuyForGift} /> */}
 
 
     </Switch>

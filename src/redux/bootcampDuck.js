@@ -9,14 +9,14 @@ let initial = {
     array: [],
     current: {},
     loggedIn: false,
-    student: {},
+    student: { monthly_installments: 1 },
     exam: {},
-    grade: null
+    result: null
 }
 function reducer(state = initial, action) {
     switch (action.type) {
         case GRADE_EXAM_SUCCESS:
-            return { ...state, fetching: false, grade: { ...action.payload } }
+            return { ...state, fetching: false, result: { ...action.payload } }
         case GRADE_EXAM:
             return { ...state, fetching: true }
         case GRADE_EXAM_ERROR:

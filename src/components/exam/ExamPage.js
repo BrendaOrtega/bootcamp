@@ -6,16 +6,17 @@ import questions from './questions.json'
 import { getExamAction, gradeExamAction } from '../../redux/bootcampDuck'
 import { connect } from 'react-redux'
 import Grading from './Grading'
+import toastr from 'toastr'
 
 let selected = require('../../assets/selected.wav')
 let next = require('../../assets/next.wav')
 
-function ExamPage({ grade, fetching, gradeExamAction, getExamAction, match, exam }) {
+function ExamPage({ result, fetching, gradeExamAction, getExamAction, match, exam }) {
     let [finish, setFinish] = useState(false)
     let [answers, setAnswers] = useState([])
     let [step, setStep] = useState(0)
     let [question, setQuestion] = useState({})
-    let mins = 30
+    let mins = 1
     let secs = 0
     let [time, setTime] = useState(`${mins}:0${secs}`)
     let interval
@@ -34,7 +35,7 @@ function ExamPage({ grade, fetching, gradeExamAction, getExamAction, match, exam
     }, [])
 
     useEffect(() => {
-        if (finish, answers.length === 4) {
+        if (finish) {
             console.log("terminó", answers)
             setStep(2)
             gradeExam()
@@ -63,7 +64,8 @@ function ExamPage({ grade, fetching, gradeExamAction, getExamAction, match, exam
     }
 
     function timesUp() {
-        alert("ya valio")
+        setStep(2)
+        gradeExam()
     }
     function onClickAnswer(a) {
         return () => {
@@ -79,18 +81,22 @@ function ExamPage({ grade, fetching, gradeExamAction, getExamAction, match, exam
         setAnswers([...answers, answer])
         audioNext.play()
         setAnswer(undefined)
-        if (index < exam.questions.length - 1) {
-            setIndex(++index)
+        if (index < (exam.questions.length - 1)) {
+            index += 1
             setQuestion(exam.questions[index])
+            setIndex(index)
             return
         }
         setFinish(true)
-
-
-
     }
 
     function gradeExam() {
+        if (exam.questions.length > answers.length) {
+            toastr.error("Tu examen está incompleto, intentalo nuevamente.")
+            // marcamos un intento
+            // redireccionamos
+            return
+        }
         gradeExamAction(answers, exam.bootcamp)
         setTimeout(() => {
             setWaiting(false)
@@ -101,17 +107,17 @@ function ExamPage({ grade, fetching, gradeExamAction, getExamAction, match, exam
         <div className={styles.container}>
             {step === 0 && <Start onStart={startExam} {...exam} />}
             {step === 1 && <Question onNext={onNext} onClick={onClickAnswer} answer={answer} time={time} {...question} />}
-            {step === 2 && <Grading grade={grade} waiting={waiting} fetching={fetching} />}
+            {step === 2 && <Grading result={result} waiting={waiting} fetching={fetching} />}
         </div>
     )
 }
 
-function mapState({ bootcamps: { exam, fetching, grade } }) {
+function mapState({ bootcamps: { exam, fetching, result } }) {
     console.log(exam)
     return {
         exam,
         fetching,
-        grade
+        result
     }
 }
 
