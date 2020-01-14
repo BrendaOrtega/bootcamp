@@ -421,7 +421,23 @@ CARD*/
     padding: 20px 20px 0 20px;
     box-sizing: border-box;
 }
+#back-background{
+background-image: url("https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fphoto.jpg?alt=media&token=cbbffbc4-d321-4e8c-bc20-abcc83bc8710");
+      }
+#php-background{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2F14435022_1302624693134700_4836530304569751852_o.jpg?alt=media&token=c54eb24c-0233-459b-9a88-ecd83d84a0e5");
+}
 
+.preorder-form{
+padding-top: 80px;
+
+}
+.preorder-form .ant-input{
+    margin: 8px 0 16px 0;
+}
+.preorder-form .ant-form-item{
+    margin-bottom: 0px;
+}
 @media (max-width: 890px) {
     .bootcamp-img{
         width: 300px;

@@ -100,7 +100,7 @@ class Login extends Component {
                                     placeholder="Contraseña"
                                 />
                             </Form.Item>
-                            <Form.Item style={{ textAlign: "center" }}>
+                            <Form.Item style={{ textAlign: "center", marginTop:"24px" }}>
 
                                 <a onClick={() => this.setState({ modal: true })} className="login-form-forgot" href="#">
                                     <p className="forget">¿Olvidaste tu contraseña?</p>

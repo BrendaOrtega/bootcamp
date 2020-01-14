@@ -5,28 +5,12 @@ import pinactive from "../../assets/barra-de-progreso_inactive.svg";
 import download from "../../assets/iconos100x100DWN-05.png";
 import {Link} from "react-router-dom";
 
-class BootcampDescriptLaravel extends Component {
+class Backend extends Component {
     componentDidMount () {
         window.scroll(0, 0)
     }
     render() {
-        const options = {
-            autoplay: true,
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        };
+
         return (
             <section className="bootcamp">
                 <meta
@@ -38,24 +22,25 @@ class BootcampDescriptLaravel extends Component {
                     name="keywords"
                     content="cursos, capacitación, react, angular, tecnología, programación, javascript, python, php, online, fixtergeek"
                 />
-                <title>Bootcamp Laravel | FixterGeek</title>
+                <title>Bootcamp Backend | FixterGeek</title>
                 <section  className="container-bootcamp">
                     <div className="container-summary">
-                        <h2 className="name-descript">Aplicaciones web fullstack con Laravel</h2>
+                        <h2 className="name-descript">Backend API con NodeJs y ExpressJs</h2>
                         <hr className="line-red"/>
-                        <p className="description"> Aprende a crear una app web con uno de los lenguajes más utilziados pero con las mejores prácticas y su framework más popular: Laravel. </p>
+                        <p className="description"> Aprende a construir un backend y tus propias API con NodeJs y ExpressJs</p>
                         <Link to="/preorder">
                             <button className="btn-float">Pre-inscripción</button>
                         </Link>
+
                         <div className="nivel">
-                            <p>Nivel <span style={{fontSize:"10px"}}>(medio-avanzado)</span></p>
-                            <img src={pactive} alt="nivel"/>
+                            <p>Nivel <span style={{fontSize:"10px"}}>(intermedio)</span></p>
                             <img src={pactive} alt="nivel"/>
                             <img  src={pactive} alt="nivel"/>
                             <img style={{opacity:".3"}} src={pinactive} alt="nivel"/>
+                            <img style={{opacity:".3"}} src={pinactive} alt="nivel"/>
                         </div>
                     </div>
-                    <div id="contain" className="container-content">
+                    <div id="back-background" className="container-content">
                         <div className="background">
 
                         </div>
@@ -65,13 +50,15 @@ class BootcampDescriptLaravel extends Component {
                 <section style={{backgroundColor:"#f5f5f5"}} className="contenedor camp-programa">
                     <div className="box-programa">
                         <h2>
-                            ¡Vuélvete un profesional del desarrollo web con Laravel!</h2>
+                            ¡Explora el poder del desarrollo Backend con JavaScript!</h2>
                         <br/>
-                        <h3>Por qué PHP y Laravel...</h3>
+                        <h3>Por qué Backend...</h3>
                         <p>
-                            PHP es uno de los  5 lenguajes más utilizados para el desarrollo de software, pero por algún tiempo fue el más
-                            utilizado, y actualmente sigue siendo demandando en vacantes de alto nivel. Y es por esto, que
-                            en este curso aprenderás a programar PHP y crearás una aplicación de 0 a 100 con las mejores practicas.
+                            Todas las aplicaciones web o móviles necesitan un backend de donde consumir datos de forma estructurada y segura,
+                            así que en este curso aprenderás a utilizar distintas bases de datos, a escribir rutas, controladores y middlewares, y más
+                            para crear tu propia API.
+
+
                         </p>
                         <br/>
                         <h3>Experiencia inigualable</h3>
@@ -86,14 +73,14 @@ class BootcampDescriptLaravel extends Component {
 
                         <hr/>
                         <p>Más de 24 hrs de ejercicios en</p>
-                        <h3> 8 semanas</h3>
+                        <h3> 5 semanas</h3>
 
                         <hr/>
                         <p>Aprende con la práctica</p>
                         <h3>1 exámen final</h3>
                         <hr/>
                         <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
-                        <h3>$ 1,500.00 </h3>
+                        <h3>$ 1,500.00</h3>
 
                         <hr/>
                     </div>
@@ -102,19 +89,14 @@ class BootcampDescriptLaravel extends Component {
                     <div className="temario">
                         <h2>¿Qué vas a aprender?</h2>
                         <p>Algunas cosas que aprenderás ene ste curso son:</p>
-                        <p><span>&bull;</span> Introducción a la OOP</p>
-                        <p><span>&bull;</span> MVC</p>
-                        <p><span>&bull;</span> Laravel</p>
-                        <p><span>&bull;</span> Service Provider</p>
-                        <p><span>&bull;</span> Ambientes (Producción, Testing, Local, QA)</p>
-                        <p><span>&bull;</span> Bases de datos: mySQL, Postgres, SQL Server, Oracle, MongoDB, Redis</p>
-                        <p><span>&bull;</span> Eloquent ORM</p>
-                        <p><span>&bull;</span> Seguridad</p>
-                        <p><span>&bull;</span> Autenticación, contraseñas y encriptación</p>
-                        <p><span>&bull;</span> Test Driven Development</p>
-                        <p><span>&bull;</span> Frontend: Laravel mix y Vue.Js</p>
-                        <p><span>&bull;</span> API Rest</p>
-                        <p><span>&bull;</span> Redis</p>
+                        <p><span>&bull;</span> Qué es un backend</p>
+                        <p><span>&bull;</span> NodeJs</p>
+                        <p><span>&bull;</span> Bases de datos SQL y NoSQL</p>
+                        <p><span>&bull;</span> Diferencias entre un ODM y un ORM</p>
+                        <p><span>&bull;</span> ExpressJs</p>
+                        <p><span>&bull;</span> Autenticación de usuarios</p>
+                        <p><span>&bull;</span> Mailing</p>
+                        <p><span>&bull;</span> Deploy de API</p>
                     </div>
                     <div className="downl">
                         <div>
@@ -123,7 +105,7 @@ class BootcampDescriptLaravel extends Component {
                                 Descarga el temario completo en PDF
                             </p>
                             <br/>
-                            <a href="" target="blank" >
+                            <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FBackend.pdf?alt=media&token=c6a10d3a-eb01-4938-adbe-28d8ce47b7b7" target="blank" >
                                 <img src={download} alt=""/>
                             </a>
                         </div>
@@ -139,4 +121,4 @@ class BootcampDescriptLaravel extends Component {
     }
 }
 
-export default BootcampDescriptLaravel;
+export default Backend;

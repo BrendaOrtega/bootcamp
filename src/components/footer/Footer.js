@@ -38,7 +38,7 @@ class Footer extends Component {
                     <a href="https://www.facebook.com/fixterme/" target="blank">
                         <FontAwesome name="facebook"/>
                     </a>
-                    <a href="https://wa.me/5217714348038" target="blank">
+                    <a href="https://wa.me/5217757609276" target="blank">
                         <FontAwesome name="whatsapp"/>
                     </a>
                     <a href="https://www.youtube.com/channel/UC2cNZUym14-K-yGgOEAFh6g" target="blank">

@@ -9,11 +9,9 @@ import step2 from "../../assets/iconos_100x100-02.png"
 import step3 from "../../assets/iconos_100x100-03.png"
 import step4 from "../../assets/iconos_100x100-04.png"
 import {CardBootcamp} from "../card/CardBootcamp";
-import image from "../../assets/badget1.png"
 import pyth from "../../assets/badgePYTHON_TTLBLCK_Mesa_de_trabajo_1.png";
 import web from "../../assets/badge3D_Mesa_de_trabajo_1.png";
-import rea from "../../assets/badget-3.png";
-const { TabPane } = Tabs;
+
 
 class Bootcamp extends Component {
     componentDidMount () {
@@ -39,13 +37,12 @@ class Bootcamp extends Component {
                             <br/>
                             <p>
                                 Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
-                                Aprende los
-                                fundamentos necesarios para abordar el desarrollo de software a nivel profesional.
+                                Sumerguete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
                             <br/>
-                            <Link to={"/apply?b=5dc1db06cd0b842984edca7c"}>
+                            <Link to="/preorder">
                                 <Button ico="{ }" text="Inscribirme"/>
                             </Link>
                             <div>
@@ -68,7 +65,7 @@ class Bootcamp extends Component {
                                 lecciones="45 lecciones"
                                 tiempo="6hrs"
                                 link="/bootcamp-descript"
-                                link2={"/apply?b=5dc1db06cd0b842984edca7c"}
+                                link2="/preorder"
                                 action="Pre-inscripción"
                             />
                             <CardBootcamp
@@ -78,13 +75,34 @@ class Bootcamp extends Component {
                                 lecciones="74 lecciones"
                                 tiempo="7hrs"
                                 link="/bootcamp-descript-web"
+                                link2="/preorder"
                                 action="Pre-inscripción"
                             />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fnode_BADGE_Mesa_de_trabajo_1.png?alt=media&token=4e3f49d4-f4a2-4572-9e7a-b92d66d2a45a"
+                            name="Backend API con NodeJs y ExpressJs"
+                            descript="Construye un backend API con NodeJs y ExpressJs "
+                            lecciones=" 70 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-backend-nodejs"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
+                        <CardBootcamp
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fbadges_Mesa_de_trabajo_1_copia_2%20(1).png?alt=media&token=b104bae1-992f-4924-85aa-55aaa98a08ba"
+                            name="Aprende a usar PHP correctamente"
+                            descript="Aprende PHP de forma fácil y eficiente, pero sobre todo con buenas prácticas"
+                            lecciones="53 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-php"
+                            link2="/preorder"
+                            action="Pre-inscripción"
+                        />
                         <CardBootcamp
                             image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
                             name="Aplicaciones web fullstack con Laravel"
                             descript="Crea una aplicación web de 0 a 100 con PHP y Laravel "
-                            lecciones="+ 50 lecciones"
+                            lecciones="83 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-descript-laravel"
                             link2="/preorder"
@@ -218,7 +236,7 @@ class Bootcamp extends Component {
                             </div>
                             <div className="step-descript">
                                 <h3>Asesoría</h3>
-                                <p>¿Tienes dudas sobre alguna lección? Podrás recibir asesoría de nuestros mentores.</p>
+                                <p>¿Tienes dudas sobre alguna lección? Podrás recibir asesoría de nuestros instructores.</p>
                             </div>
                         </div>
                         <div className="steps">
@@ -239,7 +257,7 @@ class Bootcamp extends Component {
                 <div className="invite">
                     <h2 className="subtitulos" style={{marginBottom:"20px"}}>¿Quieres completar tu aprendizaje?</h2>
 
-                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas para el desarrollo de software.</p>
+                    <p>Explora nuestro catálogo de cursos en línea, y aprende a usar las herramientas más utilzadas en el desarrollo de software.</p>
                     <p>
                         Encuentra cursos actualizados y concretos sobre las tecnologías más populares para el desarrollo de aplicaciones
                         web y móviles. Aprende con los profesionales y forma parte

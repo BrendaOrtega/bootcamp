@@ -104,7 +104,7 @@ class BootcampDescript extends Component {
                     </div>
                     <div className="box-data">
                         <p>Próxima edición</p>
-                        <h3>20 de Enero de 2020</h3>
+                        <h3>27 de Enero de 2020</h3>
 
                         <hr/>
                         <p>Más de 24 hrs de ejercicios en</p>
@@ -114,7 +114,7 @@ class BootcampDescript extends Component {
                         <p>Aprende con la práctica</p>
                         <h3>1 examen final</h3>
                         <hr/>
-                        <p>Precio especial diciembre</p>
+                        <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
                         <h3>$ 1,500.00</h3>
 
                         <hr/>
@@ -142,7 +142,7 @@ class BootcampDescript extends Component {
                         </p>
 
                             <br/>
-                        <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FTemario_Python3.pdf?alt=media&token=098d69d7-d41d-4292-ac4f-2818b4cc6463" target="blank" >
+                        <a href="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FFundamentos_de_Programacio%CC%81n_Python.pdf?alt=media&token=cc9e4b75-1366-4a35-bf9a-79a221ed85d6" target="blank" >
                             <img src={download} alt="descargar-temario"/>
                         </a>
                         </div>
