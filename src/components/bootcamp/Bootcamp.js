@@ -37,7 +37,7 @@ class Bootcamp extends Component {
                             <br/>
                             <p>
                                 Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
-                                Sumerguete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
+                                Sumérgete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
