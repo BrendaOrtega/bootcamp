@@ -27,9 +27,9 @@ class BootcampPhp extends Component {
                     <div className="container-summary">
                         <h2 className="name-descript">Aprende a usar PHP correctamente</h2>
                         <hr className="line-red"/>
-                        <p className="description">En 4 semanas aprenderás programación orientada a objetos, estádares de programación, patrones de diseño y más</p>
-                        <Link to="/preorder">
-                            <button className="btn-float">Pre-inscripción</button>
+                        <p className="description">En 4 semanas aprenderás programación orientada a objetos, estádares de programación, patrones de diseño y más.</p>
+                        <Link to="/apply/?b=5de52aa7734c4163308b63fb">
+                            <button className="btn-float">Inscribirme</button>
                         </Link>
 
                         <div className="nivel">
@@ -56,7 +56,7 @@ class BootcampPhp extends Component {
                         <p>
                             PHP sigue siendo uno de los lenguajes más demandados para backend, además de ser un lenguaje con el
                             cual puedes desarrollar aplicaciones completas de forma rápida, así que en este curso aprenderás a programar siguiendo patrones
-                            de diseño y generando codigo escalable y de calidad.
+                            de diseño y generando código escalable y de calidad.
 
 
                         </p>
@@ -80,7 +80,7 @@ class BootcampPhp extends Component {
                         <h3>1 exámen final</h3>
                         <hr/>
                         <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
-                        <h3>$ 1,500.00</h3>
+                        <h3>$ 1,999.00</h3>
 
                         <hr/>
                     </div>
@@ -93,7 +93,7 @@ class BootcampPhp extends Component {
                         <p><span>&bull;</span> PHP (código de calidad)</p>
                         <p><span>&bull;</span> Unit testing</p>
                         <p><span>&bull;</span> PHP Fig y PHP Unit</p>
-                        <p><span>&bull;</span> Encapsulación, mensajes entre onjetos y herencias</p>
+                        <p><span>&bull;</span> Encapsulación, mensajes entre objetos y herencias</p>
                         <p><span>&bull;</span> Decoradores, Singleton y adaptadores</p>
                         <p><span>&bull;</span> MVC</p>
                     </div>

@@ -386,19 +386,19 @@ CARD*/
     height: 32px;
     background-color: white;
     border-radius: 16px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ca3e47;
     cursor: crosshair;
-    color:green;
+    color:white;
+    transition: all 1s ease;
+    background-color: #ca3e47;
 }
 .btn-in:hover{
     background-color: #ca3e47;
+    border: #ca3e47;
     color:white;
     cursor: pointer;
 }
-.btn-pre:hover{
-    background-color: orange;
-    color:white;
-}
+
 .btn-pre{
     transition:all .3s ease;
     outline: none;
@@ -408,9 +408,14 @@ CARD*/
     border-radius: 16px;
     border: 1px solid #cccccc;
     cursor: pointer;
-    color:orange;
+    color:#ca3e47;
     margin-top: 10px;
+    transition: all 1s ease;
 }
+.btn-pre:hover{
+     background-color: #cccccc;
+     color:white;
+ }
 .window-chat{
     padding: 0 2%;
     box-sizing: border-box;

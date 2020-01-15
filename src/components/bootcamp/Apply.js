@@ -114,7 +114,7 @@ class Apply extends Component {
                 />,
             },
             {
-                title: 'Datos',
+                title: 'Información general',
                 content: <StepDos />,
             },
             {

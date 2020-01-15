@@ -44,11 +44,11 @@ class BootcampDescript extends Component {
                     <div className="container-summary">
                         <h2 className="name-descript">Fundamentos de Programación con Python</h2>
                         <hr className="line-red"/>
-                        <p className="description"> Aprende las bases de la programación, y preparate
+                        <p className="description"> Aprende las bases de la programación, y prepárate
                             para este programa creado especialmente para principiantes que quieren incursionar en el mundo de Python
                             tanto para análisis de datos como para desarrollo web. </p>
-                        <Link to="/preorder">
-                            <button className="btn-float">Pre-inscripción</button>
+                        <Link to="/apply/?b=5dc1db06cd0b842984edca7c">
+                            <button className="btn-float">Inscribirme</button>
                         </Link>
                         <div className="nivel">
                             <p>Nivel <span style={{fontSize:"10px"}}>(básico)</span></p>
@@ -114,8 +114,8 @@ class BootcampDescript extends Component {
                         <p>Aprende con la práctica</p>
                         <h3>1 examen final</h3>
                         <hr/>
-                        <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
-                        <h3>$ 1,500.00</h3>
+                        <p>Precio especial <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
+                        <h3>$ 1,999.00</h3>
 
                         <hr/>
                     </div>
@@ -125,7 +125,7 @@ class BootcampDescript extends Component {
                        <h2>¿Qué vas a aprender?</h2>
                         <p>Algunas cosas que aprenderás en este curso son:</p>
                         <p><span>&bull;</span> Funciones, ciclos y condicionales</p>
-                        <p><span>&bull;</span> Debug, tracing y logging</p>
+                        <p><span>&bull;</span> Debug y logging</p>
                         <p><span>&bull;</span> Expresiones regulares en Python</p>
                         <p><span>&bull;</span> Funciones lambda</p>
                         <p><span>&bull;</span> Async IO</p>

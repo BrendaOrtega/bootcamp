@@ -36,13 +36,13 @@ class Bootcamp extends Component {
                             <h2 style={{textAlign:"left"}} className="subtitulos">Bootcamp Online</h2>
                             <br/>
                             <p>
-                                Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
+                                Aprende a programar y prepárate para impulsar tu carrera profesional. <br/><br/>
                                 Sumérgete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
                             <br/>
-                            <Link to="/preorder">
+                            <Link to="/apply/?b=5d632e4c339a1b379df68a74">
                                 <Button ico="{ }" text="Inscribirme"/>
                             </Link>
                             <div>
