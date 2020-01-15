@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./Bootcamp.css"
-import { Form, Input } from "antd";
+import { Form, Input, Select } from "antd";
 import { connect } from 'react-redux'
 import { onChangeStudentAction } from '../../redux/bootcampDuck'
 
 
-const StepTres = ({ student, onChangeStudentAction }) => {
+const StepTres = ({ selected, student, onChangeStudentAction }) => {
 
     let [errors, setError] = useState({})
 
@@ -49,6 +49,7 @@ const StepTres = ({ student, onChangeStudentAction }) => {
 
     return (
         <div className="step">
+            <h2>{selected.title} - ${selected.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.00MXN</h2>
             <Form.Item
                 hasFeedback
                 help={errors.cardName}
@@ -74,6 +75,7 @@ const StepTres = ({ student, onChangeStudentAction }) => {
                     placeholder="Número de tarjeta"
                 />
             </Form.Item>
+
             <div className="pay-fl">
                 <label htmlFor="">
                     Mes de expiración
@@ -91,7 +93,7 @@ const StepTres = ({ student, onChangeStudentAction }) => {
                         name="year"
                         value={student.year}
                         onChange={onChange}
-                        placeholder="VVV"
+                        placeholder="2020"
                     />
                     <span style={{ color: "red" }}>{errors.year}</span>
                 </label>
@@ -101,11 +103,17 @@ const StepTres = ({ student, onChangeStudentAction }) => {
                         name="cvc"
                         value={student.cvc}
                         onChange={onChange}
-                        placeholder="VVV"
+                        placeholder="999"
                     />
                     <span style={{ color: "red" }}>{errors.cvc}</span>
                 </label>
             </div>
+            <br />
+            <Select style={{ width: "100%" }} value={student.monthly_installments} onChange={value => onChange({ target: { name: "monthly_installments", value } })}>
+                <option value={1} >De contado</option>
+                <option value={3} >3 Meses sin intereses</option>
+                <option value={6} >6 Meses sin intereses</option>
+            </Select>
 
         </div>
     );

@@ -130,7 +130,7 @@ const PromoCiberMonday = ({ bootcamps, error, makeBootcampPurchasePromoAction })
 
     function handleChange(value) {
         let b = bootcamps.find(boo => boo._id == value)
-        setForm({ "bootcampId": value, bootcampName: b.title })
+        setForm({ ...form, "bootcampId": value, bootcampName: b.title })
         //console.log(form)
         // setTotal(Number(value) * 1000)
     }

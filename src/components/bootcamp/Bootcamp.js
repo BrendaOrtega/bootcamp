@@ -37,7 +37,7 @@ class Bootcamp extends Component {
                             <br/>
                             <p>
                                 Aprende a programar y preparate para impulsar tu carrera profesional. <br/>
-                                Sumerguete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
+                                Sumérgete en el mundo de la programación y aborda el desarrollo de software a nivel profesional.
                             </p>
                             <br/>
                             <p>100% online | 5 y 8 semanas </p>
@@ -65,8 +65,8 @@ class Bootcamp extends Component {
                                 lecciones="45 lecciones"
                                 tiempo="6hrs"
                                 link="/bootcamp-descript"
-                                link2="/preorder"
-                                action="Pre-inscripción"
+                                link2="/apply/?b=5dc1db06cd0b842984edca7c"
+                                action="Inscribirme"
                             />
                             <CardBootcamp
                                 image={web}
@@ -75,8 +75,8 @@ class Bootcamp extends Component {
                                 lecciones="74 lecciones"
                                 tiempo="7hrs"
                                 link="/bootcamp-descript-web"
-                                link2="/preorder"
-                                action="Pre-inscripción"
+                                link2="/apply/?b=5d632e4c339a1b379df68a74"
+                                action="Inscribirme"
                             />
                         <CardBootcamp
                             image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fnode_BADGE_Mesa_de_trabajo_1.png?alt=media&token=4e3f49d4-f4a2-4572-9e7a-b92d66d2a45a"
@@ -85,8 +85,8 @@ class Bootcamp extends Component {
                             lecciones=" 70 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-backend-nodejs"
-                            link2="/preorder"
-                            action="Pre-inscripción"
+                            link2="/apply/?b=5de52ae9734c4163308b63fd"
+                            action="Inscribirme"
                         />
                         <CardBootcamp
                             image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fbadges_Mesa_de_trabajo_1_copia_2%20(1).png?alt=media&token=b104bae1-992f-4924-85aa-55aaa98a08ba"
@@ -95,8 +95,8 @@ class Bootcamp extends Component {
                             lecciones="53 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-php"
-                            link2="/preorder"
-                            action="Pre-inscripción"
+                            link2="/apply/?b=5de52aa7734c4163308b63fb"
+                            action="Inscribirme"
                         />
                         <CardBootcamp
                             image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
@@ -105,8 +105,8 @@ class Bootcamp extends Component {
                             lecciones="83 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-descript-laravel"
-                            link2="/preorder"
-                            action="Pre-inscripción"
+                            link2="/apply/?b=5de52b17734c4163308b63fe"
+                            action="Inscribirme"
                         />
                      {/*   <CardBootcamp
                             image={rea}

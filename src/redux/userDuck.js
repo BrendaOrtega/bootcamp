@@ -176,10 +176,11 @@ export function makeBootcampPurchaseGroupAction({ total, tokenId, tel, email, fu
 }
 
 
-export function makeBootcampPurchaseAction({ tokenId, bootcampId }) { // {tokenId, bootcampId}
+export function makeBootcampPurchaseAction({ tokenId, bootcampId, monthly_installments }) { // {tokenId, bootcampId}
     return (dispatch, getState) => {
         let { user: { token }, bootcamps: { student } } = getState()
         let data = {
+            monthly_installments,
             tel: student.tel,
             fullName: student.name,
             email: student.email,
