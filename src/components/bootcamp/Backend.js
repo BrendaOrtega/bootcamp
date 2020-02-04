@@ -28,8 +28,8 @@ class Backend extends Component {
                         <h2 className="name-descript">Backend API con NodeJs y ExpressJs</h2>
                         <hr className="line-red"/>
                         <p className="description"> Aprende a construir un backend y tus propias API con NodeJs y ExpressJs</p>
-                        <Link to="/preorder">
-                            <button className="btn-float">Pre-inscripción</button>
+                        <Link to="/apply/?b=5de52ae9734c4163308b63fd">
+                            <button className="btn-float">Inscribirme</button>
                         </Link>
 
                         <div className="nivel">
@@ -55,7 +55,7 @@ class Backend extends Component {
                         <h3>Por qué Backend...</h3>
                         <p>
                             Todas las aplicaciones web o móviles necesitan un backend de donde consumir datos de forma estructurada y segura,
-                            así que en este curso aprenderás a utilizar distintas bases de datos, a escribir rutas, controladores y middlewares, y más
+                            así que en este curso aprenderás a utilizar distintas bases de datos, a escribir rutas, controladores, middlewares, y más
                             para crear tu propia API.
 
 
@@ -64,7 +64,7 @@ class Backend extends Component {
                         <h3>Experiencia inigualable</h3>
                         <p>
                             En esta nueva modalidad de bootcamp online, te sumergirás en una experiencia única de aprendizaje,
-                            en donde concoerás las mejores prácticas del desarrollo para construir tu propio sitio web.
+                            en donde conocerás las mejores prácticas del desarrollo para construir tu propio sitio web.
                         </p>
                     </div>
                     <div className="box-data">
@@ -80,7 +80,7 @@ class Backend extends Component {
                         <h3>1 exámen final</h3>
                         <hr/>
                         <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
-                        <h3>$ 1,500.00</h3>
+                        <h3>$ 1,999.00</h3>
 
                         <hr/>
                     </div>

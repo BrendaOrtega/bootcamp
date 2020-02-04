@@ -197,13 +197,13 @@ class HomeContainer extends Component {
                     <div className="box-destacados">
                         <CardBootcamp
                             image={pyth}
-                            name="Fundamentos de Programación con Python"
-                            descript="Aprende todo lo necesario sobre el modelo vista controlador"
+                            name="Fundamentos de Desarrollo con Python"
+                            descript="Aprende a programar con Python, aprende lo necesario sobre el modelo vista controlador"
                             lecciones="45 lecciones"
                             tiempo="6hrs"
                             link="/bootcamp-descript"
-                            link2="preorder"
-                            action="Pre-inscripción"
+                            link2="/apply/?b=5dc1db06cd0b842984edca7c"
+                            action="Inscribirme"
                         />
                         <CardBootcamp
                             image={web}
@@ -212,18 +212,18 @@ class HomeContainer extends Component {
                             lecciones="74 lecciones"
                             tiempo="7hrs"
                             link="/bootcamp-descript-web"
-                            link2="/preorder"
-                            action="Pre-inscripción"
+                            link2="/apply/?b=5d632e4c339a1b379df68a74"
+                            action="Inscribirme"
                         />
                         <CardBootcamp
-                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2FbadgePHP_Prueba_Mesa_de_trabajo_1.png?alt=media&token=15556e2b-3ba4-4c1d-b675-ab681d9c4775"
-                            name="Aplicaciones web fullstack con Laravel"
-                            descript="Crea una aplicación web de 0 a 100 con PHP y Laravel "
-                            lecciones="80 lecciones"
-                            tiempo="8hrs"
-                            link="/bootcamp-descript-laravel"
-                            link2="/preorder"
-                            action="Pre-inscripción"
+                            image="https://firebasestorage.googleapis.com/v0/b/fixter-67253.appspot.com/o/assets%2Fnode_BADGE_Mesa_de_trabajo_1.png?alt=media&token=4e3f49d4-f4a2-4572-9e7a-b92d66d2a45a"
+                            name="Backend API con NodeJs y ExpressJs"
+                            descript="Construye un backend API con NodeJs y ExpressJs "
+                            lecciones=" 70 lecciones"
+                            tiempo="6hrs"
+                            link="/bootcamp-backend-nodejs"
+                            link2="/apply/?b=5de52ae9734c4163308b63fd"
+                            action="Inscribirme"
                         />
 
 

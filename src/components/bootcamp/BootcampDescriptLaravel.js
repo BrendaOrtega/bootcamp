@@ -10,23 +10,7 @@ class BootcampDescriptLaravel extends Component {
         window.scroll(0, 0)
     }
     render() {
-        const options = {
-            autoplay: true,
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        };
+
         return (
             <section className="bootcamp">
                 <meta
@@ -43,9 +27,9 @@ class BootcampDescriptLaravel extends Component {
                     <div className="container-summary">
                         <h2 className="name-descript">Aplicaciones web fullstack con Laravel</h2>
                         <hr className="line-red"/>
-                        <p className="description"> Aprende a crear una app web con uno de los lenguajes más utilziados pero con las mejores prácticas y su framework más popular: Laravel. </p>
-                        <Link to="/preorder">
-                            <button className="btn-float">Pre-inscripción</button>
+                        <p className="description"> Aprende a crear una app web con uno de los lenguajes más utilizados pero con las mejores prácticas y su framework más popular: Laravel. </p>
+                        <Link to="/apply/?b=5de52b17734c4163308b63fe">
+                            <button className="btn-float">Inscribirme</button>
                         </Link>
                         <div className="nivel">
                             <p>Nivel <span style={{fontSize:"10px"}}>(medio-avanzado)</span></p>
@@ -71,13 +55,13 @@ class BootcampDescriptLaravel extends Component {
                         <p>
                             PHP es uno de los  5 lenguajes más utilizados para el desarrollo de software, pero por algún tiempo fue el más
                             utilizado, y actualmente sigue siendo demandando en vacantes de alto nivel. Y es por esto, que
-                            en este curso aprenderás a programar PHP y crearás una aplicación de 0 a 100 con las mejores practicas.
+                            en este curso aprenderás a programar en PHP y crearás una aplicación de 0 a 100 con las mejores prácticas.
                         </p>
                         <br/>
                         <h3>Experiencia inigualable</h3>
                         <p>
                             En esta nueva modalidad de bootcamp online, te sumergirás en una experiencia única de aprendizaje,
-                            en donde concoerás las mejores prácticas del desarrollo para construir tu propio sitio web.
+                            en donde conocerás las mejores prácticas del desarrollo para construir tu propio sitio web.
                         </p>
                     </div>
                     <div className="box-data">
@@ -93,7 +77,7 @@ class BootcampDescriptLaravel extends Component {
                         <h3>1 exámen final</h3>
                         <hr/>
                         <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
-                        <h3>$ 1,500.00 </h3>
+                        <h3>$ 2,499.00 </h3>
 
                         <hr/>
                     </div>

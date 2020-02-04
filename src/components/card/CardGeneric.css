@@ -117,6 +117,7 @@
     color:#ca3e47;
     cursor: pointer;
     transition: all 1s ease;
+    background-color: white;
 }
 .bootcamp-card button:hover{
     background-color: #ca3e47;

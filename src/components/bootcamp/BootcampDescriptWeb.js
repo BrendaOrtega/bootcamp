@@ -26,10 +26,10 @@ class BootcampDescriptWeb extends Component {
                     <div className="container-summary">
                         <h2 className="name-descript">Fundamentos de Desarrollo Web con JavaScript</h2>
                         <hr className="line-red"/>
-                        <p className="description"> Aprende las bases de la programación y preparate
+                        <p className="description"> Aprende las bases de la programación y prepárate
                             para incursionar en el mundo del desarrollo Web utilizando uno de los lenguajes más utilizados: JavaScript.</p>
-                        <Link to="/preorder">
-                            <button className="btn-float">Pre-inscripción</button>
+                        <Link to="/apply/?b=5d632e4c339a1b379df68a74">
+                            <button className="btn-float">Inscribirme</button>
                         </Link>
 
                         <div className="nivel">
@@ -55,14 +55,14 @@ class BootcampDescriptWeb extends Component {
                         <h3>Por qué JavaScript...</h3>
                         <p>
                             JavaScript se encuentra en el top 10 de los lenguajes de programación más utilizados,
-                            al aprenderlo, estarás dando tus primeros pasos para convertirte en un desarrollador
+                            al aprenderlo, estarás dando tus primeros pasos para convértirte en un desarrollador
                             profesional.
                         </p>
                         <br/>
                         <h3>Experiencia inigualable</h3>
                         <p>
                             En esta nueva modalidad de bootcamp online, te sumergirás en una experiencia única de aprendizaje,
-                            en donde concoerás las mejores prácticas del desarrollo para construir tu propio sitio web.
+                            en donde conocerás las mejores prácticas del desarrollo para construir tu propio sitio web.
                         </p>
                     </div>
                     <div className="box-data">
@@ -78,7 +78,7 @@ class BootcampDescriptWeb extends Component {
                         <h3>1 exámen final</h3>
                         <hr/>
                         <p>Precio especial diciembre <span style={{fontSize:"10px"}}>(hasta 6 MSI)</span></p>
-                        <h3>$ 1,500.00</h3>
+                        <h3>$ 1,999.00</h3>
 
                         <hr/>
                     </div>

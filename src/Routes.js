@@ -52,6 +52,7 @@ export const Router = () => (
         <Route path="/login" component={Login} />
         <Route path="/registro" component={Registro} />
         <Route path="/apply" component={Apply} />
+        <Redirect path="/preorden" to="/bootcamp"/>
         <Route path="/profile" component={ProfileContainer} />
         <Route path="/null" component={ProfileContainer} />
         {/* Secciones nuevas por bootcamp */}
