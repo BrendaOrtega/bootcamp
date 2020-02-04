@@ -112,7 +112,6 @@ function HomeWork({ updateProfileAction, uHomework, user, onOk, onCancel, homewo
 function mapState({ user }, props) {
     let uHomework
     if (user.homeworks) uHomework = user.homeworks[props.homework._id]
-    console.log(uHomework)
     return {
         user,
         uHomework

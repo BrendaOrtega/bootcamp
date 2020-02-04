@@ -8,13 +8,14 @@ import js from "../../assets/JavaScript-logo.png"
 import { Tabs, Badge } from 'antd';
 import { CardTask } from "./CardTask";
 import { connect } from 'react-redux'
-import moment from 'moment';
 import { getBootcampAction } from '../../redux/bootcampDuck'
 import Learning from './Learning';
 import HomeWork from './HomeWork'
 import img from "../../assets/28698604_1973144766082686_589124668727305128_o.jpg"
 import { Message } from "./chat/Message";
 import { SendMessage } from "./chat/SendMessage";
+import moment from 'moment'
+
 
 const { TabPane } = Tabs;
 
@@ -162,12 +163,17 @@ const BD = ({ uHomeworks, history, getBootcampAction, subscribed, match, bootcam
 
                     {activeWeek === 4 && <TabPane style={{ paddingLeft: 20, textAlign: "center" }} tab={<Badge count={"new"} >Examen -</Badge>} key="5">
                         <p>Completa el examen que se promediará con tus tareas para que puedas obtener tu certificado</p>
-                        <h3 style={{
-                            padding: 30,
-                            textAlign: "center",
-                            border: "2px dashed red"
-                        }} >
-                            Estamos subiendo el examen, estará disponible esta semanas. ¡Gracias!</h3>
+                        <h3
+                            onClick={() => history.push(`/exam/${bootcamp._id}`)}
+                            style={{
+                                padding: 30,
+                                color: "red",
+                                textAlign: "center",
+                                cursor: "pointer"
+                                // border: "2px dashed red"
+                            }} >
+                            Resuelve tu examen aquí, o imprime tu certificado 📈
+                            </h3>
                     </TabPane>}
 
                 </Tabs>
