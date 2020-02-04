@@ -5,7 +5,7 @@ import FontAwesome from "react-fontawesome"
 
 let song = require('../../assets/start.wav')
 
-export default function Start({ title, onStart }) {
+export default function Start({ attempts, title, onStart }) {
     let [audio, setAudio] = useState(new Audio())
     let [paused, setPaused] = useState(false)
     useEffect(() => {
@@ -38,11 +38,11 @@ export default function Start({ title, onStart }) {
             <div className={styles.startArea}>
                 <div className={styles.flexRow}>
                     <p className={styles.flexColumn}>
-                        <strong>0/2</strong>
+                        <strong>{attempts ? attempts : 0}/2</strong>
                         <span>Intentos</span>
                     </p>
                     <h2>
-                        Estas listx?
+                        Estas listo(a)?
                     </h2>
                     <button onClick={onStart}>
                         Comenzar

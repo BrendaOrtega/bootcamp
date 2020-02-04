@@ -11,12 +11,12 @@ import toastr from 'toastr'
 let selected = require('../../assets/selected.wav')
 let next = require('../../assets/next.wav')
 
-function ExamPage({ result, fetching, gradeExamAction, getExamAction, match, exam }) {
+function ExamPage({ user, error, result, fetching, gradeExamAction, getExamAction, match, exam }) {
     let [finish, setFinish] = useState(false)
     let [answers, setAnswers] = useState([])
     let [step, setStep] = useState(0)
     let [question, setQuestion] = useState({})
-    let mins = 1
+    let mins = 30
     let secs = 0
     let [time, setTime] = useState(`${mins}:0${secs}`)
     let interval
@@ -28,15 +28,28 @@ function ExamPage({ result, fetching, gradeExamAction, getExamAction, match, exa
     let audioNext = new Audio()
     audioNext.src = next
 
+
     useEffect(() => {
         let { id } = match.params
-        let uid = "5dc1db06cd0b842984edca7c"
-        getExamAction(uid)
+        getExamAction(id)
     }, [])
+
+    // useEffect(() => {
+    //     if (result && result.approved) setStep(4)
+    // }, [exam])
+
+    useEffect(() => {
+        if (error) {
+            toastr.warning(error)
+            // history.push('/profile')
+            setStep(4)
+        }
+
+    }, [error])
+
 
     useEffect(() => {
         if (finish) {
-            console.log("terminó", answers)
             setStep(2)
             gradeExam()
         }
@@ -64,8 +77,8 @@ function ExamPage({ result, fetching, gradeExamAction, getExamAction, match, exa
     }
 
     function timesUp() {
-        setStep(2)
-        gradeExam()
+        setStep(3)
+        // gradeExam()
     }
     function onClickAnswer(a) {
         return () => {
@@ -77,7 +90,6 @@ function ExamPage({ result, fetching, gradeExamAction, getExamAction, match, exa
         if (answer === undefined) {
             return
         }
-        console.log(answer)
         setAnswers([...answers, answer])
         audioNext.play()
         setAnswer(undefined)
@@ -100,24 +112,28 @@ function ExamPage({ result, fetching, gradeExamAction, getExamAction, match, exa
         gradeExamAction(answers, exam.bootcamp)
         setTimeout(() => {
             setWaiting(false)
-        }, 10000);
+        }, 5000);
     }
-
     return (
         <div className={styles.container}>
             {step === 0 && <Start onStart={startExam} {...exam} />}
             {step === 1 && <Question onNext={onNext} onClick={onClickAnswer} answer={answer} time={time} {...question} />}
-            {step === 2 && <Grading result={result} waiting={waiting} fetching={fetching} />}
+            {step === 2 && <Grading user={user} result={result} waiting={waiting} fetching={fetching} />}
+            {step === 3 && <div style={{ height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }} ><h2  >
+                Se acabó el tiempo 😱
+                </h2></div>}
+            {step === 4 && <Grading user={user} result={result} waiting={false} fetching={false} />}
         </div>
     )
 }
 
-function mapState({ bootcamps: { exam, fetching, result } }) {
-    console.log(exam)
+function mapState({ user, bootcamps: { error, exam, fetching, result } }, props) {
     return {
+        user,
         exam,
         fetching,
-        result
+        result: result ? result : exam.result,
+        error
     }
 }
 

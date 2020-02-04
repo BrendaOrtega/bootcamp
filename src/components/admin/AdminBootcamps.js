@@ -22,13 +22,13 @@ function AdminBootcamps({ saveExamAction, bootcamps, history, setEditingBootcamp
     }
 
     function openExam(ex, _id) {
-        console.log(ex)
         if (!ex) ex = { ...initialExam, bootcamp: _id }
         setExam(ex)
         setOpen(true)
     }
 
     function saveExam(exam) {
+        console.log("enviado: ", exam)
         saveExamAction(exam)
         setOpen(false)
     }

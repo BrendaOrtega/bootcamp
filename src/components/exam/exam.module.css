@@ -21,6 +21,7 @@
 .container{
     padding-top: 75px;
     font-family: 'Press Start 2P', cursive;
+    height: 80vh;
 }
 .nav{
     text-align: center;

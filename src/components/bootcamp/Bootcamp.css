@@ -411,6 +411,22 @@ CARD*/
     color:orange;
     margin-top: 10px;
 }
+.btn-pre-exam{
+    transition:all .3s ease;
+    outline: none;
+    width: 100%;
+    height: 32px;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    color:darkslateblue;
+    margin-top: 10px;
+}
+.btn-pre-exam:hover{
+    background-color: lightskyblue;
+    color:white;
+}
 .window-chat{
     padding: 0 2%;
     box-sizing: border-box;

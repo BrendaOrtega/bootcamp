@@ -45,7 +45,6 @@ function mapState({ user, bootcamps: { object, array } }) {
     if (user.bootcamps.length) bootcamps = [...user.bootcamps]
     if (user.bootcamps && array.length > 0) bootcamps = user.bootcamps.map(b => object[b._id])
     user.bootcamps = bootcamps
-    console.log(user)
     return {
         user,
         ...user,

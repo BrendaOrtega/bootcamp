@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Modal, Button, Input, DatePicker, Radio, Switch } from 'antd'
 import styles from './admin.module.css'
 import toastr from 'toastr'
+import moment from 'moment'
 
 let initialExam = {
     questions: []
@@ -72,8 +73,10 @@ export default function EditExamModal({ ex, onFinish, onCancel, visible = true }
     }
 
     function deleteQuestion() {
+        console.log("a borrar: ", question)
         exam.questions.splice(question.index, 1)
         setExam({ ...exam })
+
         setQuestion({ answers: [] })
         setOpen(false)
     }
@@ -109,12 +112,12 @@ export default function EditExamModal({ ex, onFinish, onCancel, visible = true }
                 <label>
                     Fecha de inicio
                     <br />
-                    <DatePicker value={exam.startDate} onChange={value => onChangeExam({ target: { name: "startDate", value } })} />
+                    <DatePicker value={moment(exam.startDate)} onChange={value => onChangeExam({ target: { name: "startDate", value } })} />
                 </label>
                 <label>
                     Fecha de termino
                     <br />
-                    <DatePicker value={exam.endDate} onChange={value => onChangeExam({ target: { name: "endDate", value } })} />
+                    <DatePicker value={moment(exam.endDate)} onChange={value => onChangeExam({ target: { name: "endDate", value } })} />
                 </label>
 
                 <div>

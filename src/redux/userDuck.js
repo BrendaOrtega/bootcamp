@@ -238,6 +238,7 @@ export function updateProfileAction(update) {
         dispatch({ type: UPDATE_PROFILE })
         return axios.patch(`${baseURL}/self`, update, { headers: { Authorization: token } })
             .then(res => {
+                delete res.data.bootcamps
                 let { user } = localStorage
                 if (user) user = JSON.parse(user)
                 localStorage.user = JSON.stringify({ ...user, ...res.data })

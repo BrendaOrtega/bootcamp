@@ -7,14 +7,18 @@ import img from "../../assets/28698604_1973144766082686_589124668727305128_o.jpg
 
 
 
-function BootcampCard({ startDate, endDate, history, weeks, bootcamp, title, students = 100, _id, thumbnail }) {
+function BootcampCard({ startDate, endDate, history, weeks, exam, bootcamp, title, students = 100, _id, thumbnail }) {
     let available = false
     let week1 = false
+    let examAvailable = false
     if (weeks && weeks[0] && (moment(weeks[0].startDate) < moment(Date.now()))) {
         available = true
     }
     if (weeks && weeks[1] && (moment(weeks[1].startDate) < moment(Date.now()))) {
         week1 = true
+    }
+    if (exam && exam[0] && (moment(exam[0].startDate) < moment(Date.now()))) {
+        examAvailable = true
     }
     let link = "https://wallpaperplay.com/walls/full/3/c/4/164624.jpg"
     return (
@@ -41,6 +45,9 @@ function BootcampCard({ startDate, endDate, history, weeks, bootcamp, title, stu
                 {available && <button
                     onClick={() => history.push("/bootcamp/detail/" + _id)}
                     className="btn-pre">Prework ya Disponible</button>}
+                {(exam && exam.length && examAvailable) && <button
+                    onClick={() => history.push("/exam/" + _id)}
+                    className="btn-pre-exam">Examen ya Disponible</button>}
             </div>
         </div>
     )

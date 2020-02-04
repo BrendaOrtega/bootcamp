@@ -23,9 +23,9 @@ function reducer(state = initial, action) {
             return { ...state, fetching: false, error: action.payload }
 
         case GET_EXAM_SUCCESS:
-            return { ...state, fetching: false, exam: { ...action.payload } }
+            return { ...state, fetching: false, exam: { ...action.payload }, error: null }
         case GET_EXAM:
-            return { ...state, fetching: true }
+            return { ...state, fetching: true, error: null }
         case GET_EXAM_ERROR:
             return { ...state, fetching: false, error: action.payload }
 
@@ -199,6 +199,12 @@ export function getExamAction(bootcampId) {
                 return res
             })
             .catch(err => {
+                if (err.response && err.response.data.result && err.response.data.result.attempts > 1) {
+                    dispatch({ type: GRADE_EXAM_SUCCESS, payload: err.response.data.result })
+                    dispatch({ type: GET_EXAM_ERROR, payload: err.response.data.message })
+                    dispatch({ type: GET_EXAM }) // para evitar que el error mande siempre el resultado
+                    return
+                }
                 if (!err.response) return dispatch({ type: GET_EXAM_ERROR, payload: "Algo falló" })
                 dispatch({ type: GET_EXAM_ERROR, payload: err.response.data.message })
                 return err

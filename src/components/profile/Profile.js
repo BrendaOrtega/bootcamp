@@ -18,7 +18,7 @@ let photo = "https://media.licdn.com/dms/image/C4E0BAQGdnoI0RtTQnw/company-logo_
 
 export const Profile = ({ _id, bootcamps, updateProfile, displayName, photoURL = photo, country, city, email, changePass, updatePassword }) => {
 
-    console.log(bootcamps)
+    // console.log(bootcamps)
 
     let input = useRef()
     let [profile, setProfile] = useState({})
