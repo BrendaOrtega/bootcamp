@@ -9,7 +9,7 @@ export const UserBootcamp = ({ bootcamps = [] }) => {
     return (
         <section className="user-courses">
             {bootcamps.length < 1 ? <div className="box-c none-user">
-                <p>El próximo Bootcamp Online inicia el 21 de Octubre. <br /> <strong>¡Incríbete ya! </strong>
+                <p>El próximo Bootcamp Online inicia el 21 de Febrero. <br /> <strong>¡Incríbete ya! </strong>
                 </p>
                 <img style={{ opacity: ".7" }} src={img} alt="" />
                 <br />
